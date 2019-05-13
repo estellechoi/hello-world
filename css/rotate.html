@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /*
+  transform: rotate(deg); 회전
+  transform: translate(px,px); 이동
+  transform: scale(1); 크기 (기준크기의 *1, 2, 3, .. 배수)
+
+  */
+    #main {
+      width: 800px;
+      height: 800px;
+      background: pink;
+      border-radius: 50px;
+    }
+
+    .common {
+      display: flex;
+      /* ?? */
+      justify-content: center;
+      /* left, right*/
+      align-items: center;
+      /* top, bottom */
+      width: 200px;
+      height: 200px;
+      background: #eeeeee;
+      color: green;
+      font-weight: bold;
+      font-style: italic;
+      border: 3px dashed green;
+      border-radius: 100px;
+      /* border-radius: 100px; -> 원 */
+      position: absolute;
+    }
+
+    #pkc1 {
+      transform: scale(0.7, 1);
+      /* scale(width, height);
+         1 : 기준 크기 */
+    }
+
+    #pkc2 {
+      left: 250px;
+      /* position 기준으로 위치 설정*/
+      transform: rotate(45deg);
+      /* 회전
+         transform: scale과 함께 쓰니까 rotate가 안된다 .. ?
+      */
+
+    }
+
+    #pkc3 {
+      left: 500px;
+      animation-name: exp;
+      /* 애니메이션명 (made by coder) */
+      animation-duration: 10s;
+      /*동작시간*/
+    }
+
+    @keyframes exp {
+      from {
+        transform: rotate(0deg)
+      }
+
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    #pkc4 {
+      top: 300px;
+      animation-name: exp2;
+      animation-duration: 5s;
+    }
+
+    @keyframes exp2 {
+      from {
+        transform: translate(0px, 0px)
+      }
+
+      to {
+        transform: translate(300px, 300px)
+      }
+    }
+
+    #pkc5 {
+      left: 250px;
+      top: 300px;
+      transform: rotate(180deg);
+    }
+
+    #pkc6 {
+      left: 500px;
+      top: 300px;
+      transform: rotate(225deg);
+    }
+
+    #pkc7 {
+      top: 540px;
+      transform: rotate(270deg);
+    }
+
+    #pkc8 {
+      left: 250px;
+      top: 540px;
+      transform: rotate(315deg);
+    }
+
+    #pkc9 {
+      left: 500px;
+      top: 540px;
+      transform: rotate(360deg);
+    }
+  </style>
+
+<body>
+  <div id=main>
+    <div class=common id=pkc1>
+      none
+    </div>
+    <div class=common id=pkc2>
+      transform:rotate(45deg);
+    </div>
+    <div class=common id=pkc3>
+      transform:rotate(90deg);
+    </div>
+    <div class=common id=pkc4>
+      transform:rotate(1350deg);
+    </div>
+    <div class=common id=pkc5>
+      transform:rotate(180deg);
+    </div>
+    <div class=common id=pkc6>
+      transform:rotate(2250deg);
+    </div>
+    <div class=common id=pkc7>
+      transform:rotate(270deg);
+    </div>
+    <div class=common id=pkc8>
+      transform:rotate(315deg);
+    </div>
+    <div class=common id=pkc9>
+      transform:rotate(360deg);
+    </div>
+  </div>
+
+</body>
+
+</html>

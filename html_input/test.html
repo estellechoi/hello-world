@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <form method=post action=aa.php>
+
+    ID <input type=text name=userid size=15 placeholder="ID (email address)">
+    <p>
+      <!--size : 입력란 길이-->
+
+      PW <input type=text name=pwd placeholder=password>
+      <p>
+        <!--name 속성을 왜쓰더라 ? ;;;;-->
+
+        Name <input type=text name="name" size=15 disabled value=Youjin>
+        <p>
+          <!--disabled : 해당 form 사용불가 / enabled-->
+          <!-- ** placeholder : 사용자에게 입력할 내용을 가이드함
+          value : 사용자에 앞서 값을 입력
+  -->
+
+          Nationality
+          <select>
+            <option> Republic of Korea </option>
+            <option> USA </option>
+            <option> Spain </option>
+            <option> Japan </option>
+            <option> Indonesia </option>
+            <option> France </option>
+            <option selected> NA </option>
+          </select>
+          <p>
+
+            Like to make a donation? <input type=radio name=l> yes <input type=radio name=l> no <p>
+              <!--same name (name=1) needed not to allow selecting both-->
+
+              Amount <input type=text name=amount size=10 value=0> Dollors <p>
+
+                Like to get email regarding the donation?
+                <input type=checkbox checked> yes
+                <input type=checkbox> no <p>
+
+                  <font color=pink face=arial size=3>
+                    Comment </font>
+                  <p>
+                    <textarea cols=40 rows=5></textarea>
+                    <p>
+
+                      <input type=submit value=Submit>
+                      <p>
+
+
+
+  </form>
+
+
+
+
+
+
+</body>
+
+</html>

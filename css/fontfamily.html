@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--
+font-size: px;
+font-weight: 100~900;
+font-family: arial;
+font-style: italic;
+color: #123456;
+  -->
+
+  <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    div {
+      font-size: 30px;
+      font-family: notosanskr;
+      /* notosanskr 왜안돼??????*/
+      /*sans-serif;*/
+    }
+
+    #aa {
+      font-family: 궁서;
+      font-style: normal;
+      /*not italic*/
+    }
+
+    #bb {
+      font-family: 나눔고딕;
+      font-style: italic;
+    }
+
+    #cc {
+      font-family: 궁서;
+      font-style: inherit;
+      /*take over parents' tag's font-style.*/
+    }
+
+    #dd {
+      font-family: 궁서;
+      font-style: initial;
+      /*initial default*/
+    }
+
+    #ee {
+      font-family: 궁서;
+      font-style: oblique;
+      /*oblique: 사선의, 비스듬한 = italic*/
+    }
+
+    #a {
+      font-variant: small-caps;
+      /*Capital effect*/
+    }
+
+    #b {
+      font-variant: normal;
+    }
+
+    /*
+  Nowadays, coders use em,rem for reactive design instead of px.
+  1 in
+  2.54cm
+  25.4mm
+  72pt
+  6pc
+  96px
+  */
+    #aa1 {
+      font-weight: 500;
+      /*thickness > how bold the font is : 100~900*/
+      font-size: xx-large;
+      /*<font-size=6>*/
+    }
+
+    #aa2 {
+      font-weight: lighter;
+      font-size: x-large;
+      /*<font-size=5>*/
+    }
+
+    #aa3 {
+      font-weight: normal;
+      font-size: large;
+      /*<font-size=4>*/
+    }
+
+    #aa4 {
+      font-weight: 600;
+      font-size: larger;
+    }
+
+    #aa5 {
+      font-weight: bold;
+      font-size: smaller;
+    }
+
+    #aa6 {
+      font-weight: bolder;
+      font-size: 200%;
+      /*부모의 ~%*/
+      font-size: 2em;
+      /* 부모기준 */
+      font-size: 1rem;
+      /* html 기준 */
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id=aa>궁서</div>
+  <div id=bb>나눔고딕</div>
+  <div id=cc>궁서</div>
+  <div id=dd>궁서</div>
+  <div id=ee>궁서</div>
+  <p>
+
+    <div id=a>
+      <!--부모 태그-->
+      <div id=aa1>font-variant</div>
+      <!--자식 태그-->
+    </div>
+    <div id=b>font-variant</div>
+    <p>
+
+      <div id=aa1>font-weight</div>
+      <div id=aa2>font-weight</div>
+      <div id=aa3>font-weight</div>
+      <div id=aa4>font-weight</div>
+      <div id=aa5>font-weight</div>
+      <div id=aa6>font-weight</div>
+</body>
+
+</html>

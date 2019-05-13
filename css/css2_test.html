@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /* can call several tags, classes, ids together with coma */
+
+    span,
+    a {
+      font-style: italic;
+      /* ?????? */
+      background: #FFB2F5;
+    }
+
+    .d {
+      color: #0100FF;
+      /*색상표 코드 참조*/
+      background-color: #2F9D27;
+    }
+
+    .b {
+      color: #2F9D27;
+    }
+
+    #h,
+    #m {
+      text-decoration: underline;
+
+    }
+
+    #m {
+      font-size: 40px;
+    }
+
+    * {
+      /* call all tags in body */
+      color: orange;
+    }
+
+
+    /* for <a> tag
+	   none; not to show underline
+	   a:hover { } >> show underline when 커서가 위에 있을 때
+*/
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <span class=d>동해물</span>과 <span class=b>백두산</span>이 <p>
+    마르고 닳도록 <p>
+      <span id=h>하느님</span>이 보우하사 <p>
+        우리나라 <span id=m>만세</span>
+        <p>
+          <a href="http://www.naver.com"> www.naver.com </a>
+          <!-- <a> link tag includes underline style automatically-->
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <style>
+    /* 글자크기 30px, 현재문서의 모든 div 태그 */
+    div {
+      font-size: 30px;
+    }
+
+    #aa2 {
+      color: blue;
+      /*영문색상 단어*/
+    }
+
+    #aa3 {
+      color: rgb(222, 60, 250);
+      /* choose from 0~255 for each level of red, green, blue*/
+    }
+
+    #aa4 {
+      color: #ab12dd;
+      /* red, green, blue 16진수로 표현*/
+    }
+
+    #aa5 {
+      color: rgba(222, 60, 250, 0.5);
+      /*rgb함수에 투명도 a (0~1 / 투명~불투명) 추가*/
+    }
+
+    #aa6 {
+      color: hsl(360, 100%, 50%);
+      /*hue 색조 : 0~360 (360 빨 120 녹 240 파)
+        saturation 채도 : 0~100%
+        lightness 밝기 : 0~100% */
+    }
+
+    #aa7 {
+      color: hsla(360, 100%, 50%, 0.7);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>How to put colors on fonts</h1>
+
+  <div id=aa2> hello. </div>
+  <div id=aa3> hello. </div>
+  <div id=aa4> hello. </div>
+  <div id=aa5> hello. </div>
+  <div id=aa6> hello. </div>
+  <div id=aa7> hello. </div>
+
+
+  <!--
+  div, span tags
+  no function at all.
+  div :block, span: inline
+-->
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /*div:hover {
+      visibility: hidden;
+      ->> hidden; visible;
+      보통 javascript와 연동해서 사용, 본문에서 잘 안쓰고 layout에서 씀
+    }*/
+    div {
+      background: white;
+    }
+
+    #bb {
+      visibility: hidden;
+      /* 숨겼지만, 공간 차지함 -> 본문보다는 layout에 사용됨 */
+    }
+
+    #dd {
+      display: none;
+      /* 숨겼으며, 공간 차지하지 않음 -> 본문에서 사용됨 */
+    }
+  </style>
+  <script>
+    function imsi(pp) {
+      pp.style.visibility = "hidden";
+    }
+
+    function imsi2(pp) {
+      pp.style.visibility = "visible";
+    }
+  </script>
+
+<body>
+  <div onmouseover=imsi(this) onmouseout=imsi2(this)> hello Estelle.</div>
+  <div onmouseover=imsi(this) onmouseout=imsi2(this)> hello Izabel.</div>
+  <div onmouseover=imsi(this) onmouseout=imsi2(this)> hello Carina.</div>
+  <div onmouseover=imsi(this) onmouseout=imsi2(this)> hello Domorello.</div>
+  <div onmouseover=imsi(this) onmouseout=imsi2(this)> hello Honsokun.</div>
+  <hr>
+  <div>hello Estelle.</div>
+  <div id=bb>hello Izabel.</div>
+  <div>hello Carina.</div>
+  <div id=dd>hello Domorello.</div>
+  <div>hello Honsokun.</div>
+
+</body>
+
+</html>

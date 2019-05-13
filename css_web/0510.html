@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .aa {
+      margin: auto;
+    }
+
+    .sign {
+      background: lightyellow;
+      width: 1000px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: darkgrey;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 60px;
+
+    }
+
+    .left {
+      background: lightyellow;
+      width: 150px;
+      height: 300px;
+      float: left;
+    }
+
+    .blank {
+      width: 700px;
+      height: 300px;
+      background: grey;
+      float: left;
+    }
+
+    .right {
+      background: lightyellow;
+      width: 150px;
+      height: 300px;
+      float: left;
+    }
+
+    .buttons {
+      background: lightyellow;
+      clear: both;
+      width: 1000px;
+      height: 150px;
+    }
+
+    .bottom {
+      background: lightyellow;
+      width: 1000px;
+      height: 100px;
+    }
+
+    #form {
+      background: green;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      color: lightyellow;
+      width: 700px;
+      height: 300px;
+      line-height: 40px;
+    }
+
+    #input {
+      float: left;
+    }
+
+    #goblock {
+      float: left;
+      margin-left: 50px;
+      margin-top: 22px;
+    }
+
+    #go {
+      background: lightyellow;
+      color: green;
+      font-weight: bold;
+      font-style: italic;
+      width: 100px;
+      height: 40px;
+    }
+
+    #secure {
+      clear: both;
+      color: white;
+      font-size: 15px;
+    }
+  </style>
+
+<body>
+  <div class=aa>
+    <div class=sign> Sign In </div>
+    <div class=left> </div>
+    <div class=blank> 일단 비워놓는다 </div>
+    <div class=right> </div>
+    <div class=buttons> buttons </div>
+    <div class=bottom> bottom </div>
+  </div>
+  <hr>
+  <form id=form>
+    <div id=input>
+      <div> Name &nbsp;&nbsp;&nbsp;&nbsp; <input type=text name=username size=20 placeholder="Profile name."> </div>
+      <div> Password <input type=password name=pw size=20 placeholder="Text and number mixed"></div>
+    </div>
+    <div id=goblock><input id=go type=submit value="Sign In"> </div>
+    <div id=secure> <input type=checkbox checked> Secure Connections </div>
+  </form>
+</body>
+
+</html>

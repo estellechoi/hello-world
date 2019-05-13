@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Hello World.</title>
+
+  <style>
+    tr {
+      text-align: left;
+      font-size: 12px;
+    }
+
+    input[type=text] {
+      width: 300px;
+      height: 40px;
+    }
+
+    input[type=password] {
+      width: 300px;
+      height: 40px;
+    }
+
+    input[type=button] {
+      width: 130px;
+      height: 40px;
+      color: white;
+      background-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table cellpadding=10 border=0 align=center color=lightgrey>
+    <caption>
+      <h2>
+        <font color=purple size=7>회원가입</font>
+      </h2>
+    </caption>
+
+    <tr>
+      <td>
+        아이디*
+      </td>
+      <td>
+        <input type=text placeholder=" 예: marketcurly12">
+      </td>
+      <td>
+        <input type=button value="중복확인">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        비밀번호*
+      </td>
+      <td>
+        <input type=password placeholder=" 비밀번호를 입력해주세요.">
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        비밀번호 확인*
+      </td>
+      <td>
+        <input type=password placeholder=" 비밀번호를 한 번 더 입력해주세요.">
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        이름*
+      </td>
+      <td>
+        <input type=text placeholder=" 예: 김컬리">
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        이메일*
+      </td>
+      <td>
+        <input type=text placeholder=" 예: marketcurly@curly.com">
+      </td>
+      <td>
+        <input type=button value="이메일 중복확인">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        휴대폰*
+      </td>
+      <td>
+        <input type=text placeholder=" '-'없이 숫자만 입력해주세요.">
+      </td>
+
+      <td>
+        <input type=button value="인증번호받기" disabled>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <input type=text disabled>
+      </td>
+      <td>
+        <input type=button value="인증번호확인" disabled>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        배송주소
+      </td>
+      <td><input type=button value="주소검색" onclick=aa()></td>
+      <td>
+
+      </td>
+    </tr>
+
+
+    </form>
+    </td>
+    </tr>
+  </table>
+
+  <body>

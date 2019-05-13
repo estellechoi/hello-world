@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div,
+    span,
+    b,
+    td {
+      width: 300px;
+      height: 50px;
+      border: 1px solid black;
+      /* text에 테두리 생성 가능 */
+    }
+
+    #aa {
+      text-align: center;
+      /* inline tag는 width, height, text-align 설정 불가능 -> span, b .. */
+      vertical-align: center;
+      /* top, middle, bottom -> table tag에서만 설정 가능 */
+      text-transform: uppercase;
+    }
+
+    #bb {
+      display: flex;
+      /* declare to use flex for displaying align. used for div, li tags*/
+      justify-content: flex-end;
+      /* 좌우 정렬 -> flex-start, center, flex-end */
+      align-items: flex-end;
+      /* 상하 정렬 -> flex-start, center, flex-end */
+      text-transform: capitalize;
+      /* uppercase; lowercase; capitalize;*/
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id=bb> align1 </div>
+  <div id=aa> align2 </div>
+  <span id=aa> align </span>
+  <p>
+    <b id=aa> align </b>
+    <p>
+      <table border=1 width=200 height=50>
+        <tr>
+          <td id=aa> align </td>
+        </tr>
+      </table>
+      <p>
+
+</body>
+
+</html>

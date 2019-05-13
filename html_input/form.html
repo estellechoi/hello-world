@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!--form tag (입력양식 태그)-->
+  <form method=post action=aa.php>
+    <!--form 입력값을 aa.php (서버)로 전송>
+ 	<!--키보드 입력창-->
+
+    ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type=text>
+    <p>
+      Password
+      <input type=password>
+      <p>
+        Comment <p>
+          <textarea cols=40 rows=4> Any comment will be appreciated.</textarea>
+          <p>
+
+            <!--마우스 선택-->
+
+            Gender
+            <input type=radio name=x> Male
+            <input type=radio name=x> Female <p>
+              <!--name이 같은 선택지 중 1개만 선택 가능-->
+
+              Hobby
+              <input type=checkbox> Fishing
+              <input type=checkbox> Reading
+              <input type=checkbox> Gaming
+              <input type=checkbox> Traveling <p>
+                <!--복수선택가능-->
+
+                Age
+                <select>
+                  <option> 10~19 </option>
+                  <option> 20~29 </option>
+                  <option> 30~39 </option>
+                  <option> 40~49 </option>
+                  <option> 50~59 </option>
+                  <option> 60~69 </option>
+                </select>
+                <p>
+
+                  File Upload
+                  <input type=file>
+                  <p>
+
+                    Bottons <p>
+                      <input type=button value="Check" onclick=aaa()>
+                      <p>
+                        <!--javascript 함수 호출용-->
+                        <input type=submit value="Submit">
+                        <p>
+                          <!--입력값을 서버로 전송-->
+                          <input type=reset value="Reset">
+                          <p>
+                            <!--입력값을 원래대로-->
+                            <input type=image src=../img/Tulips.jpg width=50>
+                            <p>
+                              <!--submit과 동일 기능-->
+
+                              <input type=hidden value="?">
+                              <p>
+                                <!-- ????? -->
+
+
+  </form>
+
+  <script>
+    function aaa() {
+      alert("Wrong Button!");
+    }
+  </script>
+
+</body>
+
+</html>

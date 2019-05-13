@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<!--ko, ja, zh(중국어), ru(러시아어), de(독일어)-->
+
+<head>
+  <!--head 태그: 웹페이지 정보, title, CSS, javascript-->
+  <meta charset="UTF-8">
+  <title>Hello world.</title>
+</head>
+
+<body>
+  <!--body 태그: 브라우저에 보일 내용-->
+  <!--JAVA 주석: //-->
+  <!--p 문단바꿈 (한 번 사용)-->
+  <!--br 줄바꿈(반복사용 가능)-->
+  <!--h1 >>> h6-->
+  <h3>1. br & hr tag</h3>
+  <!--block tag-->
+
+  <u>Kimchi</u> <br><br>
+  <!--inline tag-->
+  <u>Egg</U> <br><br>
+  <u>Ham</u>
+  <hr>
+  <!--화면 줄 생김-->
+
+  <h3>2. u, i, ins, del, s, sub, sup, small tags & p tag</h3>
+  <u>Korea</u> <br><br>
+  <u>Japan</u>
+  <p>
+    <!--underlined-->
+    <i>China</i>
+    <p>
+      <!--italic-->
+      <ins>China</ins>
+      <p>
+        <!--underlined-->
+        <!--<sub>China</sub> <p> 
+   <sup>China</sup> <p>-->
+        <del>China</del>
+        <p>
+          <!--deleted-->
+          <s>China</s>
+          <p>
+            <!--deleted-->
+            H<sub>2</sub>O <p>
+              2<sup>n</sup>
+              <p>
+                Hello. <p>
+                  <small>Hello.</small>
+                  <hr>
+                  <!--smaller than before-->
+
+                  <h3>3. List Tags</h3>
+
+                  <!--unordered list-->
+                  <ul type=disc>
+                    <!--ul type=circle/square/disc-->
+                    <li>hello</li>
+                    <li>Hola</li>
+                    <li>Bonjour</li>
+                  </ul>
+
+                  <!--ordered list-->
+                  <ol type=i>
+                    <li>Hello</li>
+                    <li>Hola</li>
+                    <li>Bonjour</li>
+                  </ol>
+                  <hr>
+
+                  <h3>4. Hyper Reference</h3>
+
+                  <!--<a></a>: anchor tag + hyper reference-->
+                  <a href="index.php"> click here to go back home </a>
+                  <p>
+                    <a href="https://www.naver.com"> click here to visit www.naver.com </a>
+                    <p>
+                      <hr>
+                      <!-- <a href="http://address"></a>-->
+
+                      <h3>5. Table Tag</h3>
+
+                      <table width="300" height="200" border="1">
+                        <!--기본값 없으면 표 안보임 / border도 전체 길이에 포함-->
+                        <!--<tag name + 속성 = "속성값">-->
+                        <caption>
+                          <h4>Making a Table</h4>
+                        </caption>
+                        <!--caption : The name of Table-->
+                        <!--&nbsp; 공백-->
+
+                        <tr height="20">
+                          <!--table row 행-->
+                          <td width="100">&nbsp;</td>
+                          <!--table column 열-->
+                          <td width="110">&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+                        <!--the first finished-->
+
+                        <tr>
+                          <!--second row-->
+                          <td>Seoul</td>
+                          <td>Barcelona</td>
+                          <td>Paris</td>
+                        </tr>
+                        <!--the second finished-->
+
+                        <tr>
+                          <!--third row-->
+                          <td>Marrakesh</td>
+                          <td>Bali</td>
+                          <td>Tokyo</td>
+                        </tr>
+                        <!--the third finished-->
+                      </table>
+                      <p>
+                        <hr>
+
+                        <h3>6. Spliting and Combining Cells on a Table</h3>
+
+                        <table cellspacing="0" cellpadding=10 width="300" height="200" border="1" align="center" bgcolor="grey" bordercolor=pink>
+                          <!--cellspacing : cell 간 간격 (border는 전체테두리)-->
+                          <!--cellpadding : cell 벽과 내용 사이의 간격-->
+                          <caption>
+                            <h4>Table A</h4>
+                          </caption>
+
+                          <tr height="20" align="center" bgcolor="lightyellow">
+                            <td width="80">&nbsp;</td>
+                            <th width="80" colspan=3>London</td>
+                              <!--colspan=3 해당 열을 3칸 합친다-->
+                              <!--<th> : <td>+bold+center /*th : table head-->
+                          </tr>
+                          <tr>
+                            <td align=center bgcolor=lightyellow rowspan=3>Seoul</td>
+                            <!--rowspan 해당 행을 3칸 합친다-->
+                            <td align=center bgcolor=grey>Barcelona</td>
+                            <td colspan=2 rowspan=2 align=center><img src="https://cdn-images-1.medium.com/max/1600/1*dv1Uv84_ZUx-BmQgDOXWDw.png" width=100 /> </td>
+                          </tr>
+                          <tr>
+                            <td align=right>Marrakesh</td>
+                          </tr>
+                          <tr>
+                            <td align=right>Marrakesh</td>
+                            <td>Bali</td>
+                            <td>Tokyo</td>
+                          </tr>
+                        </table>
+                        <p>&nbsp;<p>&nbsp;
+
+                            <!--New Table-->
+
+                            <table width=300 height=300 border=1 align=center>
+                              <caption>
+                                <h4>Practice</h4>
+                              </caption>
+
+                              <tr>
+                                <td align=right>Marrakesh</td>
+                                <td>Bali</td>
+                                <td>Tokyo</td>
+                              </tr>
+                              <tr>
+                                <td align=right>Marrakesh</td>
+                                <td>Bali</td>
+                                <td>Tokyo</td>
+                              </tr>
+                              <tr>
+                                <td align=right>Marrakesh</td>
+                                <td>Bali</td>
+                                <td>Tokyo</td>
+                              </tr>
+                              <tr>
+                                <td align=right>Marrakesh</td>
+                                <td>Bali</td>
+                                <td>Tokyo</td>
+                              </tr>
+
+                            </table>
+                            <p>
+                              <hr>
+
+                              <h4>** nbsp & pre Tag</h4>
+
+                              안녕하세요 <p>
+                                안 녕 하 세 요 <p>
+                                  안&nbsp;&nbsp;&nbsp;녕 하세&nbsp;요 <p>
+                                    <pre>안       녕 하 세    요</pre>
+                                    <p>
+                                      <hr>
+
+                                      <h3>7. img Tag</h3>
+
+                                      <!--
+   img src = 이미지 경로
+   img alt = 이미지 없을 때 나오는 글자
+   img width = 이미지 너비
+   img height = 이미지 높이
+   **htdocs 폴더 내에 이미지가 있다면 "파일명.jpg"
+   -->
+
+                                      <img src="img/Tulips.jpg" width=300 alt="Cannot find the image file." align=top> Tulips <p>
+                                        <img src="C:\APM_Setup/Chrysanthemum.jpg" width=300 alt="Cannot find the image file." align=top>
+                                        <!--
+   *하위 폴더에 있을 때 : src="폴더명/Tulips.jpg"
+   *상위 폴더에 있을 때 : src="../Tulips.jpg"
+   *동급 폴더에 있을 때 : src="../폴더명/Tulips.jpg"
+   *현재 폴더에 있을 때 : src="./Tulips.jpg" (리눅스 등에서 사용)
+   -->
+                                        <p>&nbsp;<p>
+                                            <img src="https://cdn-images-1.medium.com/max/1600/1*dv1Uv84_ZUx-BmQgDOXWDw.png" width=300 align=top> Vapor Wave <p>&nbsp;
+                                              <!--align=top/middle/bottom : 그림 Tag에 붙은 글자 상하정렬-->
+                                              <hr>
+
+                                              <h3>8. Next ?</h3>
+
+                                              <p>&nbsp;<p>&nbsp;<p>&nbsp;
+
+</body>
+
+</html>

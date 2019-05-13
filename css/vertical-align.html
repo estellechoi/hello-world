@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      border: 1px solid blue;
+      display: table-cell;
+      /* ???? */
+    }
+
+    #aa1 {
+      vertical-align: top;
+    }
+
+    #aa2 {
+      vertical-align: bottom;
+    }
+
+    #aa3 {
+      vertical-align: middle;
+    }
+
+    #bb1 {
+      vertical-align: sub;
+      /* sub; super; */
+    }
+
+    #bb2 {
+      vertical-align: super;
+    }
+
+    #bb3 {
+      vertical-align: text-top;
+      /* 글자 기준 */
+    }
+
+    #bb4 {
+      vertical-align: text-bottom;
+      /* 글자 기준 */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id=aa1> hello </div>
+  <div id=aa2> hello </div>
+  <div id=aa3> hello </div>
+  <hr>
+  <p> H2O </p>
+  <p> H <span id=bb1>2</span> O </p>
+  <p> 232 * 312 </p>
+  <p> 2<span id=bb2> 32 </span> * 3<span id=bb2>12</span> </p>
+  <p> 학교종이 <img src=a1.jpg width=9 height=9 id=bb3> 땡땡땡
+    <img src=a1.jpg width=9 height=9 id=bb4> 어서모이자 </p>
+
+
+</body>
+
+</html>

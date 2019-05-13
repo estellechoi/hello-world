@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      width: 400px;
+      height: 30px;
+      margin-top: 20px;
+      /* border-style이 없으면 외곽선이 만들어지지 않음 */
+    }
+
+    #aa1 {
+      border-color: red;
+      border-style: dotted;
+      border-width: 2px;
+      /* border-width -> px 을 많이 사용하는 편 */
+    }
+
+    #aa2 {
+      border-color: red blue;
+      /* red 상하, blue 좌우 */
+      border-style: dashed;
+      border-width: 10px;
+    }
+
+    #aa3 {
+      border-color: orange yellow green pink;
+      /* 상 -> 시계방향 */
+      border-style: solid;
+      border-width: thick;
+      /* medium; thin; */
+    }
+
+    #aa4 {
+      border: 3px double green;
+      /* width,style,color */
+      border-style: double;
+      border-width: 10px 20px;
+      /* 10px 상하, 20px 좌우 */
+    }
+
+    #aa5 {
+      border-style: groove;
+      /* 선을 진하게 ..? */
+      border-color: green;
+      border-width: 10px 20px 30px 40px;
+      /* 상 -> 시계방향 */
+    }
+
+    #aa6 {
+      border-style: ridge;
+      border-color: green;
+      border-radius: 10px;
+    }
+
+    /*border ridged*/
+
+    #aa7 {
+      border-style: inset;
+      border-color: green;
+      border-radius: 40px;
+    }
+
+    #aa8 {
+      border-style: outset;
+      border-color: green;
+      border-radius: 10px 40px;
+      /* (좌상, 우하) (우상, 좌하)
+      px값은 원의 반지름으로 계산하여 표현 */
+    }
+
+    #aa9 {
+      border-style: dotted dashed solid double;
+      border-color: green;
+      border-radius: 10px 20px 30px 40px;
+    }
+
+    #aa10 {
+      border-style: hidden;
+      border-color: green;
+    }
+
+    #aa11 {
+      border-style: none;
+      border-color: green;
+    }
+
+    /* 상 -> 시계방향 */
+  </style>
+
+<body>
+
+  <div id=aa1> border-color: red; </div>
+  <div id=aa2> border-color: red blue; </div>
+  <div id=aa3> border-color: red yellow green purple; </div>
+  <div id=aa4> border: 1px solid green; </div>
+  <div id=aa5> border-style: groove; </div>
+  <div id=aa6> border-style: ridge; </div>
+  <div id=aa7> border-style: inset; </div>
+  <div id=aa8> border-style: outset; </div>
+  <div id=aa9> border-style: none; </div>
+  <div id=aa10> border-style: hidden; </div>
+  <div id=aa11> border-style: dotted dashed solid double; </div>
+
+
+</body>
+
+</html>
+<!--border style
+
+<h1>border-spacing : 테이블 테두리 간격 <br> </h1>
+
+<h3> 1. border-spacing 생략 </h3>
+<table width=200 height=100 border=1>
+  <tr>
+    <td> 안녕하세요 </td>
+    <td> 호호 </td>
+  </tr>
+  <tr>
+    <td> 감사합니다 </td>
+    <td> 하하 </td>
+  </tr>
+</table>
+
+<hr>
+<h3> 2. 테이블 속성 : cellspacing=10 </h3>
+<table width=200 height=100 border=1 cellspacing=10>
+  <tr>
+    <td> 안녕하세요 </td>
+    <td> 호호 </td>
+  </tr>
+  <tr>
+    <td> 감사합니다 </td>
+    <td> 하하 </td>
+  </tr>
+</table>
+
+<hr>
+<h3> 3. border-spacing : 10px; </h3>
+<table width=200 height=100 border=1 style="border-spacing : 10px;">
+  <tr>
+    <td> 안녕하세요 </td>
+    <td> 호호 </td>
+  </tr>
+  <tr>
+    <td> 감사합니다 </td>
+    <td> 하하 </td>
+  </tr>
+</table>
+
+
+border outline
+
+
+<meta charset="utf-8">
+
+<style>
+  div {
+    width: 200px;
+    height: 200px;
+    border: 5px solid yellow;
+  }
+
+  #aa1 {
+    outline-style: dotted;
+    outline-color: black;
+    outline-width: 1px;
+  }
+
+  #aa2 {
+    outline-style: dashed;
+    outline-color: black;
+    outline-width: 5px;
+    /* outline-offset:10px;  브라우저에 따라 다름 */
+  }
+
+  #aa3 {
+    outline: 4px double blue;
+  }
+</style>
+<h1> 외곽선 밖 <br> </h1>
+<div id=aa1>
+  outline-style:dotted; <br>
+  outline-color:black; <br>
+  outline-width:1px;
+</div>
+<p>
+  <div id=aa2>
+    outline-style:dashed; <br>
+    outline-color:black; <br>
+    outline-width:5px;
+  </div>
+  <p>
+    <div id=aa3> outline:4px double blue; </div>
+
+
+  border collapse
+
+
+    <meta charset="utf-8">
+
+
+    <h1> border-collapse : 테이블 테두리 분리 <br> </h1>
+
+    <h3> 1. border-collapse:separate (생략한거랑 동일함) </h3>
+    <table width=200 height=100 border=1 style="border-collapse:separate">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <hr>
+    <h3> 2. 테이블 속성에 있는 cellspacing=0 </h3>
+    <table width=200 height=100 border=1 cellspacing=0>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <hr>
+    <h3> 3. border-collapse:collapse </h3>
+    <table width=200 height=100 border=1 style="border-collapse:collapse">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+
+  border calculate
+
+
+    <meta charset="utf-8">
+
+    <style>
+      #aa1 {
+        width: 300px;
+        height: 100px;
+        padding: 10px;
+        border: 10px solid blue;
+      }
+    </style>
+    <h1> 박스의 width, height</h1>
+    <h2 style="color:red">
+      width:300px; <br>
+      height:100px; <br>
+      padding:10px; <br>
+      border:10px solid blue; <br>
+      <span style="color:blue">box의 width</span> : 300px + 20px(left,right padding) + 20px(left,right border) = 340px; <br>
+      <span style="color:blue">box의 height</span> : 100px + 20px(left,right padding) + 20px(left,right border) = 140px;
+    </h2>
+    <div id=aa1></div>
+     -->

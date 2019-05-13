@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+ <form method=get action=aa.php>
+ 주소에 노출
+ <form method=post action=aa.php>
+ 정보 노출되면 안될 때
+
+ <a href="aa.php?aa=11&bb=33"> hahahaha </a>
+ 파일명 ? 전송되는 값의 내용
+
+ ***중요한 정보는 절대 get method로 보내면 안됨 ! 주소창에 나타나기 때문 ***
+ -->
+
+  <!--
+ <form name=""> : 현재문서 내에서 자바스크립트 호출
+                  jsp, php 문서에서 읽어오는 이름
+ -->
+
+  <form method=post action=aa.php>
+    Name <input type=text name=name>
+    <p>
+      Age <input type=text name=age>
+      <p>
+        <input type=submit value=Submit>
+
+</body>
+
+</html>
+
+<!--PHP 파일 별도로 필요 / 파일명 : aa.php
+<?
+	echo $_POST["name"];
+	echo $_POST["age"];
+?>
+-->

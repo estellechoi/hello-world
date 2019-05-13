@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    table {
+      border: 1px solid #D1B2FF;
+    }
+
+    td {
+      text-transform: capitalize;
+      color: #4C4C4C;
+      border: 1px solid #D1B2FF;
+    }
+
+    div {
+      width: 120px;
+      height: 60px;
+      border: 1px solid #D1B2FF;
+      /* div에 border size, 실선, border color*/
+
+    }
+
+    #aa2 {
+      overflow: auto;
+      /* hidden, scroll, auto */
+    }
+
+    #aa3 {
+      overflow: hidden;
+    }
+
+    #aa4 {
+      overflow: scroll;
+    }
+  </style>
+
+</head>
+
+<body>
+  <table width=1000 border=1 cellspacing=0>
+    <caption>
+      <h3> </h3>
+    </caption>
+    <tr align=center style="color:#eeeeee;background:#D1B2FF;font-size:20px">
+      <td> overflow </td>
+      <td> nothing </td>
+      <td> auto </td>
+      <td> hidden </td>
+      <td> scroll </td>
+    </tr>
+    <tr align=center height=200>
+      <td> text </td>
+      <td>
+        <div>
+          Hello world. Hello humans ! This is my first try to use overflow.
+        </div>
+      </td>
+      <td>
+        <div id=aa2>
+          Hello world. Hello humans ! This is my first try to use overflow.
+        </div>
+      </td>
+      <td>
+        <div id=aa3>
+          Hello world. Hello humans ! This is my first try to use overflow.
+        </div>
+      </td>
+      <td>
+        <div id=aa4>
+          Hello world. Hello humans ! This is my first try to use overflow.
+        </div>
+      </td>
+    </tr>
+    <tr align=center height=200>
+      <td> image </td>
+      <td>
+        <div>
+          <img src=rainbow.jpg width=150>
+        </div>
+      </td>
+      <td>
+        <div id=aa2>
+          <img src=rainbow.jpg width=150>
+        </div>
+      </td>
+      <td>
+        <div id=aa3>
+          <img src=rainbow.jpg width=150>
+        </div>
+      </td>
+      <td>
+        <div id=aa4>
+          <img src=rainbow.jpg width=150>
+        </div>
+      </td>
+    </tr>
+    <tr align=center>
+      <td> &nbsp; </td>
+      <td> do nothing for overflow </td>
+      <td> automatically cut the overed </td>
+      <td> Make the overed hidden </td>
+      <td> use scroll to see the overed </td>
+    </tr>
+  </table>
+
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    h1 {
+      color: #FF00DD;
+      font-style: italic;
+    }
+
+    h3 {
+      color: #4C4C4C;
+      font-style: italic;
+    }
+
+    caption {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 50px;
+      color: #D1B2FF;
+    }
+
+    table,
+    td {
+      border: 1px solid #FF00DD;
+      text-align: center;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1 align=center> caption-side </h1>
+  <hr>
+  <!--br: enter 2번 // p: enter 1번--->
+
+  <!--caption isde omit 생략-->
+  <h3> caption-side : omit; </h3>
+  <table width=200 height=100>
+    <caption> Caption </caption>
+    <tr>
+      <td> AAAAAAA </td>
+      <td> AAA </td>
+    </tr>
+    <tr>
+      <td> AAAAAAA </td>
+      <td> AAA </td>
+    </tr>
+  </table>
+
+  <hr>
+  <h3> caption-side : top; </h3>
+  <table width=200 height=100 style="caption-side:top">
+    <caption> Caption </caption>
+    <tr>
+      <td> AAAAAAA </td>
+      <td> AAA </td>
+    </tr>
+    <tr>
+      <td> AAAAAAA </td>
+      <td> AAA </td>
+    </tr>
+  </table>
+
+  <hr>
+  <h3> caption-side : bottom; </h3>
+  <table width=200 height=100 style="caption-side:bottom">
+    <caption> Caption </caption>
+    <tr>
+      <td> AAAAAAA </td>
+      <td> AAA </td>
+    </tr>
+    <tr>
+      <td> AAAAAAA </td>
+      <td> AAA </td>
+    </tr>
+  </table>
+</body>
+
+</html>

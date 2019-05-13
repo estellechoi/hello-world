@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /*
+    margin : 브라우저-tag 사이 간격
+    padding : tag 테두리와 내용 사이 간격
+    */
+    #aa {
+      width: 300px;
+      height: 300px;
+      background: red;
+      float: left;
+      margin: 10px;
+      border: 10px solid blue;
+    }
+
+    .bb {
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      float: left;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .cc {
+      clear: both;
+      width: 100px;
+      height: 100px;
+      background: yellow;
+    }
+  </style>
+
+<body>
+  <div id=aa>
+    <div style="margin:10px" class=bb>전체</div>
+    <div class=bb></div>
+    <div class=cc></div>
+  </div>
+  <div id=aa>
+    <div style="margin:10px 20px" class=bb> 상하,좌우</div>
+    <div class=bb></div>
+    <div class=cc></div>
+  </div>
+  <div id=aa>
+    <div style="margin:10px 20px 30px" class=bb> 상,좌우,하</div>
+    <div class=bb></div>
+    <div class=cc></div>
+  </div>
+  <div id=aa>
+    <div style="margin:10px 20px 30px 40px" class=bb> 상,우,하,좌</div>
+    <div class=bb></div>
+    <div class=cc></div>
+  </div>
+</body>
+
+</html>

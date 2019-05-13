@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<!-- CSS background-repeat: no-repeat; -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 200px;
+      text-align: center;
+    }
+
+    table {
+      width: 400px;
+      height: 370px;
+      text-align: center;
+    }
+
+    #a {
+      background-image: url(img/green.jpg);
+    }
+
+    #b {
+      background-image: url(rainbow.jpg);
+      background-size: 100%;
+    }
+
+    .aa {
+      background-image: url(img/green.jpg);
+      background-size: 200%;
+      /*width에 맞춰짐*/
+    }
+
+    .bb {
+      background-image: url(rainbow.jpg);
+      background-size: 250%;
+      align: right;
+    }
+
+    .cc {
+      background-image: url(img/green.jpg);
+      background-size: 100px;
+      background-repeat: repeat;
+    }
+
+    .dd {
+      background: #eeeeee;
+      background-image: url(rainbow.jpg);
+      background-size: 100px;
+      background-repeat: repeat;
+      /*
+      repeat;
+      repeat-x;
+      repeat-y;
+      */
+    }
+  </style>
+
+<body>
+  <div id=a> first </div>
+  <div id=b> second </div>
+  <table border=0>
+    <caption> color table </caption>
+    <tr>
+      <td width=200 class=aa> green </td>
+      <td class=bb> rainbow </td>
+    </tr>
+    <tr>
+      <td class=cc> green </td>
+      <td class=dd> rainbow </td>
+    </tr>
+
+  </table>
+
+</body>
+
+</html>
