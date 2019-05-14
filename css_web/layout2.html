@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- http://192.168.0.11/shop/align.html -->
+  <!-- 페이지를 라인 개념으로 나눈다 layout의 기본-->
+  <meta charset="UTF-8">
+  <style>
+    .dd {
+      width: 100px;
+      height: 40px;
+      border: 1px solid black;
+    }
+
+    #dd1 {
+      display: inline-block;
+    }
+
+    #dd2 {
+      float: left;
+    }
+
+    #bb {
+      height: 45px;
+    }
+
+    #cc {
+
+      display: flex;
+      /* 부모 div 태그에 적용*/
+      /* flex-direction: row-reverse; */
+    }
+  </style>
+</head>
+
+<body>
+  <div id=aa>
+    <div class=dd id=dd1> Airbnb </div>
+    <div class=dd id=dd1> Facebook </div>
+    <div class=dd id=dd1> Netflix </div>
+  </div>
+  <hr>
+  <div id=bb>
+    <div class=dd id=dd2> Airbnb </div>
+    <div class=dd id=dd2> Facebook </div>
+    <div class=dd id=dd2> Netflix </div>
+  </div>
+  <hr style="clear: both">
+  <div id=cc>
+    <div class=dd id=dd3> Airbnb </div>
+    <div class=dd id=dd3> Facebook </div>
+    <div class=dd id=dd3> Netflix </div>
+  </div>
+</body>
+
+</html>

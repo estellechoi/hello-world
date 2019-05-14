@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #ment {
+      width: 1000px;
+      height: 40px;
+      background: #353535;
+      margin: auto;
+      /* 중앙정렬 */
+      color: white;
+      /* 그림판에서 캡쳐본 열고 포인터로 색편집 -> RGU 3개 값을 Dec - Hex 변환 */
+      display: flex;
+      /* ⓐ display: flex; 자식태그들의 한줄 정렬 */
+    }
+
+    /*
+    "자손선택자 / 후손선택자"
+    <div> 부모
+      <span></span> 자식1
+      <span><b></b> 손자 </span> 자식2
+    <div>
+    *자손선택자
+      div > span {} : div 내 span1, span2
+    *후손선택자
+      div span {} : div 내 span1, span2, b
+    */
+    #ment #hello {
+      width: 970px;
+      height: 40px;
+      /* ⓑ display: flex; 내부 텍스트 정렬하겠다 선언 */
+      /* text-align: center; -> flex 사용시 안먹음 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    #ment #x {
+      width: 30px;
+      height: 40px;
+      border: 1px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #signin {
+      width: 1000px;
+      height: 40px;
+      background: none;
+      margin: auto;
+      display: flex;
+      font-size: 12px;
+      /* 자식 태그 정렬 flex 하겠다 (1줄로 태그정렬)선언 -> float로 배치*/
+    }
+
+    #signin #help {
+      width: 500px;
+      height: 40px;
+      /* 블럭 정렬 */
+      float: left;
+      /* 텍스트 정렬 */
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    #signin #help span {
+      border: 1px solid black;
+      border-radius: 7px;
+      padding: 2px;
+    }
+
+    #signin #sign {
+      width: 500px;
+      height: 40px;
+      /* 블럭 정렬 */
+      float: right;
+      /* 텍스트 정렬 */
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    #logo {
+      width: 1000px;
+      height: 100px;
+      background: white;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #menu {
+      width: 1000px;
+      height: 50px;
+      background: none;
+      margin: auto;
+    }
+
+    #menu #list li {
+      /* 동글이 없애기 */
+      list-style-type: none;
+      float: left;
+      width: 130px;
+      height: 50px;
+      font-weight: bold;
+      color: #353535;
+      /* 텍스트 정렬 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #menu #list li:first-child {
+      width: 140px;
+      height: 50px;
+    }
+
+    #menu #list #searchspace {
+      display: flex;
+      justify-content: flex-start;
+      /* 왜 플렉스 start 임 ????? */
+    }
+
+    #menu #list #search {
+      border-radius: 20px;
+      padding: 10px;
+      background: #eeeeee;
+      border: 0px;
+    }
+
+    #menu #list #cart {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    #img {
+      width: 1000px;
+      height: 250px;
+      margin: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+    }
+
+    #products {
+      width: 1000px;
+      height: 420px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    #products table {
+      table-layout: fixed;
+      /* 테이블 셀 크기 고정 !!!!*/
+    }
+
+    #products caption {
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      color: #353535;
+      line-height: 40px;
+    }
+
+    #products #productsimg td {
+      text-align: center;
+    }
+
+
+    #products #price td {
+      font-size: 13px;
+      font-style: italic;
+      line-height: 20px;
+      word-break: break-all;
+      /* breack-all; normal;*/
+    }
+
+    #footer {
+      width: 1000px;
+      height: 300px;
+      background: #353535;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id=ment>
+    <div id=hello> 지금 가입하고 인기상품 100원에 받아가세요 ! > </div>
+    <div id=x> ⓧ </div>
+  </div>
+  <div id=signin>
+    <div id=help> <span> 서울·수도권 이외 지역 택배배송 > </span> </div>
+    <div id=sign> 회원가입 | 로그인 | 고객센터 | 배송지역 검색 </div>
+  </div>
+  <div id=logo>
+    <img src="logo_curly.png"> <!-- 로고 이미지 -->
+  </div>
+  <div id=menu>
+    <ul id=list>
+      <li> Categories </li>
+      <li> New Arrival </li>
+      <li> Bestseller </li>
+      <li> Hot Deal </li>
+      <li> Event </li>
+      <li id=searchspace>
+        <input type=text size=13 placeholder="감사의 달" id=search>
+        <img src="search.png">
+      </li>
+      <li id=cart> <img src="cart.png"> </li>
+    </ul>
+  </div>
+  <div id=img>
+    <img src="main_img.png" width=1000px> <!-- 전체 이미지 -->
+  </div>
+  <div id=products>
+    <table width=910 height=325 border=0>
+      <caption> 이 상품 어때요 ? </caption>
+      <tr id=productsimg>
+        <td> <img src="pro3.png"> </td>
+        <td> <img src="pro3.png"> </td>
+        <td> <img src="pro3.png"> </td>
+        <td> <img src="pro3.png"> </td>
+      </tr>
+      <tr id=price>
+        <td valign=top> sample11111111111111111111111111111111111 <br> $ 10 </td>
+        <td> sample 2 <br><br> $ 20 </td>
+        <td> sample 3 <br><br> $ 25 </td>
+        <td> sample 4 <br><br> $ 33 </td>
+      </tr>
+    </table>
+  </div>
+  <div id=footer> </div>
+</body>
+
+</html>
