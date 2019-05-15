@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .headbar {
+      margin: auto;
+      width: 1238px;
+      height: 450px;
+      background: #ff5500;
+    }
+
+    .search {
+      margin: auto;
+      width: 1238px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .search #input {
+      background: #eeeeee;
+      width: 600px;
+      height: 45px;
+      border-radius: 5px;
+      display: flex;
+    }
+
+    .search #input #inputtext {
+      margin-left: 10px;
+      background: #eeeeee;
+      border-width: 0px;
+      line-height: 35px;
+      float: left;
+    }
+
+    .search #input #inputbutton {
+      margin-left: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      line-height: 30px;
+      border: 0px solid #eeeeee;
+      background: #eeeeee;
+      /* 버튼 높이 왜 못 줄여? */
+    }
+
+    .search #or {
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      font-size: 17px;
+      font-family: arial;
+    }
+
+    .search #upload {
+      width: 170px;
+      line-height: 40px;
+      border: 0px solid #ff5500;
+      border-radius: 5px;
+      background: #ff5500;
+      color: white;
+      font-size: 15px;
+    }
+
+    .recomen {
+      margin: auto;
+      width: 1238px;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .recomen #table caption {
+      margin-top: 20px;
+      height: 50px;
+      font-size: 23px;
+    }
+
+    .recomen #table td {
+      width: 180px;
+    }
+
+    .recomen #table #pic {
+      height: 180px;
+      text-align: center;
+    }
+
+    .recomen #table #info td {
+      height: 65px;
+      vertical-align: baseline;
+    }
+
+    .recomen #table #info td #title {
+
+      font-size: 14px;
+    }
+
+    .recomen #table #info td #user {
+      font-size: 11px;
+      color: darkgrey;
+    }
+
+    .explore {
+      margin: auto;
+      width: 1238px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .explore button {
+      background: #ff5500;
+      border-radius: 5px;
+      border: 0px solid #ff5500;
+      width: 250px;
+      height: 45px;
+      color: white;
+      font-size: 17px;
+    }
+
+    .mobile {
+      margin: auto;
+      width: 1238px;
+      height: 448px;
+    }
+
+    .creator {
+
+      margin: auto;
+      width: 1238px;
+      height: 347px;
+    }
+
+    .join {
+      margin: auto;
+      width: 1238px;
+      height: 300px;
+    }
+
+    .join #a {
+      margin-top: 20px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+    }
+
+    .join #b {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 23px;
+    }
+
+    .join #c {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .join #c button {
+      height: 45px;
+      width: 200px;
+      background: #ff5500;
+      border: 0px solid #ff5500;
+      border-radius: 5px;
+      color: white;
+      font-size: 17px;
+    }
+
+    .join #d {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .join #d button {
+      height: 40px;
+      width: 100px;
+      margin-left: 20px;
+      border: 1px solid #eeeeee;
+      border-radius: 5px;
+      background: none;
+      font-size: 14px;
+    }
+
+    .footer {
+      height: 50px;
+      border: 1px solid green;
+      margin: auto;
+      width: 1238px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class=headbar> <img src="soundcloud.png"></div>
+  <div class=search>
+    <div id=input>
+      <input id=inputtext type=text size=70 placeholder="Search for artists, bands, tracks, podcasts">
+      <button id=inputbutton> <img src="soundsearch.png"> </button>
+    </div>
+    <div id=or> or </div>
+    <button id=upload> Upload your own </button>
+  </div>
+  <div class=recomen>
+    <table id=table width=1180 border=0>
+      <caption> Hear what’s trending for free in the SoundCloud community </caption>
+      <tr id=pic>
+        <td> <img src="music1.png"> </td>
+        <td> <img src="music2.png"> </td>
+        <td> <img src="music3.png"> </td>
+        <td> <img src="music4.png"></td>
+        <td> <img src="music5.png"></td>
+        <td> <img src="music6.png"></td>
+      </tr>
+      <tr id=info>
+        <td>
+          <div id=title>Old Town Road (I Got The H </div>
+          <div id=user>Lil Nas X</div>
+        </td>
+        <td>
+          <div id=title>Robbery</div>
+          <div id=user>Juice WRLD</div>
+        </td>
+        <td>
+          <div id=title> YNW MELLY </div>
+          <div id=user>Ynw Melly</div>
+        </td>
+        <td>
+          <div id=title>Polo G feat. Lil TJay</div>
+          <div id=user>POLO G</div>
+        </td>
+        <td>
+          <div id=title>Polo G - Pop Out fit Lil TJ</div>
+          <div id=user>POLO G</div>
+        </td>
+        <td>
+          <div id=title>Wrong </div>
+          <div id=user>Luh Kel</div>
+        </td>
+      </tr>
+      <tr id=pic>
+        <td> <img src="music7.png"></td>
+        <td> <img src="music8.png"></td>
+        <td> <img src="music9.png"></td>
+        <td> <img src="music10.png"></td>
+        <td> <img src="music11.png"></td>
+        <td></td>
+      <tr id=info>
+        <td>
+          <div id=title>Mixed Personalities feat.K </div>
+          <div id=user>Ynw Melly</div>
+        </td>
+        <td>
+          <div id=title>No Friends </div>
+          <div id=user>HappyBirthdayCalvin</div>
+        </td>
+        <td>
+          <div id=title>Lil TJay - Ruthless </div>
+          <div id=user>Lil Tjay</div>
+        </td>
+        <td>
+          <div id=title>Swervin feat. 6ix9ine </div>
+          <div id=user>A BOOGIE WIT DA HOODIE</div>
+        </td>
+        <td>
+          <div id=title>Litl Tjay - Brothers </div>
+          <div id=user>Lil Tjay</div>
+        </td>
+        <td> </td>
+      </tr>
+      </tr>
+    </table>
+  </div>
+  <div class=explore> <button> Explore trending playlists </button></div>
+  <div class=mobile> <img src="mobile.png"></div>
+  <div class=creator> <img src="creators.png"></div>
+  <div class=join>
+    <div id=a> Thanks for listening. Now join in. </div>
+    <div id=b>Save tracks, follow artists and build playlists. All for free.</div>
+    <div id=c><button>Create account</button></div>
+    <div id=d>Already have an account? <button>Sign in</button></div>
+  </div>
+  <div class=footer>
+    <br>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+  </div>
+
+
+</body>
+
+</html>
