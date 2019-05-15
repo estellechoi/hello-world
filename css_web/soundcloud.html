@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <title>SoundCloud – Listen to free music and podcasts on SoundCloud</title>
   <meta charset="UTF-8">
   <style>
     .headbar {
@@ -166,7 +167,7 @@
       align-items: center;
     }
 
-    .join #c button {
+    .join #c .arrow {
       height: 45px;
       width: 200px;
       background: #ff5500;
@@ -174,6 +175,10 @@
       border-radius: 5px;
       color: white;
       font-size: 17px;
+    }
+
+    .join #c .arrow:hover {
+      padding-right: 25px;
     }
 
     .join #d {
@@ -184,7 +189,7 @@
       font-size: 12px;
     }
 
-    .join #d button {
+    .join #d .signbutton {
       height: 40px;
       width: 100px;
       margin-left: 20px;
@@ -194,12 +199,46 @@
       font-size: 14px;
     }
 
+    .join #d .signbutton:hover {
+      border: 1px solid darkgrey;
+    }
+
     .footer {
-      height: 50px;
-      border: 1px solid green;
       margin: auto;
       width: 1238px;
-      height: 200px;
+      height: 30px;
+      display: flex;
+    }
+
+    .footer a {
+      margin-left: 10px;
+      color: darkgrey;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .lang {
+      margin: auto;
+      width: 1238px;
+      height: 150px;
+    }
+
+    .lang a {
+      margin-left: 10px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .lang a #blue {
+      color: blue;
+    }
+
+    .lang a #black {
+      color: black;
+    }
+
+    .lang a:visited {
+      color: inherit;
     }
   </style>
 </head>
@@ -290,24 +329,26 @@
   <div class=join>
     <div id=a> Thanks for listening. Now join in. </div>
     <div id=b>Save tracks, follow artists and build playlists. All for free.</div>
-    <div id=c><button>Create account</button></div>
-    <div id=d>Already have an account? <button>Sign in</button></div>
+    <div id=c><button class=arrow>Create account</button></div>
+    <div id=d>Already have an account? <button class=signbutton>Sign in</button></div>
   </div>
   <div class=footer>
     <br>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-
+    <a href="#top"> Popular searches </a>
+    <a href="#top"> Directory</a>
+    <a href="#top"> About us</a>
+    <a href="#top"> Blog</a>
+    <a href="#top"> Jobs</a>
+    <a href="#top"> Developers</a>
+    <a href="#top"> Help</a>
+    <a href="#top"> Legal</a>
+    <a href="#top"> Privacy</a>
+    <a href="#top"> Cookies </a>
+    <a href="#top"> Imprint </a>
+    <a href="#top"> Charts</a>
+  </div>
+  <div class=lang>
+    <a href="javascript:alert('NA!');"> <span id=blue>Language:</span> <span id=black>English (US)</span> </a>
   </div>
 
 
