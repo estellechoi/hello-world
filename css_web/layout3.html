@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>layout</title>
+  <meta charset="UTF-8">
+  <style>
+    #aa {
+      margin: auto;
+      width: 320px;
+      height: 50px;
+      border: 1px solid black;
+    }
+
+    #aa #left {
+      margin-left: 10px;
+      width: 150px;
+      height: 50px;
+      border: 1px solid green;
+      float: left;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      /*display: inline-block; */
+      /* table-cell; 텍스트 상하 정렬(vertical-align 하겠다) */
+      /* vertical-align: top; middle; bottom;*/
+      /*
+      display: table-cell;
+      vertical-align: middle;
+      text-align: left;
+      */
+    }
+
+    #aa #right {
+      margin-right: 10px;
+      width: 146px;
+      height: 50px;
+      border: 1px solid red;
+      float: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      /*display: inline-block; */
+      /*
+      display: table-cell;
+      vertical-align: middle;
+      text-align: right;
+      */
+    }
+  </style>
+
+<body>
+  <div id=aa>
+    <div id=left>LEFT</div>
+    <div id=right>RIGHT</div>
+  </div>
+
+</body>
+
+</html>
