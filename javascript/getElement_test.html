@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <script>
+    function aa() {
+      // document.all.test1.style.border = "1px solid lime";
+      var input = document.getElementsByTagName("input");
+      input[0].style.background = "grey";
+      input[0].style.color = "lime";
+      var t1 = document.getElementById("test1");
+      t1.style.borderRadius = "50px";
+      t1.style.background = "lime";
+      t1.style.fontStyle = "italic";
+      t1.style.width = "600px";
+      t1.style.margin = "auto";
+    }
+
+    function bb() {
+      var input = document.getElementsByTagName("input");
+      input[1].style.background = "grey";
+      input[1].style.color = "pink";
+      var t2 = document.getElementById("test2");
+      t2.style.width = "600px";
+      t2.style.margin = "auto";
+      t2.style.background = "pink";
+
+    }
+
+    function cc() {
+      var input = document.getElementsByTagName("input");
+      input[2].style.background = "grey";
+      input[2].style.color = "yellow";
+
+    }
+
+    function dd() {
+      var input = document.getElementsByTagName("input");
+      input[3].style.background = "grey";
+      input[3].style.color = "lightblue";
+
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" onclick="aa()" value="1">
+  <div id=test1> Shortly after moving to San Francisco in October 2007, </div>
+  <p>
+    <input type="button" onclick="bb()" value="2">
+    <div id=test2> roommates and former schoolmates Brian Chesky and Joe Gebbia </div>
+    <p>
+      <input type="button" onclick="cc()" value="3">
+      <div id=test3> could not afford the rent for their loft apartment. </div>
+      <p>
+        <input type="button" onclick="dd()" value="4">
+        <div id=test4> Chesky and Gebbia came up with the idea </div>
+        <p>
+
+
+
+</body>
+
+</html>

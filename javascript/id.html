@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <script>
+    function aaa() {
+      document.all.the[0].style.color = "lime";
+      document.all.the[1].style.color = "red";
+      document.all.the[2].style.color = "pink";
+      //document.all 생략 가능 여기서만 !
+      the[3].style.color = "lightblue";
+    }
+
+    function bbb() {
+      document.getElementById("the").style.color = "lime";
+      // cannot use arrays.
+      // document. 생략 불가
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" onclick="aaa()" value="id 접근 (all.id[i])">
+  <input type="button" onclick="bbb()" value="id 접근(getElementById(id) )">
+  <p>
+    <span id=the>The company's name is </span>
+    <p>
+      <span id=the>a shortened version of its original name, AirBedandBreakfast.com; </span>
+      <p>
+        <span id=the>the company got its start</span>
+        <p>
+          <span id=the> after its founders put an air mattress in their living room and turned their apartment into a bed and breakfast.</span>
+          <p>
+</body>
+
+</html>
