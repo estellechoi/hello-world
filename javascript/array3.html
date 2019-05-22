@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      width: 600px;
+      margin: auto;
+    }
+  </style>
+  <script>
+    function ggg() {
+      // ※같은 name이 2개면 자동으로 배열로 인식함
+      alert(document.member.sex.value);
+      alert(document.member.hobby[0].value);
+      alert(document.member.year.value);
+      // 새로입력한 값으로 바뀌어 출력됨: 유진 → ?
+      alert(document.member.name.value);
+    }
+  </script>
+</head>
+
+<body>
+
+  <form name="member" method="post" action="array3.php">
+    <p>User name <input type="text" name="name" value="유진">
+      <p> Password &nbsp;
+        <input type="password" name="pw" placeholder="********">
+        <p> Sex
+          <!-- name="sex" 여러 개 → 배열로 인식-->
+          <input type="radio" name="sex" value="Male"> Male
+          <input type="radio" name="sex" value="Female"> Female
+          <p> Hobby
+            <!-- name="hobby" 여러 개 → 배열로 인식-->
+            <input type="checkbox" name=hobby value="0"> Travel
+            <input type="checkbox" name=hobby value="1"> Fishing
+            <input type="checkbox" name=hobby value="2"> Reading
+            <input type="checkbox" name=hobby value="3"> Excercise
+            <p> Date of Birth
+              <!-- name="year" 1개 → 선택된 값을 가져옴-->
+              <select name="year">
+                <option value="2010"> 2010 </option>
+                <option value="2011"> 2011 </option>
+                <option value="2012"> 2012 </option>
+                <option value="2013"> 2013 </option>
+                <option value="2014"> 2014 </option>
+                <option value="2015"> 2015 </option>
+                <option value="2016"> 2016 </option>
+                <option value="2017"> 2017 </option>
+                <option value="2018"> 2018 </option>
+              </select>
+              <p> Comment <p>
+                  <!-- textarea는 value가 아니라 .. ?-->
+                  <textarea name="comment" cols="30" rows="4"> Thank you. </textarea>
+                  <p>
+                    <input type="button" value="Click" onclick=ggg()>
+
+
+  </form>
+
+  <!--<form name="test">
+    <input type="text" name="n1">
+    <input type="text" name="n2">
+    <input type="button" value="Click" onclick=test()>
+  </form>
+  <form name="personal">
+    ///////////////// 여기서 n1,n2는 다른 form의 n1,n2와는 다른 변수
+  <input type="text" name="n1">
+  <input type="text" name="n2">
+  </form>
+  -->
+</body>
+
+</html>

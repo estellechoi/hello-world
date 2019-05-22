@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      margin: auto;
+      width: 400px;
+      font-weight: bold;
+      font-style: italic;
+      color: red;
+    }
+
+    input {
+      margin: auto;
+      background: #5D5D5D;
+      border: 1px solid red;
+      color: lightyellow;
+      height: 30px;
+    }
+
+    #button {
+      border-radius: 50px;
+    }
+  </style>
+  <script>
+    // 함수 안에서 생성된 변수 a,b,re는 그 함수 안에서만 존재하고 사라짐
+    // 다른 함수에서 a,b,re 변수를 쓰더라도 완전히 다른 변수임
+    function cal1() {
+      var a = parseInt(document.aa.n1.value);
+      var b = parseInt(document.aa.n2.value);
+      var re = a + b;
+      // alert("The sum is " + sum);
+      // form tag에 출력
+      document.aa.result1.value = re;
+    }
+
+    function cal2() {
+      var a = parseInt(document.aa.m1.value);
+      var b = parseInt(document.aa.m2.value);
+      var re = a - b;
+      document.aa.result2.value = re;
+    }
+
+    function cal3() {
+      var a = parseInt(document.aa.o1.value);
+      var b = parseInt(document.aa.o2.value);
+      var re = a * b;
+      document.aa.result3.value = re;
+    }
+
+    function cal4() {
+      var a = parseInt(document.aa.p1.value);
+      var b = parseInt(document.aa.p2.value);
+      var re = a / b;
+      document.aa.result4.value = re;
+    }
+
+    // 배열을 이용해보자 !
+    // ※매개변수에 자료형 생략하고 변수명만 !!!
+    function cal5(n) {
+      var a = parseInt(document.aa.v1.value);
+      var b = parseInt(document.aa.v2.value);
+      var re = [a + b, a - b, a * b, a / b];
+
+      switch (n) {
+        case 1:
+          document.aa.result5.value = re[0];
+          break;
+        case 2:
+          document.aa.result5.value = re[1];
+          break;
+        case 3:
+          document.aa.result5.value = re[2];
+          break;
+        case 4:
+          document.aa.result5.value = re[3];
+          break;
+      }
+      /*
+      if (n == 1)
+        document.aa.result5.value = re[0];
+      if (n == 2)
+        document.aa.result5.value = re[1];
+      if (n == 3)
+        document.aa.result5.value = re[2];
+      if (n == 4)
+        document.aa.result5.value = re[3];
+      */
+    }
+  </script>
+</head>
+
+<body>
+  <form name=aa>
+    1. <input type="text" name=n1 size=5>
+    +
+    <input type="text" name=n2 size=5>
+    <input id=button type="button" value="=" onclick=cal1()>
+    <!-- ↓ 여기에 출력 -->
+    <input type="text" name=result1 size=5>
+    <p>
+      2. <input type="text" name=m1 size=5>
+      -
+      <input type="text" name=m2 size=5>
+      <input id=button type="button" value="=" onclick=cal2()>
+      <input type="text" name=result2 size=5>
+      <p>
+        3. <input type="text" name=o1 size=5>
+        *
+        <input type="text" name=o2 size=5>
+        <input id=button type="button" value="=" onclick=cal3()>
+        <input type="text" name=result3 size=5>
+        <p>
+          4. <input type="text" name=p1 size=5>
+          /
+          <input type="text" name=p2 size=5>
+          <input id=button type="button" value="=" onclick=cal4()>
+          <input type="text" name=result4 size=5>
+          <hr>
+          5. <input type="text" name=v1 size=5>
+          ?
+          <input type="text" name=v2 size=5> &nbsp;
+          <input id=button type="button" value="+" onclick=cal5(1)>
+          <input id=button type="button" value="-" onclick=cal5(2)>
+          <input id=button type="button" value="*" onclick=cal5(3)>
+          <input id=button type="button" value="/" onclick=cal5(4)>&nbsp;
+          <input id=button type="text" name=result5 size=5>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      border: 1px solid red;
+    }
+
+    div {
+      border: 1px solid red;
+    }
+  </style>
+  <script>
+    //함수 만들기 (추후 실행을 위한 객체 만들기 !)
+    function aaa() {
+      alert(document.member.user.value);
+      alert(document.member.number.value);
+    }
+
+    function bbb() {
+      // alert("Function called ! ");
+      document.all.aa.style.display = "block"; // none; inline; ...
+    }
+  </script>
+
+</head>
+
+<body>
+  <form name=member>
+    <!--함수 호출은 이벤트를 통해서-->
+    이름 <input type=text name=user>
+    <p>
+      숫자 <input type=text name=number>
+      <p>
+        <input type=button value="click" onclick=aaa()>
+        <input type=button value="call functions" onmouseover=bbb()>
+  </form>
+  <div id=aa style="display: none"> hhh </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #aa {
+      margin-left: 700px;
+      /* margin: auto 왜 안돼 ???*/
+      background: black;
+      color: lightyellow;
+
+    }
+  </style>
+  <script>
+    var cc = 0; // 반복 효과를 몇 초 후에 종료시키기 위해 변수 생성
+
+    setTimeout(xx, 200); // * setTimeout(xx,3000) → xx 함수를 3000(3초) 후에 실행하라
+
+    function xx() {
+      document.getElementById("aa").style.display = "none";
+      setTimeout(yy, 200);
+    }
+
+    function yy() {
+      document.getElementById("aa").style.display = "inline";
+      // 10번 실행 후 종료 시키기
+      cc = cc + 1;
+      if (cc < 11)
+        setTimeout(xx, 200);
+      else
+        document.write("The end !");
+    }
+  </script>
+</head>
+
+<body>
+  <!-- onload=xx() : 이 문서를 읽을 때, xx() 실행-->
+  <span id=aa>Shortly after moving to San Francisco in October 2007</span>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      color: lime;
+    }
+
+    input {
+      color: lime;
+    }
+  </style>
+  <script>
+    function check() {
+      var id = document.hello.userid.value;
+      if (id.length < 10)
+        alert("Longer ID required !")
+      else
+        alert("Hello.")
+    }
+  </script>
+</head>
+
+<body>
+  <form name=hello>
+    User
+    <input type="text" name="userid">
+    <input type="button" onclick="check()" value="click">
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <script>
+    function aaa1() {
+      alert(document.pkc.num1.value);
+    }
+
+    function aaa2() {
+      alert(document.pkc.num2.value);
+    }
+
+    var a = parseInt("문자");
+
+    function aaa3() {
+      /* form tag value 이므로 문자형*/
+      var n1 = document.pkc.num1.value;
+      var n2 = document.pkc.num2.value;
+      var ns = n1 + n2;
+      alert(ns);
+      /* 문자→숫자 변환함수 :    var a = parseInt(문자);   */
+      var r1 = parseInt(document.pkc.num1.value);
+      var r2 = parseInt(document.pkc.num2.value);
+      var rs = r1 + r2;
+      alert(rs);
+    }
+
+    // bbb()
+
+    function bbb1() {
+      var sum = 0;
+      for (var i = 0; i <= 10; i++)
+        sum = sum + i;
+
+      alert(sum);
+    }
+
+    function bbb2() {
+      var sum = 0;
+      var a = parseInt(document.pkc.a.value);
+      var b = parseInt(document.pkc.b.value);
+      for (var i = a; i <= b; i++)
+        sum = sum + i;
+      alert(sum);
+    }
+
+    function bbb3() {
+      var sum = 0;
+      var a = parseInt(document.pkc.a.value);
+      var b = parseInt(document.pkc.b.value);
+      for (var i = a; i <= b; i++) {
+        if (i % 2 == 0)
+          sum = sum + i;
+        else
+          sum = sum + 0;
+      }
+      alert(sum);
+    }
+  </script>
+</head>
+
+<!-- BODY -->
+
+<body>
+  <form name=pkc>
+    숫자1 <input type=text name=num1>
+    <p>
+      숫자2 <input type=text name=num2>
+      <p>
+        <input type=button onclick=aaa1() value="first number">
+        <input type=button onclick=aaa2() value="second number">
+        <input type=button onclick=aaa3() value="sum">
+        <p>
+          <hr>
+          <!-- sum test -->
+          A : <input type=text name=a>
+          <p>
+            B : <input type=text name=b>
+            <p>
+              <input type=button onclick=bbb1() value="1~10의 합">
+              <p>
+                <input type=button onclick=bbb2() value="A~B의 합">
+                <input type=button onclick=bbb3() value="A~B 짝수의 합">
+
+  </form>
+  <!-- form tag의 모든 값으 문자로 인식됩니다 ~~~ -->
+
+</body>
+
+</html>

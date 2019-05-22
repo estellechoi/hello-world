@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+
+</head>
+
+<body>
+  <!-- form tag 이름을 항상 지어준다 -->
+  <form name=pkc>
+    숫자 입력 <input type=text name=number>
+  </form>
+  <hr>
+  <form name=aaa>
+    이름 입력 <input type=text name=user value="hello">
+  </form>
+
+  <!-- 프로그램은 위에서 부터 실행되기 때문에 form 태그 밑에 두면 실행된다 ? -->
+  <script>
+    // ☆ 자바 스크립트에서 폼에 입력된 값 가져오기
+    // document: 이 문서 body tag 안에서
+    // form이름.input이름.value(사용자 혹은 프로그래머 입력값)
+    alert(document.pkc.number.value);
+
+    // document.aaa.user.value;
+  </script>
+
+</body>
+
+</html>

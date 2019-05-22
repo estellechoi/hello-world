@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+
+  </style>
+  <script>
+    function aa() {
+      var time = new Date();
+      var sec = document.getElementById("sec");
+      sec.innerText = time.getHours() + " : " + time.getMinutes() + " : " + time.getSeconds();
+      // * innerText : tag 내부 문자 → 여기에선 span 태그에 들어갈 문자
+      setTimeout(aa, 1000); // aa 함수를 1초 뒤에 실행해라
+    }
+  </script>
+</head>
+
+<body>
+  <!-- onload=xx() : 이 문서를 읽을 때, xx() 실행-->
+  <input type="button" onclick="aa()" value="Click">
+  <p>
+    <span id=sec> </span>
+</body>
+
+</html>

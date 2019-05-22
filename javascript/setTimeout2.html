@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 3초 동안 광고창을 띄운 후 사라지게 하기 -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #ad {
+      width: 200px;
+      height: 100px;
+      background: lightyellow;
+      color: lime;
+    }
+  </style>
+  <script>
+    // setTimeout(함수, 시간);
+    function aa() {
+      var ad = document.getElementById("ad");
+      ad.style.display = "none";
+    }
+    setTimeout(aa, 3000); // 문서를 읽을 때 실행 (1초 뒤 aa 함수 실행)
+  </script>
+</head>
+
+<body>
+  <div id=ad> This is an advertisement. </div>
+
+</body>
+
+</html>

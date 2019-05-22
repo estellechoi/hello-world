@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <script>
+    // * DOM (Document Object Model)
+    //   script에서 body tag 내 요소들에 접근하기 위한 이름
+    //   - tag, class, id
+    function aaa() {
+      // traditional way (not recommended)
+      document.all.the.style.color = "lime";
+      the.style.background = "pink"; // document.all 생략 가능
+    }
+
+    function bbb() {
+      // how to call an id
+      document.getElementById("the").style.color = "blue";
+      document.getElementById("the").style.background = "none";
+    }
+
+    function ccc() {
+      // use a variable with id put in it
+      var a = document.getElementById("a");
+      a.style.color = "purple";
+      a.style.fontStyle = "italic";
+    }
+
+    function ddd() {
+      // how to call a class
+      //document.getElementsByClassName("")[i]; → Always call array indexes!
+      var com = document.getElementsByClassName("com");
+      com[0].style.color = "red";
+      com[0].style.fontStyle = "italic";
+      // call directly without variables.
+      document.getElementsByClassName("com")[0].style.background = "pink";
+    }
+
+    function eee() {
+      var com = document.getElementsByClassName("com");
+      com[1].style.color = "lime";
+      com[1].style.background = "yellow";
+    }
+    // how to call a tag (Always array)
+    function fff() {
+      var span = document.getElementsByTagName("span");
+      span[0].style.background = "orange";
+      span[1].style.background = "yellow";
+      span[2].style.background = "lightyellow";
+      span[3].style.background = "ivory";
+      span[3].style.marginLeft = "300px"; // marginLeft (use Capital instead of -)
+
+    }
+    // how to call form with name (Always array)
+    function ggg() {
+      document.getElementsByName("new")[0].style.border = "1px solid red";
+    }
+  </script>
+</head>
+
+<body>
+  <form name="new">
+    <input type="button" onclick="aaa()" value="id로 접근 (lime)">
+    <input type="button" onclick="bbb()" value="id로 접근 (blue)">
+    <input type="button" onclick="ccc()" value="id로 접근 (var)">
+    <input type="button" onclick="ddd()" value="class로 접근[0]">
+    <input type="button" onclick="eee()" value="class로 접근[1]">
+    <input type="button" onclick="fff()" value="tag로 접근[i]">
+    <input type="button" onclick="ggg()" value="form name으로 접근[i]">
+  </form>
+  <p>
+    <span id=the>The company's name is </span>
+    <p><span id=a>a shortened version of its original name, AirBedandBreakfast.com; </span>
+      <p>
+        <span class=com>the company got its start </span>
+        <p>
+          <span class=com>after its founders put an air mattress in their living room and turned their apartment into a bed and breakfast.</span>
+
+</body>
+
+</html>

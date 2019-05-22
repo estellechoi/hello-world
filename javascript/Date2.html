@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- "오늘은 2019년 5월 22일 입니다" -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #time {
+      margin: auto;
+      width: 300px;
+      background: lightyellow;
+      color: lime;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 17px;
+    }
+  </style>
+  <script>
+    // setTimeout(aa, 1000);
+
+    function aa() {
+      var time = document.getElementById("time");
+      // time.style.visibility: visible;
+      var sec = new Date();
+      var y = sec.getFullYear();
+      var m = sec.getMonth() + 1;
+      var d = sec.getDate();
+      var dayarr = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]; // 배열
+      time.innerText = "Today is " + y + " y " + m + " m " + d + " d " + dayarr[sec.getDay()]; // 수요일 출력 !
+      //setTimeout(bb, 1000);
+    }
+    /*
+        function bb() {
+          var time = document.getElementById("time");
+          time.style.visibility: hidden;
+          var sec = new Date();
+          var y = sec.getFullYear();
+          var m = sec.getMonth() + 1;
+          var d = sec.getDate();
+          time.innerText = "Today is " + y + " y " + m + " m " + d + " d."; // 수요일 출력 !
+          setTimeout(aa, 1000);
+        }
+    */
+  </script>
+</head>
+
+<body onload=aa()>
+  <div id="time"> </div>
+
+</body>
+
+</html>

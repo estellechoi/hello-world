@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      color: lime;
+    }
+
+    input {
+      color: lime;
+    }
+  </style>
+  <script>
+    // String : 문자열 객체 (script에서는 new String 생략 가능)
+    // 속성(변수, 배열) ex ) length → 문자열의 길이를 가져온다
+    var str = "hello world.";
+    alert(str.length);
+
+    // 사용자가 입력한 문자 길이 체크
+    function check() {
+      var userid = document.hello.userid.value; // 값이 문자
+      alert(userid.length);
+      // or → alert(document.hello.userid.value.length);
+
+      // 숫자는 문자로 바꿔줘야 String으로 인식
+      // * 숫자를 문자로 바꾸기 1
+      var num = 1234 + "";
+      alert(num.length);
+    }
+  </script>
+</head>
+
+<body>
+  <form name=hello>
+    User
+    <input type="text" name="userid">
+    <input type="button" onclick="check()" value="click">
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #aa {
+      color: yellow;
+      background: blue;
+    }
+
+    #bb {
+      color: pink;
+      background: darkgrey;
+    }
+  </style>
+  <script>
+    /* script 규칙 ▶ font-size → fontSize */
+    // script에서 CSS에 접근하기
+    function coloraa() {
+      // ⓐ tag id  호출
+      //document.getElementByID("aa");
+      document.all.aa.style.color = "red";
+      document.all.aa.style.background = "yellow";
+      // document.all.bb.style.color = "green";
+      // ⓑ tag class 호출
+      //document.getElementsByClassName("");
+      // ⓒ tag 호출
+      //document.getElementsByTagName("");
+    }
+
+    function coloroutaa() {
+      document.all.aa.style.color = "yellow";
+      document.all.aa.style.background = "blue";
+    }
+
+    function colorbb() {
+      document.all.bb.style.fontSize = "20px";
+      document.all.bb.style.color = "darkgrey";
+      document.all.bb.style.background = "pink";
+    }
+
+    function coloroutbb() {
+      document.all.bb.style.fontSize = "15px";
+      document.all.bb.style.color = "pink";
+      document.all.bb.style.background = "darkgrey";
+    }
+
+    function decocc() {
+      document.all.cc.style.fontStyle = "italic";
+    }
+
+    function decooutcc() {
+      document.all.cc.style.fontStyle = "normal";
+    }
+
+    /*onmouseover onmouseout 통해 이미지 바꾸기*/
+    function over() {
+      document.all.img.src = "music2.png";
+      document.all.img.width = "150";
+      document.all.img.height = "150";
+    }
+
+    function out() {
+      document.all.img.src = "music1.png";
+      document.all.img.width = "130";
+      document.all.img.height = "130";
+    }
+  </script>
+</head>
+
+<body>
+  <span id=aa onmouseover=coloraa() onmouseout=coloroutaa()> gggggggggggggg </span>
+  <p>
+    <span id=bb onmouseover=colorbb() onmouseout=coloroutbb()>gggggggggggggg</span>
+    <P>
+      <span id=cc onmouseover=decocc() onmouseout=decooutcc()>gggggggggggggg</span>
+      <p>
+        <!-- onmouseover onmouseout 통해 이미지 바꾸기 -->
+        <img id=img onmouseover=over() onmouseout=out() src=music1.png width=130 height=130>
+
+</body>
+
+</html>

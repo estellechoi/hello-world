@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 문자열의 index no. 에 대하여 -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    // 문자열의 문자 하나 하나는 index no. 가진다 (left → right)
+    var email = "estele.choi@gmail.com";
+    var n = email.indexOf("@"); // email 변수의 해당문자 index no. 0 ~
+    var id = email.substring(0, n); // 0 ~ n 전까지
+    alert(id);
+
+    // 같은 문자 2개 이상일 때
+    var add = "hello@hello@hello";
+    var id = add.indexOf("@"); // 앞에서부터 몇 번째 인덱스 (첫번째 @를 찾는다)
+    var com = add.lastIndexOf("@"); // 뒤에서부터 몇번째 인덱스
+    alert(id + "@" + com);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

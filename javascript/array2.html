@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      margin: auto;
+      width: 600px;
+    }
+
+    input {
+      margin: auto;
+    }
+  </style>
+  <script>
+    function cal(n) {
+      var a = parseInt(document.test.n1.value);
+      var b = parseInt(document.test.n2.value);
+
+      var re = 0;
+
+      if (n == 1) {
+        for (var i = a; i <= b; i++)
+          re = re + i;
+        document.test.result.value = re;
+      }
+      //
+      else if (n == 2) {
+        for (var i = a; i <= b; i++) {
+          if (i % 2 == 0)
+            re = re + i;
+        }
+        document.test.result.value = re;
+      }
+      //
+      else if (n == 3) {
+        for (var i = a; i <= b; i++) {
+          if (i % 3 == 0)
+            re = re + i;
+        }
+        document.test.result.value = re;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form name=test>
+    <input name=n1 size=5>
+    <input name=n2 size=5>
+    <!-- buttons -->
+    <input type="button" value="a~b의 합" onclick=cal(1)>
+    <input type="button" value="a~b 짝수의 합" onclick=cal(2)>
+    <input type="button" value="a~b 3의 배수의 합" onclick=cal(3)>
+    <!-- result output-->
+    <input type="text" name=result size=5>
+  </form>
+
+</body>
+
+</html>
