@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 팝업창과 링크, target
+// 새 브라우저 열기
+// window.open(문서/주소, target(새 창 이름), 새 창 설정(width, height 등));
+-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      color: blue;
+    }
+
+    input {
+      border: 1px solid blue;
+      border-radius: 10px;
+      height: 25px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background: darkgrey;
+      color: yellow;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  </style>
+  <script>
+    function oo() {
+      split = open("split.html", "aa", "width=300, height=400");
+    }
+
+    function cc() {
+      split.close();
+    }
+  </script>
+</head>
+
+<body>
+  성적 입력 &nbsp; <input type="text" placeholder="Your grade.." onclick=oo()>
+</body>
+
+</html>

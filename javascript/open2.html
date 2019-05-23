@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 팝업창과 링크, target
+// 새 브라우저 열기
+// window.open(문서/주소, target(새 창 이름), 새 창 설정(width, height 등));
+-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    // ⓐ 창 열기
+    function oo() {
+      ppp = open("split.html", "xx", "width=300, height=350");
+      // ppp :오픈한 브라우저 창의 이름 / xx : target 주소
+      qqq = open("split.html", "yy", "width=300, height=350");
+      // qqq : 새 창 이름 / target 주소 생략 가능 (안쓸거면 !)
+
+      // ??????????????? 난 왜 target 생략하면 탭으로 뜨지 ..ㅠㅠ
+    }
+    // ⓑ 창 닫기
+    function cc() {
+      qqq.close();
+
+      // ⓒ 창 위치 옮기기
+      ppp.moveTo(200, 200); // (200,200) 좌표로 가라
+    }
+
+    function forward() {
+      ppp.document.form.card.value = document.getElementById("card").value;
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" onclick=oo() value="Open browsers">
+  <input type="button" onclick=cc() value="Close browsers">
+
+  <!-- target : 페이지 열 때 브라우저 창 연결시키는 이름 -->
+  <a href="http://www.naver.com" target=xx> Naver </a>
+  &nbsp;
+  <a href="http://www.google.com" target=xx> Google </a>
+  <p>User Name &nbsp;<input type="text" id="card">
+    <input type="button" value="click" onclick="forward()">
+
+</body>
+
+</html>
