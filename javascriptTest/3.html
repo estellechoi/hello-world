@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      color: purple;
+    }
+
+    input {
+      border: 1px solid purple;
+      border-radius: 5px;
+      background: darkgrey;
+      color: yellow;
+      width: 120px;
+    }
+
+    #button {
+      border: 2px solid purple;
+      width: 100px;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function go() {
+      var day = new Date();
+      var y = day.getFullYear();
+      var m = day.getMonth() + 1;
+      var d = day.getDate();
+      document.getElementById("year").value = y;
+      document.getElementById("month").value = m;
+      document.getElementById("date").value = d;
+    }
+  </script>
+</head>
+<!-- 문제) 버튼을 누르면 적절한 값을 Date()를 사용하여 입력 -->
+
+<body>
+  <input type="button" value="Date()" onclick=go() id="button">
+  <input type="text" id="year"> 년
+  <input type="text" id="month"> 월
+  <input type="text" id="date"> 일
+
+
+</body>
+
+</html>
