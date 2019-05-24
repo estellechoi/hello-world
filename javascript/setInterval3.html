@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #outline {
+      margin-left: 400px;
+      margin-top: 200px;
+      width: 600px;
+      height: 40px;
+      border: 1px solid #eeeeee;
+    }
+
+    #outline #box {
+      width: 0px;
+      height: 40px;
+      border: 1px solid blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #outline #box #loading {
+      font-style: italic;
+    }
+
+    #outline #box #finish {
+      visibility: hidden
+    }
+  </style>
+  <script>
+    var n = 0;
+
+    function move() {
+      n = n + 1;
+      box.style.width = n + "px";
+      if (n >= 600) {
+        clearInterval(xx); // " " 안한다. xx는 변수이기 때문
+        document.getElementById("loading").style.visibility = "hidden";
+        document.getElementById("finish").style.visibility = "visible";
+      }
+    }
+
+    function int() {
+      xx = setInterval(move, 10);
+    }
+  </script>
+</head>
+
+<!-- body -->
+
+<body onload="int()">
+  <div id=outline>
+    <div id=box>
+      <span id=loading> L o a d i n g L o a d i n g L o a d i n g </span>
+      <span id=finish> F i n i s h e d !</span>
+    </div>
+  </div>
+
+</body>
+
+</html>

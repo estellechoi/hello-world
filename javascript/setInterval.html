@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- setTimeout 으로 움직이기 (setInterval과 비교) -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #body {
+      display: flex;
+      justify-content: center;
+    }
+
+    #body input {
+      border: 1px solid blue;
+      border-radius: 10px;
+      height: 25px;
+      color: lime;
+      background: #eeeeee;
+    }
+
+    #aa {
+      /* 절대위치 ! 포스트잇 붙이기 ! 다른 div 위에 따로 붙이는 느낌*/
+      /* 위치 - 값으로 화면에서 숨겼다가 후에 나오게 하는 기능도 가능*/
+      position: absolute;
+      left: -25px;
+      top: 300px;
+      visibility: visible;
+      /* visible; ↔ hidden;*/
+      background: yellow;
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+  <script>
+    var n = -25; // 이동시킬 div의 현 위치
+
+    function move() {
+      n = n + 1;
+      document.getElementById("aa").style.left = n + "px"; // "px" 필수
+
+      // ☆ 반복실행 시키기
+      if (n <= 399) // 400px 까지만 옮기기 (399 + 1)
+        setTimeout(move, 10);
+    }
+
+    function out() {
+      setTimeout(move, 10); // 0.01초 후에 move 함수 실행
+      // setTimeout: s초 후에 실행, setInterval: s초 마다 실행
+    }
+  </script>
+</head>
+
+<!-- body -->
+
+<body>
+  <div id=aa> </div>
+  <div id=body>
+    <input type="button" value="setTimeout" onclick=out()>
+  </div>
+</body>
+
+</html>

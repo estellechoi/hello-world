@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--moveTo(), resizeTo()-->
+<!-- 크롬에서 왜 안될까 ? ㅠㅠ-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    function move() {
+      moveTo(400, 400); // 브라우저 창의 위치 좌표 지정
+    }
+
+    function resize() {
+      resizeTo(300, 300); // 브라우저 창 크기 설정
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" value="moveTo" onclick=move()>
+  <input type="button" value="resizeTo" onclick=resize()>
+
+</body>
+
+</html>

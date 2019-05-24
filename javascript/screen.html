@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    function view() {
+      // alert(screen.availWidth + " " + screen.availHeight);
+      moveTo(0, 0); // 0,0 으로 창 위치 이동
+      resizeTo(screen.availWidth, screen.availHeight); // 가능한 최대 크기로 resize
+    }
+  </script>
+</head>
+
+<!-- body -->
+
+<body>
+  <div id=box> </div>
+  <input type="button" value="what" onclick=view()>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #body {
+      display: flex;
+      justify-content: center;
+    }
+
+    #body input {
+      border: 1px solid black;
+      border-radius: 10px;
+      height: 25px;
+      color: yellow;
+      background: #535353;
+    }
+
+    #aa {
+      position: absolute;
+      left: -25px;
+      top: 300px;
+      visibility: visible;
+      /* visible; ↔ hidden;*/
+      background: yellow;
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+  <script>
+    var n = -25; // 이동시킬 div의 현 위치
+
+    function move() {
+      n = n + 1;
+      aa.style.left = n + "px"; // "px" 필수
+      if (n >= 400)
+        clearInterval(int); // 변수 int 기능을 중지하라
+    }
+
+    function int() {
+      int = setInterval(move, 10); // 0.01초 마다 move 함수 실행 (자동 반복)
+
+      // ★ int → 전역변수 생성 / var int → 지역변수 생성
+      //   var int X  ∵ cannot be used in other functions like move() in this case
+
+    }
+  </script>
+</head>
+
+<!-- body -->
+
+<body>
+  <div id=aa> </div>
+  <div id=body>
+    <input type="button" value="setInterval" onclick=int()>
+  </div>
+</body>
+
+</html>
