@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    input {
+      border: 1px solid blue;
+      border-radius: 10px;
+      background: darkgrey;
+      color: yellow;
+    }
+  </style>
+  <script>
+    function ch() {
+      var email = document.getElementById("email").value;
+      var n = email.indexOf("@");
+      var id = email.substring(0, n);
+      document.getElementById("new").value = id + "@channy.co.kr"
+    }
+  </script>
+</head>
+<!-- 문제) 버튼을 누르면 '기존 이메일' 주소에서 아이디만 잘라서
+새로운 이메일 "아이디@channy.co.kr"를 '바뀐 이메일'에 출력 -->
+
+<body>
+  Email address <input type="text" id=email>
+  <input type="button" value="Change server to channy.co.kr" onclick=ch()>
+  <p>
+    New address <input type="text" id=new>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 팝업창과 링크, target
+// 새 브라우저 열기
+// window.open(문서/주소, target(새 창 이름), 새 창 설정(width, height 등));
+-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      color: blue;
+      font-style: italic;
+    }
+  </style>
+  <script>
+    function done() {
+      var name = document.getElementById("name").value;
+      var age = document.getElementById("age").value;
+      var phone = document.getElementById("phone").value;
+      // 부모 창의 이름은 무조건 opener
+      opener.document.getElementById("name").value = name;
+      opener.document.getElementById("age").value = age;
+      opener.document.getElementById("phone").value = phone;
+      close();
+    }
+  </script>
+</head>
+
+<body>
+  <form name="form">
+    Name &nbsp;<input type="text" id=name placeholder="Your name..">
+    <p>
+      Age &nbsp;&nbsp; <input type="text" id=age placeholder="Your age..">
+      <p>
+        Phone <input type="text" id=phone placeholder="Your phone number..">
+        <p>
+          <input type="button" value="Done" onclick=done()>
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    input {
+      border: 1px solid green;
+      border-radius: 7px;
+      background: darkgrey;
+      color: yellow;
+    }
+
+    #time {
+      border: 1px solid green;
+      border-radius: 7px;
+      background: yellow;
+      color: #535353;
+      padding-left: 10px;
+    }
+  </style>
+  <script>
+    function clock() {
+      var time = new Date();
+      var h = time.getHours();
+      var m = time.getMinutes();
+      var s = time.getSeconds();
+      document.getElementById("time").value = h + " : " + m + " : " + s + " !";
+      setTimeout(clock, 1000);
+    }
+  </script>
+</head>
+<!-- 문제) 버튼을 누르면 "??시??분??초" 를 표시하고 자동으로 변환되게 -->
+
+<body>
+  <input type="text" id="time">
+  <input type="button" value="Show the clock" onclick=clock()>
+
+</body>
+
+</html>

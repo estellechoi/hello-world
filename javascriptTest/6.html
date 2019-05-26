@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #red,
+    #blue {
+      width: 100px;
+      height: 100px;
+    }
+
+    #red {
+      background: red;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+    }
+
+    #blue {
+      background: blue;
+      position: absolute;
+      top: 200px;
+      left: 500px;
+    }
+  </style>
+  <script>
+    var x = 200;
+
+    function move() {
+      var red = document.getElementById("red");
+      x = x + 1;
+      red.style.left = x + "px";
+      if (x >= 500)
+        clearInterval(int);
+    }
+
+    function aa() {
+      int = setInterval(move, 10);
+    }
+  </script>
+</head>
+<!-- 문제) 버튼을 누르면 빨간색레이어의 위치를 파란색 레이어까지 이동 -->
+
+<body>
+  <input type="button" value="Move" onclick="aa()"> <br>
+  <div id=red> </div>
+  <div id=blue> </div>
+</body>
+
+</html>

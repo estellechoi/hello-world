@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 팝업창과 링크, target
+// 새 브라우저 열기
+// window.open(문서/주소, target(새 창 이름), 새 창 설정(width, height 등));
+-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      color: blue;
+      font-style: italic;
+    }
+  </style>
+  <script>
+    function input() {
+      opened = open("opened.html", "xx", "width=350, height=400");
+      // 자식 창의 이름은 내가 지정 whatever I want
+      opened.moveTo(500, 200);
+    }
+  </script>
+</head>
+
+<body>
+  <form name="form">
+    Name &nbsp;<input type="text" id=name placeholder="Your name..">
+    <input type="button" value="Click to input" onclick=input()>
+    <p>
+      Age &nbsp;&nbsp; <input type="text" id=age placeholder="Your age..">
+      <p>
+        Phone <input type="text" id=phone placeholder="Your phone number..">
+        <p>
+          <input type="button" value="Save">
+  </form>
+
+</body>
+
+</html>

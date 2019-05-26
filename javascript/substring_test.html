@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 문자열 자르기 -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    span {
+      font-style: italic;
+      display: block;
+      /* display: block; → div로 만드는구나 */
+    }
+
+    input {
+      border-radius: 10px;
+      border: 1px solid blue;
+      height: 20px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    #id,
+    #server,
+    #fir,
+    #sec,
+    #thr {
+      background: #eeeeee;
+    }
+  </style>
+  <script>
+    function str() {
+      // 변수에 값을 넣어줄 때는 .value 를 잊지 말자 !
+      var email = document.getElementById("email").value;
+      var n = email.indexOf("@"); // @의 위치
+      var id = email.substring(0, n);
+      var server = email.substring(n + 1);
+      document.getElementById("id").value = id;
+      document.getElementById("server").value = server;
+
+      var phone = document.getElementById("phone").value;
+      var x = phone.indexOf("-"); // 첫번째 -의 위치
+      var y = phone.lastIndexOf("-") // 마지막 -의 위치
+      var fir = phone.substring(0, x);
+      var sec = phone.substring(x + 1, y);
+      var thr = phone.substring(y + 1);
+      document.getElementById("fir").value = fir;
+      document.getElementById("sec").value = sec;
+      document.getElementById("thr").value = thr;
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <!-- Email address -->
+    <span>Email</span> <input type="text" id="email" placeholder="Your email address..">
+    <p>
+      <span>User</span> <input type="text" id="id">
+      <p>
+        <span>Server</span> <input type="text" id="server">
+        <p>
+          <!-- phone number-->
+          <span>Phone (000-0000-0000)</span> <input type="text" id="phone" placeholder="Your phone number..">
+          <p>
+            <span>000</span> <input type="text" id="fir">
+            <p>
+              <span>0000</span> <input type="text" id="sec">
+              <p>
+                <span>0000</span> <input type="text" id="thr">
+                <p>
+                  <!-- Button -->
+                  <input type="button" value="Click" onclick="str()">
+  </form>
+
+</body>
+
+</html>

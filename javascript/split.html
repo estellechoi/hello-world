@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 문자열 자르기 -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      width: 300px;
+      margin: auto;
+    }
+
+    input {
+      background: darkgrey;
+      border-radius: 10px;
+      border: 1px solid blue;
+      height: 20px;
+      color: yellow;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    #card {
+      background: white;
+      color: blue;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  </style>
+  <script>
+    /*
+    var card = "1234-5678-9012-3456";
+    var num = card.split("-");
+    // - 기준으로 자동으로 배열 생성
+    // num =["1234","5678","9012","3456"];
+    alert(num[2]);
+    */
+    function split() {
+      var card = document.form.card.value;
+      var num = card.split("-");
+
+      document.form.a.value = num[0]; // split makes an array !
+      document.form.b.value = num[1];
+      document.form.c.value = num[2];
+      document.form.d.value = num[3];
+    }
+
+    function cc() {
+      close();
+    }
+  </script>
+</head>
+
+<body>
+  <form name="form">
+    Card Number <input id=card type="text" name=card placeholder="0000-0000-0000-0000">
+    <p>
+      ⓐ <input type="text" name=a>
+      <p>
+        ⓑ <input type="text" name=b>
+        <p>
+          ⓒ <input type="text" name=c>
+          <p>
+            ⓓ <input type="text" name=d>
+            <p>
+              <input type="button" value="Click" onclick=split()>
+              <input type="button" value="Cancel" onclick=cc()>
+  </form>
+</body>
+
+</html>

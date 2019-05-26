@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      color: blue;
+    }
+
+    input {
+      border: 1px solid blue;
+      border-radius: 10px;
+      color: orange;
+      font-weight: bold;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+  </style>
+  <script>
+    function sum() {
+      var a1 = parseInt(document.getElementById("a1").value);
+      var a2 = parseInt(document.getElementById("a2").value);
+      var re1 = a1 + a2;
+      document.getElementById("re1").value = re1;
+    }
+
+    function sumab() {
+      var a = parseInt(document.getElementById("b1").value);
+      var b = parseInt(document.getElementById("b2").value);
+      var x = 0;
+      for (var i = a; i <= b; i++)
+        x = x + i;
+      document.getElementById("re2").value = x;
+    }
+
+    function cc() {
+      var a = parseInt(document.getElementById("c1").value);
+      var b = parseInt(document.getElementById("c2").value);
+      var x = parseInt(Math.random() * (b - a + 1)) + a; // 정리 필요
+      document.getElementById("re3").value = x;
+    }
+  </script>
+</head>
+<!-- 문제1) 두수를 입력후 계산 버튼을 누르면 더한 후 출력 -->
+<!-- 문제2) a와 b의 값을 입력후 계산 버튼을 누르면 a부터 b까지의 합계 출력  -->
+<!-- 문제3) a와 b의 값을 입력후 계산 버튼을 누르면 a부터 b까지의 임의의 값 출력  -->
+
+<body>
+  Question 1) <input type="text" id="a1"> + <input type="text" id="a2">
+  <input type="button" value="cal" onclick="sum()"> <input type="text" id="re1">
+  <hr>
+  Question 2) <input type="text" id="b1"> + <input type="text" id="b2">
+  <input type="button" value="cal" onclick="sumab()"> <input type="text" id="re2">
+  <hr>
+  Question 3) <input type="text" id="c1"> + <input type="text" id="c2">
+  <input type="button" value="cal" onclick="cc()"> <input type="text" id="re3">
+
+
+</body>
+
+</html>

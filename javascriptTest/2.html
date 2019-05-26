@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- script 반복 사용하는 문장 치환하는 법 ???-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    input {
+      border: 1px solid blue;
+      border-radius: 10px;
+      color: yellow;
+      background: darkgrey;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    body {
+      color: blue;
+    }
+  </style>
+  <script>
+    function mul() {
+      var a = parseInt(document.getElementById("a").value);
+      var b = parseInt(document.getElementById("b").value);
+      document.getElementById("re").value = a * b;
+    }
+
+    function even() {
+      var a = parseInt(document.getElementById("a").value);
+      var b = parseInt(document.getElementById("b").value);
+      var x = 0;
+      for (var i = a; i <= b; i++) {
+        if (i % 2 == 0)
+          x = x + i;
+      }
+      document.getElementById("re").value = x;
+    }
+
+    function low() {
+      var a = parseInt(document.getElementById("a").value);
+      var b = parseInt(document.getElementById("b").value);
+      var x;
+      if (a < b)
+        x = a;
+      else if (b < a)
+        x = b;
+      else
+        x = a + " = " + b;
+      document.getElementById("re").value = x;
+    }
+  </script>
+</head>
+<!-- 문제) 두수를 입력후 버튼의 종류에 따라 결과 출력 -->
+
+<body>
+  a : <input type="text" size="5" id=a> &nbsp; b : <input type="text" size="5" id=b>
+  <p>
+    <input type="button" value=" * " onclick=mul()>
+    <input type="button" value="a ~ b 짝수의 합" onclick=even()>
+    <input type="button" value=" a, b 중 낮은 값" onclick=low()>
+    <p>
+      result : <input type="text" id=re>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #red {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+  </style>
+  <script>
+    var x = 100;
+    var y = 100;
+
+    function size() {
+      var red = document.getElementById("red");
+      x = x + 1;
+      y = y + 1;
+      red.style.width = x + "px";
+      red.style.height = y + "px";
+      if (x >= 200 && y >= 200)
+        clearInterval(int);
+    }
+
+    function aa() {
+      int = setInterval(size, 10);
+    }
+  </script>
+</head>
+<!-- 문제) 버튼을 누르면 레이어의 가로와 세로를 200X200크기로 변환 -->
+
+<body>
+  <input type="button" value="Resize" onclick="aa()">
+  <p>
+    <div id=red></div>
+
+</body>
+
+</html>
