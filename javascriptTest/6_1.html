@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style> /* sixth_1.html */
+    #first {
+      width:50px;
+	  height:50px;
+	  background:red;
+	  position:absolute;
+	  left:100px;
+	  top:100px;
+	}
+ 
+  </style>
+  <script>
+    function move()
+	{
+      var a=parseInt(Math.random()*1000);
+      var b=parseInt(Math.random()*800);
+	  document.all.first.style.left=a+"px";
+      document.all.first.style.top=b+"px";
+	}
+	function imsi()
+	{
+       alert("클릭성공");
+	}
+  </script>
+
+ </head>
+ <body>
+   
+   <div id=first onmouseover=move() onclick=imsi()></div>
+ 
+ </body>
+</html>
