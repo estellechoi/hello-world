@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- reload()
+입력된 정보가 DB에 수집되자마자 UI에 바로 적용하기 위해 새로고침할 때
+* opener.location.reload(); 얜 뭐지 -->
+<!--innerText & innerHTML-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    // location.href;     속성
+    // location.reload(); 메소드
+    function aa() {
+      location.reload();
+    }
+
+    function input() {
+      xx.innerText = "I did indeed.";
+      yy.innerHTML = "<b style='color: red'> I did indeed.</b>"; // "" 안에는 ''
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" value="reload" onclick="aa()">
+  <input type="button" value="put text" onclick="input()">
+  <div id=xx> </div>
+  <div id=yy> </div>
+
+</body>
+
+</html>

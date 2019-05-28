@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #id,
+    #pw {
+      color: orange;
+    }
+  </style>
+  <script>
+    function a() {
+      id.value = ""; // id
+    }
+
+    function xa() {
+      var x = id.value;
+      // id 입력 안됐을 때
+      if (x == "") // if (x.length == 0)
+        id.value = " user id !";
+      // ※ space도 문자로 인식
+    }
+
+    function b() {
+      pw.value = "";
+    }
+
+    function xb() {
+      var x = pw.value;
+      if (x.length == 0)
+        pw.value = " password !";
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <input type="text" id="id" value="user id !" onfocus="a()" onblur="xa()">
+    <p></p>
+    <input type="text" id="pw" value="password !" onfocus="b()" onblur="xb()">
+    <p></p>
+    <input type="button" value="Sign in">
+  </form>
+
+</body>
+
+</html>

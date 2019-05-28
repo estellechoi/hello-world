@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    input {
+      border-radius: 10px;
+      border: 1px solid blue;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    #e {
+      text-align: center;
+    }
+  </style>
+  <script>
+    function aa() {
+      var x = a.value;
+      if (x.length == 4)
+        b.focus(); // b에 포커스를 준다 (커서 이동)
+    }
+
+    function bb() { // * 오류 : x.length==4 로하면 5글자 입력됨 이유는? onkeypress
+      var x = b.value;
+      if (x.length == 3)
+        c.focus(); // 누르는 순간 값 입력 → 커서 이동 (값이 입력되는 순간)
+    }
+
+    function cc() {
+      var x = c.value;
+      if (x.length == 3)
+        d.focus(); // 누르는 순간 커서 이동 → 값 입력
+    }
+
+    function xx() {
+      e.value = "";
+    }
+
+    function ee() {
+      return false;
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <!--maxlength="4" 글자수 4개로 제한-->
+    <input type="text" size="4" maxlength="4" id="a" onkeyup="aa()">
+    <input type="text" size="4" id="b" onkeypress="bb()">
+    <input type="text" size="4" id="c" onkeydown="cc()">
+    <input type="text" size="4" id="d" onkeydown="dd()">
+    <p></p>
+    <input type="text" id="e" value="return" onfocus="xx()" onkeypress="return ee()">
+    <!-- 여기서 onkeyup은 값이 입력된 후 키보드 뗄 때 실행되므로, 값은 입력됨 -->
+  </form>
+
+</body>
+
+</html>

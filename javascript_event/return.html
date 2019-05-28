@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- return 활용하여, 입력값을 구분하여 실행 or 취소 해보자 -->
+<!-- * 아스키코드 (→ dec(10진법))
+숫자 (0~9) : 48 ~ 57
+영어 대문자 : 65 ~ 90
+영어 소문자 : 97 ~ 122
+-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    // 메모리 상에 저장된 값 불러오기
+    // (화면에 입력이 안돼도 모든 키보드 입력값은 메모리에 입력됨)
+    function aa() {
+      // * event.keyCode → 방금 실행된 이벤트에서 키보드 입력값
+      // → 메모리에 입력된 값 (아스키코드 참조)
+
+      // ☆ 조건이 2개 라면 ?
+      // 1) and : &&
+      // 2) or : ||
+      // ex) if (event.keyCode == 48 || event.keyCode == 49)
+
+      if (event.keyCode >= 48 && event.keyCode <= 57) // 아스키코드 dec값
+        return true; // 입력값 html에 입력됨
+      else
+        return false; // 입력값 취소됨
+    }
+  </script>
+</head>
+
+<body>
+  <!-- onkeypress : 키보드값이 html에 입력되려는 순간 실행-->
+  <!-- 여기서 onkeydown 하면, 대문자 못씀. shift키 못쓰니까 -->
+  <input type="text" id="cell" onkeypress="return aa()">
+
+</body>
+
+</html>

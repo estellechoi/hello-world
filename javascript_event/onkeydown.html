@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    function a() {
+      alert("keydown"); // 키보드 누르는 순간, 입력값이 양식에 전달 X
+    }
+
+    function b() {
+      alert("keypress"); // 키를 누를 때, 입력값이 양식에 전달 X
+      // ????????????????????값이 입력되려는 순간에 작동하니까 ?
+    }
+
+    function c() {
+      alert("keyup"); //키보드 눌렀다가 떼는 순간, 입력값이 양식에 전달 O
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <input type="text" id="aa" onkeydown="a()">
+    <!--id가 함수명과 같으면 keydown이 안먹지?-->
+    <p></p>
+    <input type="text" onkeypress="b()">
+    <p></p>
+    <input type="text" id="cc" onkeyup="c()">
+    <p></p>
+
+  </form>
+
+</body>
+
+</html>

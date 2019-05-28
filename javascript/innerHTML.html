@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #title {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <script>
+    function deco() {
+      title.innerHTML = "<b style='font-style:italic'>Google developers</b>";
+    }
+
+    function deco2() {
+      you.innerHTML = "<span style='color:blue'> You </span>";
+    }
+
+    function deco3() {
+      code.innerText = "this code";
+      code.style.color = "pink";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="title" onmouseover="deco()"> Title</div>
+  <span id="you" onmouseover="deco2()">You</span> can experiment with
+  <span id="code" onmouseover="deco3()">this code</span> in JSFiddle by clicking the icon
+  in the top-right corner of the code window.
+
+</body>
+
+</html>

@@ -1,39 +1,42 @@
 <!doctype html>
 <html lang="en">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <style>
     #first {
-      width:100px;
-	  height:0px;
-	  background:red;
-	  position:absolute;
-	  left:200px;
-	  top:100px;
-	  overflow:hidden;
-	  color:white;
-	}
- 
+      width: 100px;
+      height: 0px;
+      background: red;
+      position: absolute;
+      left: 200px;
+      top: 100px;
+      overflow: hidden;
+      color: white;
+    }
   </style>
   <script>
-   var w=0;
-   function imsi() // height 0px -> 200px;
-   {
-	 w=w+1;
-	 document.all.first.style.height=w+"px";
+    var w = 0;
 
-     if(w < 200)
-	  setTimeout(imsi,1);
-   }
+    function imsi() // height 0px -> 200px;
+    {
+      w = w + 1;
+      document.all.first.style.height = w + "px";
+
+      if (w < 200)
+        setTimeout(imsi, 1);
+    }
   </script>
- </head>
- <body>
+</head>
+
+<body>
   <h2>문제) 버튼을 누르면 레이어의 가로와 세로를 200X200크기로 변환<p>
-   <input type=button value=변환 onclick=imsi()>
-   <div id=first>
-    한국음식 <p>
-	중국음식 <p>
-	일본음식
-   </div>
- </body>
+      <input type=button value=변환 onclick=imsi()>
+      <div id=first>
+        한국음식 <p>
+          중국음식 <p>
+            일본음식
+      </div>
+</body>
+
 </html>

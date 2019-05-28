@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- onfocus → 커서가 생길 때, 버튼 클릭시-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+
+  </style>
+  <script>
+    function join() {
+
+    }
+
+    function a() {
+      idinfo.innerText = "more than 6 in length."
+      // id.outline = "none";
+      var style = document.getElementById("idinfo").style;
+      style.color = "blue";
+      style.fontSize = "11px";
+      style.fontStyle = "italic";
+      style.paddingLeft = "73px";
+    }
+
+    function b() {
+      pwinfo.innerText = "only numbers."
+      var style = document.getElementById("pwinfo").style;
+      style.color = "pink";
+      style.fontSize = "11px";
+      style.fontStyle = "italic";
+      style.paddingLeft = "73px";
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    User Id &nbsp;&nbsp;
+    <input type="text" id="id" placeholder="user id" onfocus="a()">
+    <div id="idinfo"></div>
+    <p></p>
+    Password
+    <input type="text" id="pw" placeholder="user password" onfocus="b()">
+    <div id="pwinfo"></div>
+    <p></p>
+    Comment <p><textarea name="comment" id="co" cols="30" rows="4"></textarea>
+      <p>
+        <input type="button" value="Join" onclick="join">
+  </form>
+
+</body>
+
+</html>
