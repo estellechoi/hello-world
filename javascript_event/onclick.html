@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 다양한 방법으로 버튼 만들기 / CSS cursor 속성 -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #a {
+      width: 50px;
+      height: 20px;
+      border: 1px solid blue;
+      background: #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      /* cursor: default; pointer; The shape of mouse cursor */
+    }
+  </style>
+  <script>
+    function aa() {
+      alert("Clicked !");
+    }
+  </script>
+</head>
+
+<body>
+  <!-- ⓐ <input type="button"> -->
+  a. <input type="button" value="Click" onclick="aa()">
+  <p></p>
+  <!-- ⓑ <div></div> -->
+  b. <div id=a onclick=aa()> Click </div>
+  <p></p>
+  <!-- ⓒ <button></button> * can put img tag in the button tag-->
+  c. <button onclick=aa()> Click <img src="a.jpg" width="50"></button>
+  <p></p>
+  <!-- ⓓ <a href="javascript:aa()"></a> -->
+  d. <a href="javascript:aa()"> Click </a>
+  <!-- <a href=""></a> 에서 onclick도 가능-->
+
+</body>
+
+</html>

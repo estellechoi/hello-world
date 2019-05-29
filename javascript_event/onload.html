@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- onunload : 현재 문서를 벗어날 때 (창닫기, 새로고침, 다른 페이지 링크로 이동 등) -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    function init() {
+      document.getElementById("he").style.color = "blue";
+    }
+    /* can force without function name and onload event
+       → but cannot call repeatedly because it doesn't have a name.
+    window.onload = function() {
+      document.getElementById("he").style.color = "blue";
+    }
+    */
+    function exit() {
+      var con = confirm("Are you sure to exit ?")
+      if (con)
+        location = "http://www.naver.com";
+      else
+        location = "onload.html";
+    }
+    // 링크이동 했을 때, location 왜 안되지 ? ㅠㅠ
+  </script>
+</head>
+
+<body onload="init()" onunload="exit()">
+  <div id="he"> hello. </div>
+  <a href="http://www.naver.com"> naver </a>
+
+</body>
+<!--
+* Can put script below body, but not recommendable because the code looks messed up.
+<script>
+  document.getElementById("he").style.color = "blue";
+</script>
+-->
+
+</html>

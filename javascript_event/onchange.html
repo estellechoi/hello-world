@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #result {
+      color: blue;
+    }
+  </style>
+  <script>
+    function aa() {
+      // alert("Changed !");
+      result.innerText = document.getElementById("sel").value;
+    }
+
+    function bb() {
+      alert("Name changed !");
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <select name="" id="sel" onchange="aa()">
+      <option> Select </option>
+      <option> Barcelona </option>
+      <option> Malaga </option>
+      <option> Valencia </option>
+      <option> Madrid </option>
+    </select>
+    Selected : <span id=result> </span>
+    <p></p>
+    <input type="text" id="name" value="youjin" onchange="bb()">
+  </form>
+
+</body>
+
+</html>

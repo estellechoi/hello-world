@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 반응형 웹 by js ...
+  ⓐ em 사용하기
+      1 em = 1000px;
+      fontSize = 0.2em;
+      width=0.5em;
+  ⓑ window.onresize = x ;
+      * innerWidth : 브라우저 창의 크기
+-->
+
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #algo {
+      font-size: 200px;
+    }
+  </style>
+  <script>
+    function init() {
+      algo.style.fontSize = (innerWidth / 3) + "px";
+      box.style.width = (innerWidth / 5) + "px";
+    }
+
+    function aa() {
+      // alert(window.innerWidth);
+
+      var size = window.innerWidth; // 브라우저 창 가로사이즈
+      var x = size / 3;
+      // why 4? ∵ innitial fontSize = innerWidth ÷ a
+      //           677 / a = 200
+      algo.style.fontSize = x + "px";
+      box.style.width = (innerWidth / 5) + "px";
+    }
+    window.onresize = aa;
+    // 브라우저 창이 resize될 때 aa 함수 실행
+  </script>
+</head>
+
+<body onload="init()">
+  <div id=algo> hello </div>
+  <input type="text" id="box">
+
+</body>
+
+</html>
