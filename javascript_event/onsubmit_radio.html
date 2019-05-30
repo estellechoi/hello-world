@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    function check(f) {
+      // alert(f.lunch[0].checked);
+      // * checked → 체크되었다면 (T/F)
+      // !() => not() → ()의 반댓값으로 바꿔줌
+      // !(f.lunch[0].checked || f.lunch[1].checked || f.lunch[2].checked || f.lunch[3].checked)
+      var a = 0;
+      for (var i = 0; i < 4; i++) {
+        if (f.lunch[i].checked)
+          a = 1;
+      }
+      // a의 값이 바뀌었는지만 체크 ! (안바뀌었으면 return false)
+      if (a == 0) {
+        alert("Not checked !");
+        return false;
+      } else {
+        return true;
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+  <form action="c.php" method="post" onsubmit="return check(this)">
+    <h3> Today's lunch ? </h3>
+    <input type="radio" name="lunch" id="lun"> Pizza
+    <input type="radio" name="lunch" id="lun"> Phobo
+    <input type="radio" name="lunch" id="lun"> Ramen
+    <input type="radio" name="lunch" id="lun"> Salad
+    <p></p> <input type="submit" value="Click">
+  </form>
+
+</body>
+
+</html>

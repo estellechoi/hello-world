@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+* 이벤트에서 호출한 함수의 매개변수 onsubmit=aa(this)
+   this는 이벤트 발생하는 태그 자기자신을 의미함
+-->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    #gg {
+      padding-left: 60px;
+      font-size: 12px;
+      color: yellow;
+    }
+
+    #al {
+      font-size: 12px;
+      color: red;
+    }
+  </style>
+  <script>
+    // ⓐ submitted value checking
+    function check(ff) {
+      // 매개변수 ff → document.form(name)
+      // ff.input(name).value; => document.form.input.value;
+      var id = document.getElementById("id").value;
+      if (id == "") {
+        // alert("No input !");
+        al.innerText = "No input !";
+        return false;
+
+      } else if (id.length < 6 || id.length > 10) {
+        // alert("6~10 numbers of keys required !");
+        al.innerText = "6~10 numbers of keys required !";
+        return false;
+
+      } else
+        return true;
+    }
+    // ⓑ 아이디 입력란 팝업가이드
+    function g() {
+      gg.innerText = "6 ~ 10 numbers of keys required ! "
+    }
+
+    function x() {
+      gg.innerText = "";
+    }
+  </script>
+</head>
+
+<body>
+  <!-- return check(this) → this => form tag (자기자신 태그) 의미 -->
+  <form action="b.php" method="post" onsubmit="return check(this)">
+    User ID <input type="text" id="id" onfocus="g()" onblur="x()">
+    <div id="gg"> </div>
+    <p></p>
+    <input type="submit" value="Click"> <span id="al"> </span>
+  </form>
+
+</body>
+
+</html>

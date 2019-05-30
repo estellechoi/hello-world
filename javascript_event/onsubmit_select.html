@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    function check(f) {
+      // selectedIndex => 선택된 옵션의 index no.
+      if (f.y.selectedIndex == 0) {
+        alert("Nothing selected !");
+        return false;
+      } else {
+        alert(f.y.value);
+        // option의 value를 먼저 찾고, value 없을땐 innerText 찾는다
+        return true;
+      }
+    }
+
+    function move(s) {
+      location = s.value;
+    }
+  </script>
+</head>
+
+<body>
+  <form action="c.php" method="post" onsubmit="return check(this)">
+    Years
+    <select name="y" id="">
+      <option> Select </option>
+      <option> 2019 </option>
+      <option> 2018 </option>
+      <option> 2017 </option>
+      <option> 2016 </option>
+      <option> 2015 </option>
+      <option> 2014 </option>
+      <option> 2013 </option>
+      <option> 2012 </option>
+    </select>
+    <input type="submit" value="Click">
+  </form>
+
+  <!-- 패밀리사이트 이동 -->
+  <select name="site" id="site" onchange="move(this)">
+    <option value=""> Sites </option>
+    <option value="http://www.naver.com"> 네이버 </option>
+    <option value="http://www.daum.net"> 다음 </option>
+    <option value="http://coupang.com"> 쿠팡 </option>
+  </select>
+
+</body>
+
+</html>

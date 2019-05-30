@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- radio, checkbox 는 tag name이 필요함 -->
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+  </style>
+  <script>
+    function check(f) {
+      var a = 0;
+      for (var i = 0; i < 4; i++) {
+        if (f.lunch[i].checked)
+          a = 1;
+      }
+      if (a == 0) {
+        alert("Nothing checked !");
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form action="c.php" method="post" onsubmit="return check(this)">
+    <h3> Today's lunch ? </h3>
+    <input type="checkbox" name="lunch"> Pizza
+    <input type="checkbox" name="lunch"> Phobo
+    <input type="checkbox" name="lunch"> Ramen
+    <input type="checkbox" name="lunch"> Salad
+    <p></p> <input type="submit" value="Click">
+  </form>
+
+</body>
+
+</html>
