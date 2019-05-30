@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>script tutorials</title>
+  <meta charset="UTF-8">
+  <style>
+    form {
+      color: green;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    #id,
+    #user,
+    #pw,
+    #conpw,
+    #cell,
+    #button {
+      border: 1px solid green;
+      color: green;
+      font-weight: bold;
+    }
+
+    #xx {
+      color: red;
+      font-size: 12px;
+      font-style: italic;
+    }
+  </style>
+  <script>
+    function check() {
+      var sex = 0;
+      for (var i = 0; i < 2; i++) {
+        if (document.f.sex[i].checked)
+          sex = 1;
+      }
+      var hobby = 0;
+      for (var i = 0; i < 6; i++) {
+        if (document.f.hobby[i].checked)
+          hobby = 1;
+      }
+      // for input text
+      // var x = document.getElementById("xx").innerText;
+      // var id = document.getElementById("id").value;
+      // var name = document.getElementById("name").value;
+      // var pw = document.getElementById("pw").value;
+      // var conpw = document.getElementById("conpw").value;
+      // var cell = document.getElementById("cell").value;
+      //
+      // 조건 시작
+      // ??????????? id명이 name 이면 왜 안되지 ???
+      // ?????????? 값을 변수에 넣으면 왜 안되지 ???
+      if (id.value == "") {
+        xx.innerText = "Nothing input for ID !";
+        return false;
+      } else if (id.value.length < 8) {
+        xx.innerText = "Not enough length for ID !";
+        return false;
+      } else if (user.value == "") {
+        xx.innerText = "Nothing input for name !";
+        return false;
+      } else if (pw.value == "") {
+        xx.innerText = "Nothing input for password !";
+        return false;
+      } else if (!(pw.value == conpw.value)) {
+        xx.innerText = "Please check the password again.";
+        return false;
+      } else if (cell.value == "") {
+        xx.innerText = "Nothing input for cellphone number !";
+        return false;
+      } else if (sex == 0) {
+        xx.innerText = "Select your sex !";
+        return false;
+      } else if (hobby == 0) {
+        xx.innerText = "Select more than one hobby !";
+        return false;
+      } else if (f.year.selectedIndex == 0) {
+        xx.innerText = "YOB not selected !";
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h3> Sign up </h3>
+  <form action="c.php" method="post" name="f" onsubmit="return check()">
+    * User ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="id"> more than 8 words
+    <p></p>
+    * User name &nbsp; <input type="text" id="user">
+    <p></p>
+    * Password &nbsp;&nbsp; <input type="password" id="pw">
+    <p></p>
+    * Confirm pw <input type="password" id="conpw">
+    <p></p>
+    * Cell phone &nbsp; <input type="text" id="cell">
+    <p></p>
+    * Sex <input type="radio" name="sex"> Male <input type="radio" name="sex"> Female <p></p>
+    * Hobbies
+    <input type="checkbox" name="hobby"> Reading
+    <input type="checkbox" name="hobby"> Traveling
+    <input type="checkbox" name="hobby"> Swimming
+    <input type="checkbox" name="hobby"> Fishing
+    <input type="checkbox" name="hobby"> Dancing
+    <input type="checkbox" name="hobby"> Writing
+    <p></p>
+    * Year of birth
+    <select name="year" id="year">
+      <option> Select </option>
+      <option> 1990 </option>
+      <option> 1991 </option>
+      <option> 1992 </option>
+      <option> 1993 </option>
+      <option> 1994 </option>
+    </select>
+    <p></p>
+    <input type="submit" value="Click to sign up" id="button">
+    <span id="xx"> </span>
+  </form>
+
+
+</body>
+
+</html>
