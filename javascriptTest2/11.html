@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function aa() {
+      var r = new Array();
+      r = [n1.value, n2.value, n3.value, n4.value, n5.value, n6.value, n7.value, n8.valu3, n9.value, n10.value];
+      var x = 0;
+      for (var i = 0; i < 10; i++) {
+        if (!(r[i] == ""))
+          x = x + 1;
+      }
+      var ii = parseInt(Math.random() * (x - 1));
+      result.value = r[ii];
+    }
+
+    function bb() {
+      var r = new Array();
+      r = [n1.value, n2.value, n3.value, n4.value, n5.value, n6.value, n7.value, n8.valu3, n9.value, n10.value];
+      var x = 0;
+      for (var i = 0; i < 10; i++) {
+        if (!(r[i] == ""))
+          x = x + 1;
+      }
+      // x는 정해졌다.
+      // var ii = parseInt(Math.random() * (x - 1));
+      // if (ii == iii) {
+      //  iii = parseInt(Math.random() * (x - 1));
+      // }
+      var no = new Array();
+      for (var i = 0; i < 2; i++) {
+        no[i] = parseInt(Math.random() * (x - 1));
+        for (var j = 0; j <= i - 1; j++) {
+          if (no[j] == no[i])
+            i = i - 1;
+        }
+      }
+      //
+      result.value = r[no[0]] + " " + r[no[1]];
+    }
+
+    function cc() {
+      var r = new Array();
+      r = [n1.value, n2.value, n3.value, n4.value, n5.value, n6.value, n7.value, n8.valu3, n9.value, n10.value];
+      var x = 0;
+      for (var i = 0; i < 10; i++) {
+        if (!(r[i] == ""))
+          x = x + 1;
+      }
+      // x는 정해졌다.
+      var no = new Array();
+      for (var i = 0; i < 3; i++) {
+        no[i] = parseInt(Math.random() * (x - 1));
+        for (var j = 0; j <= i - 1; j++) {
+          if (no[j] == no[i])
+            i = i - 1;
+        }
+      }
+      result.value = r[no[0]] + " " + r[no[1]] + " " + r[no[2]];
+    }
+  </script>
+
+</head>
+
+<body>
+  <form name=pkc>
+    이름 <input type=text name=irum id="n1">
+    <p></p>
+    이름 <input type=text name=irum id="n2">
+    <p></p>
+    이름 <input type=text name=irum id="n3">
+    <p></p>
+    이름 <input type=text name=irum id="n4">
+    <p></p>
+    이름 <input type=text name=irum id="n5">
+    <p></p>
+    이름 <input type=text name=irum id="n6">
+    <p></p>
+    이름 <input type=text name=irum id="n7">
+    <p></p>
+    이름 <input type=text name=irum id="n8">
+    <p></p>
+    이름 <input type=text name=irum id="n9">
+    <p></p>
+    이름 <input type=text name=irum id="n10">
+    <p></p>
+    <input type=button value="오늘 밥 사는 사람 1명" id="a" onclick="aa()">
+    <input type=button value="오늘 밥 사는 사람 2명" id="b" onclick="bb()">
+    <input type=button value="오늘 밥 사는 사람 3명" id="c" onclick="cc()">
+    <p></p>
+    <!-- 결과 -->
+    <input type=text name=result id="result" size=40>
+  </form>
+</body>
+
+</html>

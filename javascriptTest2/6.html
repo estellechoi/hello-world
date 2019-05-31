@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function aa() {
+      if (ju1.value.length == 6) {
+        ju2.focus();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 주민번호 6자리 입력하면 자동으로 그다음 입력칸으로 이동 -->
+  <form name=pkc>
+    주민번호 <input type=text name=jumin1 maxlength="6" id="ju1" onkeyup="aa()"> - <input type=text name=jumin2 maxlength="7" id="ju2">
+  </form>
+</body>
+
+</html>

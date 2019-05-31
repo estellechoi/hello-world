@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #xx {
+      color: red;
+      font-size: 11px;
+    }
+  </style>
+  <script>
+    function ch() {
+      if (pw1.value == "") {
+        xx.innerText = "You didn't input the password.";
+        return false;
+      } else if (!(pw1.value == pw2.value)) {
+        xx.innerText = "Your passwords do not match each other.";
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 전송버튼을 누르면 비밀번호가 비었는지 체크와
+        두개의 입력값이 같은지를 체크후 전송 -->
+  <form name=pkc method=post action=a.jsp onsubmit="return ch()">
+    비밀번호 1 <input type=password name=pwd1 id="pw1">
+    <p>
+      비밀번호 2 <input type=password name=pwd1 id="pw2">
+      <p>
+        <input type=submit value="Click"> <span id="xx"></span>
+  </form>
+</body>
+
+</html>

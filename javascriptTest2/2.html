@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function game() {
+      for (var j = 0; j < 5; j++) {
+        var a = new Array();
+        for (var i = 0; i < 6; i++) {
+          a[i] = parseInt((Math.random() * 45) + 1);
+          for (var k = 0; k <= i - 1; k++) {
+            if (a[k] == a[i])
+              i = i - 1;
+          }
+        }
+
+        var bun = "";
+        for (var i = 0; i < 6; i++)
+          bun = bun + a[i] + " ";
+        // ** body의 요소들은 name 값이 같으면 무조건 배열로 인식
+        document.getElementsByName("gg")[j].value = bun;
+      }
+    }
+    //  g1.value = a[0] + " " + a[1] + " " + a[2] + " " + a[3] + " " + a[4] + " " + a[5];
+    //  g2.value = a[6] + " " + a[7] + " " + a[8] + " " + a[9] + " " + a[10] + " " + a[11];
+    //  g3.value = a[12] + " " + a[13] + " " + a[14] + " " + a[15] + " " + a[16] + " " + a[17];
+    //  g4.value = a[18] + " " + a[19] + " " + a[20] + " " + a[21] + " " + a[22] + " " + a[23];
+    //  g5.value = a[24] + " " + a[25] + " " + a[26] + " " + a[27] + " " + a[28] + " " + a[29];
+  </script>
+</head>
+
+<body>
+  <!-- 버튼을 누르면 로또번호 6개를 입력양식에 출력 -->
+  <!-- 5게임을 출력 -->
+  <input type=button value="Click" onclick="game()">
+  <p>
+    1게임 <input type=text id="g1" name="gg">
+    <p></p>
+    2게임 <input type=text id="g2" name="gg">
+    <p></p>
+    3게임 <input type=text id="g3" name="gg">
+    <p></p>
+    4게임 <input type=text id="g4" name="gg">
+    <p></p>
+    5게임 <input type=text id="g5" name="gg">
+
+</body>
+
+</html>

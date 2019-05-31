@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function bb() {
+      amount.value = parseInt(q.value) * 4000;
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 구입 수량입력칸에 구입개수를 입력후 blur될때 합계금액을 구하시오 -->
+  <form name=pkc>
+    금액 4,000원
+    <p></p>
+    구입수량 <input type=text size=2 id="q" onblur="bb()">
+    <p></p>
+    합계금액 <input type=text size=5 id="amount">
+  </form>
+</body>
+
+</html>

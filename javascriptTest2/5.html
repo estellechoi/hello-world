@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<!-- 전화번호 입력은 숫자만 가능하게
+* 아스키코드 활용
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <script>
+    function xx() {
+      if (event.keyCode < 48 || event.keyCode > 57)
+        return false;
+      else
+        return true;
+    }
+  </script>
+</head>
+
+<body>
+
+  <form name=pkc method=post action=a.jsp>
+    <input type=text name=phone placeholder="only numbers are available." onkeypress=" return xx()">
+    <!--
+    <input type="number"> → 크롬에서만 작동
+    -->
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<!-- 함수 하나로 만들기 ㅎㅎㅎ if 사용 ? -->
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #btn {
+      width: 300px;
+      height: 40px;
+      background: green;
+      color: white;
+      font-size: 20px;
+      border: 1px solid green;
+    }
+  </style>
+  <script>
+    function over() {
+      btn.style.color = "yellow";
+      btn.style.background = "pink";
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 마우스가 올라가면 배경색과 글자색을 반전시키시오 -->
+  <input id=btn type=button value=전송하기 onmouseover="over()">
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #xx {
+      color: red;
+      font-size: 12px;
+    }
+  </style>
+  <script>
+    function aa() {
+      var a = email.value.indexOf("@");
+      if (a >= 0)
+        xx.innerText = "이메일 정상";
+      else
+        xx.innerText = "이메일 오류";
+    }
+  </script>
+</head>
+
+
+<body>
+  <!--  이메일을 입력후 blur가 될때 이메일에 '@'가 있는지 확인하여 있으면 입력양식 옆에 '이메일 정상' 이라고 표시하고
+   없으면 '이메일 오류' 라고 표시한다.  -->
+  <form name=pkc>
+    이메일 <input type=text id="email" onblur="aa()"> <span id="xx"> </span>
+  </form>
+</body>
+
+</html>

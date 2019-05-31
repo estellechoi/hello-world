@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<!-- radio의 value값을 쓰려면, 태그에서 value값을 줘야함 -->
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #xx {
+      color: red;
+      font-size: 11px;
+    }
+  </style>
+  <script>
+    function result() {
+      var a = 0;
+      for (var i = 0; i < 5; i++) {
+        if (document.getElementsByName('food')[i].checked) {
+          a = 1;
+        }
+      }
+      if (a == 0)
+        xx.innerText = "You didn't select food.";
+
+      // 값을 넘기자. ???????? (radio의 value를 태그에서 설정해줬어야 ..)
+      var food = document.getElementsByName('food');
+      for (var i = 0; i < 5; i++) {
+        if (food[i].checked)
+          re.value = food[i].value;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 메뉴를 선택하고 주문하기 버튼을 누르면 주문음식칸에 메뉴를 출력하기  -->
+  <h3> 메뉴 </h3>
+  <form name=pkc>
+    <input type=radio name=food value="짜장면"> 짜장면 <br>
+    <input type=radio name=food value="우동"> 우동 <br>
+    <input type=radio name=food value="짬뽕"> 짬뽕 <br>
+    <input type=radio name=food value="탕수육"> 탕수육 <br>
+    <input type=radio name=food value="라조기"> 라조기
+    <p></p>
+    <input type=button value=주문하기 onclick="result()">
+    <span id="xx"> </span>
+    <p></p>
+  </form>
+  <hr>
+  주문음식 <input type=text name=jumun id="re">
+
+</body>
+
+</html>
