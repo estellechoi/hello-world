@@ -8,6 +8,8 @@
     #btn {
       width: 300px;
       height: 40px;
+      margin-left: 100px;
+      margin-top: 100px;
       background: green;
       color: white;
       font-size: 20px;
@@ -15,16 +17,29 @@
     }
   </style>
   <script>
-    function over() {
-      btn.style.color = "yellow";
-      btn.style.background = "pink";
+    // event.      이벤트를 실행했을 때
+    // clientX     브라우저 페이지에서의 X좌표 위치를 반환 (스크롤은 무시)
+    // ??????????????  document.documentElement.scrollLeft 이건 왜 필요한지 ?
+    function aa() {
+      var x = parseInt(event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft);
+      var y = parseInt(event.clientY + document.body.scrollTop + document.documentElement.scrollTop);
+      xx.innerHTML = x + " , " + y;
+
+      if (x >= 108 && x <= 406 && y >= 108 && y <= 147) {
+        btn.style.color = "green";
+        btn.style.background = "white";
+      } else {
+        btn.style.color = "white";
+        btn.style.background = "green";
+      }
     }
   </script>
 </head>
 
-<body>
+<body onmousemove="aa()">
   <!-- 마우스가 올라가면 배경색과 글자색을 반전시키시오 -->
-  <input id=btn type=button value=전송하기 onmouseover="over()">
+  <input id=btn type=button value=전송하기>
+  <div id=xx> </div>
 </body>
 
 </html>
