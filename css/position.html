@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #ca {
+      border: 1px solid red;
+      width: 60px;
+    }
+
+    #h {
+      /* 원래 있어야할 자리를 공백으로 차지하면서, 정해진 위치에 배치됨 */
+      position: relative;
+      left: 100px;
+    }
+
+    #w {
+      position: relative;
+      left: 200px;
+    }
+
+    #e {
+      /* javascript의 도움이 필요함 */
+      position: fixed;
+      left: 100px;
+      border: 1px solid red;
+    }
+
+    #y {
+      position: absolute;
+      left: 200px;
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="ca"> ca va ? </div>
+  <div id="h"> hello </div>
+  <div id="w"> world </div>
+  <div id="e"> everybody </div> <!-- 자리차지 X-->
+  <div id="y"> yes yes </div> <!-- 자리차지 X-->
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+  dddddd <p></p>
+
+</body>
+
+</html>

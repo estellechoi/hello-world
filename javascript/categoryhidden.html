@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 점 없애기 */
+    li {
+      list-style-type: none;
+    }
+
+    /* menu 영역 크기 */
+    #menu {
+      width: 130px;
+      height: 120px;
+      border: 1px solid red;
+    }
+
+    /* call only the direct son tag */
+    #menu>li {
+      float: left;
+      padding-right: 30px;
+      border: 1px solid red;
+    }
+
+    #menu #sub {
+      padding-left: 0px;
+      display: none;
+    }
+  </style>
+  <script>
+    function view(n) {
+      sub[n].style.display = "inline";
+    }
+
+    function hide(n) {
+      sub[n].style.display = "none";
+    }
+  </script>
+</head>
+
+<body>
+  <ul id="menu">
+    <li onmouseover="view(0)" onmouseout="hide(0)"> 식품
+      <ul id="sub">
+        <li>ddd</li>
+        <li>ddd</li>
+        <li>ddd</li>
+      </ul>
+    </li>
+
+    <li onmouseover="view(1)" onmouseout="hide(1)"> 의류
+      <ul id="sub">
+        <li>ddd</li>
+        <li>ddd</li>
+        <li>ddd</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+
+</html>
