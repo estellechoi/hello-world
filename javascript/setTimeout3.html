@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #outer {
+      border: 1px solid red;
+      width: 200px;
+      height: 30px;
+      overflow: hidden;
+    }
+
+    #tx {
+      width: 1500px;
+      height: 30px;
+      margin-left: 0px;
+      color: red;
+    }
+  </style>
+  <script>
+    var mar = 0;
+
+    function move() {
+      // mar = mar - 1;
+      //tx.style.marginLeft = mar + "px";
+      // mar 이동값과 글자 변하는 속도가 다르다 ....
+      var str = tx.innerText;
+      str = str.substring(1) + str.substring(0, 1);
+      tx.innerText = str;
+      //
+      aa.innerText = mar;
+      if (mar > -1000)
+        setTimeout(move, 100);
+    }
+
+    function start() {
+      setTimeout(move, 100);
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" onclick="start()" value="Click">
+  <p></p>
+  <div id="outer">
+    <div id="tx"> abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz </div>
+  </div>
+  mar 값 : <span id=aa> </span>
+</body>
+
+</html>
