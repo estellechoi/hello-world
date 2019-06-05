@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // 1. 아이디 필수
+    // 2. 비밀번호 2개 일치
+    // 3. 알게된 경로 꼭 체크
+    // 4. 원하는 직종 꼭 체크
+    // 5. 원하는 직종 3개 까지만 체크
+    // 6. 태어난 해 꼭 체크
+    // type=submit 클릭하면 위의 내용 이상없을 시 전송
+
+    //***************************
+    // 1) id는 배열 안된다 getElementById("")
+    // 2) 각 tag에 붙인 이름으로 호출 getElementsByName("")[i]
+    // 3) getElementsByName("")[0] → 1개여도 무조건 배열번호로 호출
+    function cc() {
+      var c = 0;
+      var j = 0;
+      for (var i = 0; i < 4; i++) {
+        if (document.getElementsByName("course")[i].checked)
+          c = 1;
+      }
+      for (var i = 0; i < 5; i++) {
+        if (document.getElementsByName("job")[i].checked)
+          j = j + 1;
+      }
+      // 검토 시작
+      if (user.value == "") {
+        xx.innerText = "No user name.";
+        return false;
+      } else if (pw.value == "") {
+        xx.innerText = "No password.";
+        return false;
+      } else if (!(pw.value == conpw.value)) {
+        xx.innerText = "The passwords don't match.";
+        return false;
+      } else if (c == 0) {
+        xx.innerText = "No course checked.";
+        return false;
+      } else if (j == 0 || j > 3) {
+        xx.innerText = "No job or too many jobs checked.";
+        return false;
+      } else if (document.getElementsByName("birth")[0].value == "00") {
+        xx.innerText = "No year of birth selected.";
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form action="a.php" method="post" onsubmit="return cc()">
+    <input type="text" id="user" placeholder="User name">
+    <p></p>
+    <input type="password" id="pw" placeholder="password">
+    <p></p>
+    <input type="password" id="conpw" placeholder="confirm password">
+    <p></p>
+    알게된 경로 <p></p>
+    <input type="radio" name="course" id="cour"> 인터넷
+    <input type="radio" name="course" id="cour"> 친구
+    <input type="radio" name="course" id="cour"> 전단지
+    <input type="radio" name="course" id="cour"> 기타
+    <p></p>
+    원하는 직종 <p></p>
+    <input type="checkbox" name="job" id="job"> 웹프로그래밍
+    <input type="checkbox" name="job" id="job"> 웹퍼블리싱
+    <input type="checkbox" name="job" id="job"> 웹디자인
+    <input type="checkbox" name="job" id="job"> DB개발
+    <input type="checkbox" name="job" id="job"> 보안
+    <p></p>
+    <select name="birth" id="birth">
+      <option value="00">Year of Birth</option>
+      <option value="2019">2019</option>
+      <option value="2018">2018</option>
+      <option value="2017">2017</option>
+      <option value="2016">2016</option>
+      <option value="2015">2015</option>
+    </select>
+    <p></p>
+    <input type="submit" value="Click"> <span id="xx"> </span>
+  </form>
+
+</body>
+
+</html>
