@@ -1,0 +1,23 @@
+    #grid {
+      border: 3px solid pink;
+      display: grid;
+      grid-template-columns: 3fr 7fr;
+      /* inline*/
+    }
+
+    #grid2 {
+      border: 3px solid pink;
+      display: grid;
+      grid-template-columns: 500px 1fr;
+    }
+
+    div {
+      border: 3px solid grey;
+    }
+
+    @media(max-width: 500px) {
+      #grid2 {
+        display: block;
+        border: none;
+      }
+    }
