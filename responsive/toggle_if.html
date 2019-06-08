@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 비교연산자 -->
+  <h2> Comparison Operators </h2>
+  <h2> Calculator </h2>
+  <ul>
+    <li> &lt; </li> <!-- less than : < -->
+  </ul>
+  <!-- Boolean 자료형 -->
+  <h2> Boolean Date Type </h2>
+  <script>
+    // 1 === 1 (연산자 3개일때와 기능이 같은가 ?)
+    document.write(1 == 1);
+    document.write("<br>");
+    document.write(1 + 2 == 3);
+    document.write("<br>");
+    document.write(1 < 2);
+  </script>
+  <h2> Conditional Statements </h2>
+  <script>
+    if (true) {
+      document.write("true");
+    } else {
+      document.write("false");
+    }
+    document.write("<br>");
+    if (false) {
+      document.write("true");
+    } else {
+      document.write("false");
+    }
+  </script>
+  <h2> Toggle </h2>
+  <input id="toggle" type="button" value="None" onclick="
+  if(document.querySelector('#toggle').value == 'None') {
+     document.querySelector('body').style.background='orange';
+     document.querySelector('body').style.color='gold';
+     document.querySelector('#toggle').value = 'Colored';
+   } else {
+     document.querySelector('body').style.background='none';
+     document.querySelector('body').style.color='black';
+     document.querySelector('#toggle').value = 'None';
+   }">
+
+</body>
+
+</html>

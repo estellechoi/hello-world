@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function cc(xx) {
+      var target = document.querySelector("body");
+      if (xx.value == "None") {
+        target.style.background = "orange";
+        target.style.color = "gold";
+        xx.value = "Colored";
+      } else {
+        target.style.background = "none";
+        target.style.color = "black";
+        xx.value = "None";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h2> Toggle </h2>
+  <input type="button" value="None" onclick="
+  var target = document.querySelector('body');
+  if(this.value == 'None') {
+     target.style.background='orange';
+     target.style.color='gold';
+     this.value = 'Colored';
+   } else {
+     target.style.background='none';
+     target.style.color='black';
+     this.value = 'None';
+   }">
+  <p></p>
+  <input type="button" value="None" onclick="cc(this)">
+
+</body>
+
+</html>
