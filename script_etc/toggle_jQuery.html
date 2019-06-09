@@ -1,5 +1,7 @@
 <!doctype html>
 <html>
+<!-- jQuery CDN(Content Delivery Network) 활용하기 -->
+<!-- jQuery is one of the most popular libraries of javascript -->
 
 <head>
   <meta charset="UTF-8">
@@ -11,31 +13,13 @@
       color: blue;
     }
   </style>
-  <script>
-    function colorhandler(xx) {
-      var list = document.querySelectorAll("li");
-      // querySelectorAll() → node 생성 (일단 배열로 간주)
-      if (xx.value == "none") {
-        var i = 0;
-        while (i < list.length) {
-          list[i].style.color = "powderblue";
-          i = i + 1;
-        }
-        xx.value = "colored";
-      } else {
-        var i = 0;
-        while (i < list.length) {
-          list[i].style.color = "blue";
-          i = i + 1;
-        }
-        xx.value = "none";
-      }
-    }
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="colors_jQuery.js"></script>
 </head>
 
 <body>
   <input type="button" value="none" onclick="colorhandler(this)">
+  <h2> Tests </h2>
   <ul>
     <li> test1 </li>
     <li> test2 </li>
