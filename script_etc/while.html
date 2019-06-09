@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2> While Statements </h2>
+  <ul>
+    <script>
+      for (var i = 0; i < 5; i++) {
+        document.write("<li>" + (i + 1) + "</li>");
+      }
+    </script>
+  </ul>
+  <ul>
+    <script>
+      var i = 0;
+      while (i < 3) {
+        document.write("<li> h </li>")
+        i = i + 1;
+      }
+    </script>
+  </ul>
+  <h2> Use Array </h2>
+  <ul>
+    <script>
+      var co = new Array("one", "two", "three", "four");
+      var i = 0;
+      while (i < co.length) {
+        document.write("<li><a href='http://localhost/" + co[i] + "' >" + co[i].length + "</a></li>");
+        i = i + 1;
+      }
+    </script>
+  </ul>
+</body>
+
+</html>

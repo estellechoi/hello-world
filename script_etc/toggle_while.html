@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      color: blue;
+    }
+  </style>
+  <script>
+    function colorhandler(xx) {
+      var list = document.querySelectorAll("li");
+      // querySelectorAll() → node 생성 (일단 배열로 간주)
+      if (xx.value == "none") {
+        var i = 0;
+        while (i < list.length) {
+          list[i].style.color = "powderblue";
+          i = i + 1;
+        }
+        xx.value = "colored";
+      } else {
+        var i = 0;
+        while (i < list.length) {
+          list[i].style.color = "blue";
+          i = i + 1;
+        }
+        xx.value = "none";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" value="none" onclick="colorhandler(this)">
+  <ul>
+    <li> test1 </li>
+    <li> test2 </li>
+    <li> test3 </li>
+    <li> test4 </li>
+  </ul>
+  <script>
+    /*
+    var list = document.querySelectorAll("li");
+    // document.write(list[0].innerText);
+    var i = 0;
+    while (i < list.length) {
+      list[i].style.color = "powderblue";
+      i = i + 1;
+    }
+    */
+  </script>
+
+</body>
+
+</html>
