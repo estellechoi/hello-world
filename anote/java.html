@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  ★ Java Grammars
+
+  * OOP (Object Oriented Programming, 객체 지향 프로그래밍) :
+  부품 객체를 먼저 만들고 이것들을 (필요할 때마다) 하나씩 조립해 완성된 프로그램을 만드는 기법
+
+  * OOP 언어 : C++, JAVA 외
+
+  * Object(객체) : 클래스 내에 속성(필드), 메소드(함수) 만들어놓고 ..
+  * 캡슐화 : 외부의 잘못된 사용으로 객체가 손상되지 않도록 클래스 내용을 감춘다. (필요한 것만 알려줌)
+  * 캡슐 접근 → 접근제한자(Access Modifier) 사용 (public, private, protected, default)
+
+  * 클래스 상속(extends) : 클래스를 통째로 상속받는다 (class B extends A)
+  ∵ 클래스 복사는 public 속성과 메소드만 사용 가능하기 때문
+
+  * 다형성(Polymorphism) : 같은 타입이지만 실행 결과가 다양한 객체를 대입할 수 있는 성질
+  → 부모 타입에는 모든 자식객체가 대입 인터페이스 타입에는 모든 구현 객체가 대입 ?
+
+  * 인스턴스화(getInstance) : 예로 Scanner sc = new Scanner 에서 객체변수 sc를 객체 instance라고 함
+  * 정적 멤버 (static): 객체 생성 없이 바로 쓸 수 있도록 static 멤버 선언
+  * 인스턴스 멤버 선언 vs 정적 멤버 선언 기준
+  ???? public class Cal { String color; stataic double pi = 3.111;
+
+  * import : 다른 패키지에서 클래스 호출 예) import java.util.Scanner;
+
+  * 식별자 작성 규칙
+  하나 이상의 문자
+  첫글자 숫자 X, 빈칸 X
+  $ _ 외의 특수문자 사용 불가
+  자바 키워드 사용 불가 (ex) int for.. )
+  대소문자 구분 .! 첫 글자와 연결된 다른 단어 첫글자는 대문자로 .. (관례) ChatClient
+
+  * 하나의 java file에서 생성한 클래스 갯수만큼 .class 파일 생성
+  (javac.exe 컴파일 → .class) → public class는 파일명과 동일한 클래스만 가능 !
+
+  * new : instance 객체 생성 (클래스 복사도 해오고 ..) 예) Scanner sc = new Scanner();
+  * Constructor(생성자) : 생성자 이름은 클래스 이름과 동일
+
+  * 라이브러리 : 다른 클래스에서 이용할 목적으로 만든 클래스 (자체실행X)
+  * 실행 클래스 : main(){} 메소드를 가진 클래스
+  * 클래스 구성
+  필드(속성) : 객체(class)의 데이터 저장
+  생성자 : 객체(class) 생성시 값 초기화 기능
+  메소드(함수) : 객체(class) 동작
+
+  * boolean : 참/거짓 2가지 값을 갖는 논리형 datatype
+
+  * 필드 초기값
+  정수 : byte 0 char \u0000 (빈 공백) short 0 int 0 long 0L
+  실수 : ?
+
+  *오버로딩 (Function Overloding) : 이름은 동일하나 인자(매개변수)의 타입/개수가 다른 메소드를 쌓는 기법
+  * 싱글톤
+
+  * Annotation : 컴파일러에 추가정보 제공 (metadata) // 사람에게는 주석에 해당 !
+
+</body>
+
+</html>
