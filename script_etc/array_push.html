@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var co = ["estelle", "carina"];
+
+    // push() : 맨 뒤에 1개 추가
+    co.push("annie");
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+
+    // concat([]) : 맨 뒤에 여러개 추가 및 리턴 (변수에 넣어줘야 함 !)
+    co = co.concat(["dom", "isabel"]);
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+
+    // pop() : 맨 뒤의 원소 1개 삭제
+    co.pop();
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+
+    // shift() : index 0 원소 1개 삭제
+    co.shift();
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+
+    // unshift() : index 0에 1개 추가
+    co.unshift("jeff");
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+
+    // splice(a,b,c) : a (on which index), b (how many from a), c (add what)
+    co.splice(2, 0, "jeremie");
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+
+    // sort() : in order of alphabet/number 정렬
+    // * sort(sortfunction) 이용해서 입맛대로 정렬 가능 !
+    co.sort();
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+
+    // reverse() : 알파벳/숫자 역순 정렬
+    co.reverse();
+    for (var i = 0; i < co.length; i++) {
+      document.write(i + " : " + co[i] + "<br>");
+    }
+    document.write("<br>");
+  </script>
+
+</body>
+
+</html>

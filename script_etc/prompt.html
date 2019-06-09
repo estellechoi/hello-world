@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // prompt 입력값을 변수에 대입하기
+    // var id = prompt("Please input your ID.");
+    // if (id == "youjin") {
+    //   password = prompt("Please input your password");
+    //   if (password == "1111")
+    //     document.write("Hello.");
+    //   else
+    //     document.write("Wrong password.");
+    // } else {
+    //   document.write("Undefined user.");
+    // }
+    var id = prompt("Please input your Id.");
+    var pw = prompt("Please input your password.");
+    // if (id == "youjin" && pw == "1111")
+    //   document.write("Hello.");
+    // else {
+    //   document.write("Undefined User.");
+    // }
+    if (!(id == "youjin") || !(pw == "1111"))
+      document.write("Undefined User");
+    else
+      document.write("Hello.");
+  </script>
+
+</body>
+
+</html>
