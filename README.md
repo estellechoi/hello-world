@@ -22,8 +22,8 @@ $ clear : 화면 클리어
 
 $ cd "directory" : 해당 폴더로 이동 (change directory)
 
-        $ cd users
-        $ cd htdocs
+        [ex] $ cd users
+        [ex] $ cd htdocs
 
 $ cd .. : 상위 디렉토리로 이동
 
