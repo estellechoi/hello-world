@@ -31,7 +31,7 @@ $ "directory"  현 위치에서 디렉토리(폴더) 생성 → not tried yet.
 
 $ ls -al  현재 디렉토리의 파일목록 보여줌 ※띄어쓰기 주의
 
-$ mkdir 폴더명  로컬 디렉토리 생성 (make directory)
+$ mkdir "directory"  로컬 디렉토리 생성 (make directory)
 
         [ex] $ mkdir test
 
