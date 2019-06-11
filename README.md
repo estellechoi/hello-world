@@ -16,26 +16,26 @@
 
 #### 기본 명령어
 
-$ pwd : 현재 나의 디렉토리 위치 확인
+$ pwd  현재 나의 디렉토리 위치 확인
 
-$ clear : 화면 클리어
+$ clear  화면 클리어
 
-$ cd "directory" : 해당 폴더로 이동 (change directory)
+$ cd "directory"  해당 폴더로 이동 (change directory)
 
         [ex] $ cd users
         [ex] $ cd htdocs
 
-$ cd .. : 상위 디렉토리로 이동
+$ cd ..  상위 디렉토리로 이동
 
-$ "directory" : 현 위치에서 디렉토리(폴더) 생성 → not tried yet.
+$ "directory"  현 위치에서 디렉토리(폴더) 생성 → not tried yet.
 
-$ ls -al : 현재 디렉토리의 파일목록 보여줌 ※띄어쓰기 주의
+$ ls -al  현재 디렉토리의 파일목록 보여줌 ※띄어쓰기 주의
 
-$ mkdir 폴더명 : 로컬 디렉토리 생성 (make directory)
+$ mkdir 폴더명  로컬 디렉토리 생성 (make directory)
 
         [ex] $ mkdir test
 
-$ git remote add origin "repository url" : 원격 저장소 생성
+$ git remote add origin "repository url"  원격 저장소 생성
 
         [ex] $ git remote add origin http://git.aaaaa.git
 
@@ -43,33 +43,33 @@ $ git remote add origin "repository url" : 원격 저장소 생성
         * origin: 로컬 디렉토리와 연결된 원격 디렉토리
         [ex] $ git remote add origin master
 
-$ git remote -v : 원격 저장소 상세보기
+$ git remote -v  원격 저장소 상세보기
 
-$ git remote --help : 원격 저장소 명령어 도움말
+$ git remote --help  원격 저장소 명령어 도움말
 
-$ git remote remove "repository" : 원격 저장소 삭제
+$ git remote remove "repository"  원격 저장소 삭제
 
-$ git push -u origin master : 푸시 (로컬 → 원격 저장소(origin)의 master branch)
+$ git push -u origin master  푸시 (로컬 → 원격 저장소(origin)의 master branch)
         
         git username, password 입력 후 푸시됨
 * 
         [?] $ git push -u origin
 
-$ git clone "repository url" "directory" : 로컬 디렉토리 생성 및 원격 저장소를 해당 로컬 디렉토리에 복제
+$ git clone "repository url" "directory"  로컬 디렉토리 생성 및 원격 저장소를 해당 로컬 디렉토리에 복제
 
         [ex] $ git clone https://github.com/estellechoi/hello-world.git helloworld_home
 
 * 
-        $ git clone "repository url" . : 원격 디렉토리를 현위치(로컬)에 복제 ( . ⇒ 현재 디렉토리)
+        $ git clone "repository url" .  원격 디렉토리를 현위치(로컬)에 복제 ( . ⇒ 현재 디렉토리)
 
 
-$ git init : 깃 이닛 (해당 디렉토리를 버전관리 하겠다)
+$ git init  깃 이닛 (해당 디렉토리를 버전관리 하겠다)
 
-$ git status : 버전관리 여부/상태 확인
+$ git status  버전관리 여부/상태 확인
 
         untracked files  → 아직 버전관리를 안했군 ..
   
-$ git add : 선택된 파일을 커밋 준비 (To get files staged)
+$ git add  선택된 파일을 커밋 준비 (To get files staged)
 
         git status 입력 후 확인  → Changes to be committed.
   
@@ -77,16 +77,16 @@ $ git config --global user.name "git name"
 
 $ git config --global user.email "git email address"
 
-$ git commit : 깃 커밋 (커밋 메세지 입력을 위한 프로그램 실행(vim))
+$ git commit  깃 커밋 (커밋 메세지 입력을 위한 프로그램 실행(vim))
 
-$ git log : 버전관리 히스토리 확인
+$ git log  버전관리 히스토리 확인
 
-$ git log -p : 커밋간 소스 차이 확인
+$ git log -p  커밋간 소스 차이 확인
 
 
 #### 파일 관리
 
-$ vim "file" : vim 프로그램을 이용해서 해당 파일을 생성/편집
+$ vim "file"  vim 프로그램을 이용해서 해당 파일을 생성/편집
 
         [ex] $ vim f1.txt 
 * 
@@ -96,9 +96,9 @@ $ vim "file" : vim 프로그램을 이용해서 해당 파일을 생성/편집
         :  → 입력 완료/저장 (입력시 화면 하단에 보여짐)
         wq + enter  → vim을 종료하고 Git Bash로 복귀
 
-$ cat "file" : 해당 파일에 저장된 내용 보기
+$ cat "file"  해당 파일에 저장된 내용 보기
 
-$ cp "file1" "file2" : 파일 복사 (file1 복사 → 새로운 file2 생성)
+$ cp "file1" "file2"  파일 복사 (file1 복사 → 새로운 file2 생성)
 
         ☆ 왜 commit 전에 add를 하는가 ?
         ∵ 원하는 파일만 골라서 커밋하기 위한 커밋 준비 (staged)
@@ -109,23 +109,23 @@ $ cp "file1" "file2" : 파일 복사 (file1 복사 → 새로운 file2 생성)
 
 #### 커밋 관리
 
-$ git log "Commit ID" : 해당 커밋 이전의 히스토리만 확인
+$ git log "Commit ID"  해당 커밋 이전의 히스토리만 확인
 
-$ git diff "Commit ID".."Commit ID" : 커밋간의 차이 확인
+$ git diff "Commit ID".."Commit ID"  커밋간의 차이 확인
 
 #### 커밋 취소 (Get back to former version)
 
-$ git reset "Commit ID" --hard : 해당 커밋 상태로 초기화 (이후 버전 취소, 취소된 버전 추후 복구 가능)
+$ git reset "Commit ID" --hard  해당 커밋 상태로 초기화 (이후 버전 취소, 취소된 버전 추후 복구 가능)
 
         soft 등 다른 명령도 있음
 
-$ git revert : ??
+$ git revert  ??
 
-$ git commit --help : 커밋메세지에 대한 도움말 보기
+$ git commit --help  커밋메세지에 대한 도움말 보기
 
         [?] $ git commit id -a : 해당 파일이 수정되면 자동으로 add (can commit without add)
 
-$ git commit -am "msg" : add 및 커밋 (자동 add)
+$ git commit -am "msg"  수정된 파일 add 및 커밋 (자동 add)
 
         [ex] $ git commit -am "new version"
 
@@ -145,23 +145,23 @@ $ git commit -am "msg" : add 및 커밋 (자동 add)
 
 ### 깃 브랜치 (Branch)
 
-$ git branch : 브랜치 현황 보기
+$ git branch  브랜치 현황 보기
 
         * master : 디폴트 브랜치의 이름 (분기 전)
 
-$ git branch "branch" : 입력한 이름의 브랜치 생성
+$ git branch "branch"  입력한 이름의 브랜치 생성
 
         [ex] $ git branch test
   
-$ git checkout "branch" : 해당 브랜치로 이동 (체크아웃)
+$ git checkout "branch"  해당 브랜치로 이동 (체크아웃)
 
-$ git log --branches --decorate : 디렉토리 내 모든 브랜치 히스토리 확인 (-- 옵션)
+$ git log --branches --decorate  디렉토리 내 모든 브랜치 히스토리 확인 (-- 옵션)
 
-$ git log --branches --decorate --graph : 브랜치 히스토리를 그래프로 확인 (언제 분기되어/어디까지 관리됐는지)
+$ git log --branches --decorate --graph  브랜치 히스토리를 그래프로 확인 (언제 분기되어/어디까지 관리됐는지)
   
-$ git log --branches --decorate --graph --oneline : 브랜치 히스토리를 그래프 한 줄로 확인
+$ git log --branches --decorate --graph --oneline  브랜치 히스토리를 그래프 한 줄로 확인
   
-$ stree : 현재 디렉토리를 소스트리(GUI)로 확인 (버전관리 상태 확인)
+$ stree  현재 디렉토리를 소스트리(GUI)로 확인 (버전관리 상태 확인)
 
         [?]
         $ git log 1..2 : 1과 2 브랜치간 차이 보기 (1에는 없고 2에는 있는 것 보기)
@@ -182,20 +182,20 @@ $ stree : 현재 디렉토리를 소스트리(GUI)로 확인 (버전관리 상�
 
 ### 오픈소스 프로젝트를 나의 로컬 디렉토리로 가져오기
 
-$ git clone "repository url" "directory" : 나의 로컬 디렉토리로 원격 저장소(오픈소스 프로젝트) 복제
+$ git clone "repository url" "directory"  나의 로컬 디렉토리로 원격 저장소(오픈소스 프로젝트) 복제
 
-$ git log --reverse : 커밋 로그를 최초순으로 조회
+$ git log --reverse  커밋 로그를 최초순으로 조회
 
 $ git checkout "Commit ID"
 
 
 ### 깃헙 디렉토리 동기화/백업하기
 
-$ git commit --amend : commit msg 또는 add 내용 수정
+$ git commit --amend  커밋메시지/add 내용 수정  ※ 반드시 푸시 전에만 사용
 
-$ git push : 원격 디렉토리로 푸시
+$ git push  원격 디렉토리로 푸시
 
-$ git pull : 원격 디렉토리에 푸시된(저장된) 내용들을 로컬 디렉토리로 풀
+$ git pull  원격 디렉토리에 푸시된(저장된) 내용들을 로컬 디렉토리로 풀
 
 
 ### 깃의 원리 (How does Git work ?) : .git 디렉토리에서 일어나는 일
