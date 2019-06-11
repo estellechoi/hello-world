@@ -1,8 +1,8 @@
 # HTML, CSS, Javascript, jQuery Tutorials
 
 ## Git Tutorials
-> 깃(Git), 깃헙(Git Hub) 학습내용 정리
-> 깃 명령어 안내서 참고 https://git-scm.com → Documentation : progit Book (오픈라이센스)
+> * 깃(Git), 깃헙(Git Hub) 학습내용 정리
+> * 깃 명령어 안내서 참고 https://git-scm.com → Documentation : progit Book (오픈라이센스)
 
 ### 깃(Git) 소개
 * 기능 : 프로젝트 버전관리 (Version Control System), 백업(Backup), 복구(Recovery), 협업(Collaboration)
