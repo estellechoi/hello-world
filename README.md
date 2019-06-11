@@ -6,11 +6,11 @@
 
 ### 깃(Git) 소개
 * 기능 : 프로젝트 버전관리 (Version Control System), 백업(Backup), 복구(Recovery), 협업(Collaboration)
-> 다양한 버전관리시스템 : CVS, SVN 등
+* 다양한 버전관리시스템이 있다 (CVS, SVN 등)
 
 ### 깃 설치
 * 설치 방법 : https://git-scm.com 에서 운영체제에 맞는 다운로드 실행
-> https://codeonweb.com 에서 git 설치없이 실습 가능
+* https://codeonweb.com 에서 git 설치없이 실습 가능
 
 ### 깃 명령어
 
