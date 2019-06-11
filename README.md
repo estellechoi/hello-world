@@ -16,9 +16,9 @@
 
 #### 기본 명령어
 
-$ pwd : 현재 나의 디렉토리 위치 알려줌
+$ pwd : 현재 나의 디렉토리 위치 확인
 
-$ clear : 화면 청소
+$ clear : 화면 클리어
 
 $ cd "directory" : 해당 폴더로 이동 (change directory)
 
@@ -50,8 +50,9 @@ $ git remote --help : 원격 저장소 명령어 도움말
 $ git remote remove "repository" : 원격 저장소 삭제
 
 $ git push -u origin master : 푸시 (로컬 → 원격 저장소(origin)의 master branch)
-> git username, password 입력 후 푸시됨
-
+        
+        git username, password 입력 후 푸시됨
+* 
         [?] $ git push -u origin
 
 $ git clone "repository url" "directory" : 로컬 디렉토리 생성 및 원격 저장소를 해당 로컬 디렉토리에 복제
