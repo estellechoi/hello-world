@@ -39,7 +39,7 @@ $ git remote add origin "repository url"  원격 저장소 생성
 
         [ex] $ git remote add origin http://git.aaaaa.git
 
-* 
+
         * origin: 로컬 디렉토리와 연결된 원격 디렉토리
         [ex] $ git remote add origin master
 
@@ -52,14 +52,15 @@ $ git remote remove "repository"  원격 저장소 삭제
 $ git push -u origin master  푸시 (로컬 → 원격 저장소(origin)의 master branch)
         
         git username, password 입력 후 푸시됨
-* 
+
+
         [?] $ git push -u origin
 
 $ git clone "repository url" "directory"  로컬 디렉토리 생성 및 원격 저장소를 해당 로컬 디렉토리에 복제
 
         [ex] $ git clone https://github.com/estellechoi/hello-world.git helloworld_home
+        
 
-* 
         $ git clone "repository url" .  원격 디렉토리를 현위치(로컬)에 복제 ( . ⇒ 현재 디렉토리)
 
 
@@ -89,7 +90,8 @@ $ git log -p  커밋간 소스 차이 확인
 $ vim "file"  vim 프로그램을 이용해서 해당 파일을 생성/편집
 
         [ex] $ vim f1.txt 
-* 
+
+
         ☆ vim 명령어
         i (insert)  → 입력 시작
         esc  → 해당 기능 종료
@@ -103,7 +105,8 @@ $ cp "file1" "file2"  파일 복사 (file1 복사 → 새로운 file2 생성)
         ☆ 왜 commit 전에 add를 하는가 ?
         ∵ 원하는 파일만 골라서 커밋하기 위한 커밋 준비 (staged)
         * staged : commit 대기 상태
-* 
+
+
         ☆ 커밋 아이디(Commit ID) : 커밋마다 부여되는 고유한 ID
            [ex] e71ccbce269730181fb87010caf532c1136f9f7b
 
@@ -169,11 +172,12 @@ $ stree  현재 디렉토리를 소스트리(GUI)로 확인 (버전관리 상태
         $ git merge 2 : 현재 체크아웃 브랜치에서 2 브랜치를 merge
         $ git branch -d 2 : (현재 체크아웃 브랜치를 두고) 2 브랜치 삭제
         $ git checkout -b 3 : 3 브랜치 (긴급브랜치라고 가정) 생성 및 체크아웃
-* 
+
+
         * Fast-forwad (빨리감기) : 마스터 브랜치 + 긴급브랜치 병합 (별도의 커밋 X)
         $ git branch -d 3 : 3 브랜치(긴급 브랜치) 삭제
 
-* 
+
         * recursive : 마스터 브랜치에 변화가 생겼을 때 Fast-forward 불가
         → 공통된 조상 커밋을 두고, 합쳐진 새로운 커밋 생성 !
         → 동일파일 각 브랜치에서 커밋 후 합병시, 충돌 ...
