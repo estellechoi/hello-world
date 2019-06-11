@@ -1,20 +1,20 @@
-# HTML, CSS, Javascript, jQuery Tutorials
+# ★ HTML, CSS, Javascript, jQuery Tutorials
 
-## Git Tutorials
+# Git Tutorials
 > * 깃(Git), 깃헙(Git Hub) 학습내용 정리
 > * 깃 명령어 안내서 참고 https://git-scm.com → Documentation : progit Book (오픈라이센스)
 
-### 깃(Git) 소개
+## 깃(Git) 소개
 * 기능 : 프로젝트 버전관리 (Version Control System), 백업(Backup), 복구(Recovery), 협업(Collaboration)
 * 다양한 버전관리시스템이 있다 (CVS, SVN 등)
 
-### 깃 설치
+## 깃 설치
 * 설치 방법 : https://git-scm.com 에서 운영체제에 맞는 다운로드 실행
 * https://codeonweb.com 에서 git 설치없이 실습 가능
 
-### 깃 명령어
+## 깃 명령어
 
-#### 기본 명령어
+### 기본 명령어
 
 $ pwd  현재 나의 디렉토리 위치 확인
 
@@ -84,7 +84,7 @@ $ git log  버전관리 히스토리 확인
 $ git log -p  커밋간 소스 차이 확인
 
 
-#### 파일 관리
+### 파일 관리
 
 $ vim "file"  vim 프로그램을 이용해서 해당 파일을 생성/편집
 
@@ -107,13 +107,13 @@ $ cp "file1" "file2"  파일 복사 (file1 복사 → 새로운 file2 생성)
         ☆ 커밋 아이디(Commit ID) : 커밋마다 부여되는 고유한 ID
            [ex] e71ccbce269730181fb87010caf532c1136f9f7b
 
-#### 커밋 관리
+### 커밋 관리
 
 $ git log "Commit ID"  해당 커밋 이전의 히스토리만 확인
 
 $ git diff "Commit ID".."Commit ID"  커밋간의 차이 확인
 
-#### 커밋 취소 (Get back to former version)
+### 커밋 취소 (Get back to former version)
 
 $ git reset "Commit ID" --hard  해당 커밋 상태로 초기화 (이후 버전 취소, 취소된 버전 추후 복구 가능)
 
@@ -129,7 +129,7 @@ $ git commit -am "msg"  수정된 파일 add 및 커밋 (자동 add)
 
         [ex] $ git commit -am "new version"
 
-### 자주 쓰는 깃 명령어 순위 (Google 검색빈도 순)
+## 자주 쓰는 깃 명령어 순위 (Google 검색빈도 순)
   
         $ git commit
         $ git push
@@ -143,7 +143,7 @@ $ git commit -am "msg"  수정된 파일 add 및 커밋 (자동 add)
         $ git fetch
         $ git merge
 
-### 깃 브랜치 (Branch)
+## 깃 브랜치 (Branch)
 
 $ git branch  브랜치 현황 보기
 
@@ -180,7 +180,7 @@ $ stree  현재 디렉토리를 소스트리(GUI)로 확인 (버전관리 상태
         → 파일 내에서 각 브랜치의 내용 모두 자동으로 합침
 
 
-### 오픈소스 프로젝트를 나의 로컬 디렉토리로 가져오기
+## 오픈소스 프로젝트를 나의 로컬 디렉토리로 가져오기
 
 $ git clone "repository url" "directory"  나의 로컬 디렉토리로 원격 저장소(오픈소스 프로젝트) 복제
 
@@ -189,7 +189,7 @@ $ git log --reverse  커밋 로그를 최초순으로 조회
 $ git checkout "Commit ID"
 
 
-### 깃헙 디렉토리 동기화/백업하기
+## 깃헙 디렉토리 동기화/백업하기
 
 $ git commit --amend  커밋메시지/add 내용 수정  ※ 반드시 푸시 전에만 사용
 
@@ -198,7 +198,7 @@ $ git push  원격 디렉토리로 푸시
 $ git pull  원격 디렉토리에 푸시된(저장된) 내용들을 로컬 디렉토리로 풀
 
 
-### 깃의 원리 (How does Git work ?) : .git 디렉토리에서 일어나는 일
+## 깃의 원리 (How does Git work ?) : .git 디렉토리에서 일어나는 일
 
 * Gistory 설치 → gttps://www.python.ord 에서 다운로드 (Git Bash에서 바로 설치 가능 → pip install gistory)
 
