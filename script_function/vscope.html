@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<!--
+* 자바스크립트에서는 함수 안에서 선언된 변수만이 지역변수임
+* 즉, for/if 외 구문 안에서 선언된 변수들은 지역변수가 아니므로, fot/if문 밖에서 사용 구문
+* 단 해당 함수 안에서만
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var vscope = "global";
+    //
+    // function fscope() {
+    //   var vscope = "local";
+    //   alert(vscope);
+    // }
+    // fscope();
+
+    function a() {
+      i = 0;
+    }
+
+    for (var i = 0; i < 5; i++) {
+      // a(); // i = 0; → infinite loop problem occurs...
+      document.write(i);
+    }
+
+    // 응용
+    // 객체 전역변수
+    var MYAPP = {}
+    // 객체 속성 (object of object 추가 ?)
+    MYAPP.calculator = {
+      "left": null,
+      "right": null
+    }
+    MYAPP.coordinate = {
+      "left": null,
+      "right": null
+    }
+
+    MYAPP.calculator.left = 10;
+    MYAPP.calculator.right = 20;
+
+    function sum() {
+      return MYAPP.calculator.left + MYAPP.calculator.right;
+    }
+    document.write(sum());
+  </script>
+
+</body>
+
+</html>

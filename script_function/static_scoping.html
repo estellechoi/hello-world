@@ -1,0 +1,31 @@
+<html>
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 자바스크립트에서 전역변수는 함수가 선언된 시점에 유효범위를 갖는다.
+    // 이러한 유효범위 방식을 정적 유효범위(static scoping) 혹은 렉시컬(lexical scoping)이라고 한다.
+
+    var i = 5; // 전역변수
+
+    function a() {
+      var i = 10;
+      b();
+    }
+
+    function b() {
+      document.write(i); // i → 함수가 선언된 시점에 선언된 var i = 5 가 유효
+    }
+    a();
+  </script>
+
+</body>
+
+</html>

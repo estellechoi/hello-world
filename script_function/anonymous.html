@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<!-- 익명함수 ? -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 익명함수 : 이름 없는 함수 (단 하나의 전역변수도 허용하지 않는 앱 구축 가능)
+    (function() {
+      var MYAPP = {}
+      // 객체 속성 (object of object 추가 ?)
+      MYAPP.calculator = {
+        "left": null,
+        "right": null
+      }
+      MYAPP.coordinate = {
+        "left": null,
+        "right": null
+      }
+
+      MYAPP.calculator.left = 10;
+      MYAPP.calculator.right = 20;
+
+      function sum() {
+        return MYAPP.calculator.left + MYAPP.calculator.right;
+      }
+      document.write(sum());
+    }())
+  </script>
+
+</body>
+
+</html>
