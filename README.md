@@ -16,9 +16,9 @@
 
 #### 기본 명령어
 
-/$ pwd/  현재 나의 디렉토리 위치 확인
+$ pwd  현재 나의 디렉토리 위치 확인
 
-/$ clear/  화면 클리어
+$ clear  화면 클리어
 
 $ cd "directory"  해당 폴더로 이동 (change directory)
 
