@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<!-- OOP(Object Oriented Programming) 객체지향프로그래밍 -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // object in object.
+    // functin in object.
+    var grades = {
+      "List": {
+        "Estelle": 10,
+        "Dom": 9,
+        "Carina": 8
+      },
+      "Show": function() {
+        for (var name in this.List) {
+          document.write(name + " ", this.List[name] + "<br>"); // this → grades(객체 자신)
+        }
+      }
+    }
+
+    // call a function of object
+    // grades["Show"]();
+    grades.Show();
+  </script>
+
+</body>
+
+</html>

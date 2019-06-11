@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<!-- 생활코딩 객체 다시 재생 필요 -->
+<!-- 객체 문법 재정리 -->
 
 <head>
   <meta charset="UTF-8">
@@ -11,20 +11,23 @@
 
 <body>
   <script>
+    // make an object.
     var grades = {
-      'list': {
-        'estelle': 10,
-        'dom': 9,
-        'annie': 6
-      },
-      'show': function() {
-        for (var name in this.list) {
-          document.write(name, this.list[name]);
-        }
-        alert(this.list); // this → 객체 grades
-      }
-    };
-    grades['show']();
+      'Estelle': 10,
+      'Dom': 9,
+      'Carina': 8
+    }
+    // add elements.
+    grades['Annie'] = 6;
+
+    // call elements in various ways.
+    document.write(grades.Estelle + "<br>");
+    document.write(grades['Dom'] + "<br>");
+    document.write(grades['Ca' + 'rina'] + "<br>");
+
+    // another way. 이거 안되는데 ???
+    // var members = new Object("programmer": "Estelle", "designer": "Dom");
+    // document.write(members.designer + "<br>");
   </script>
 </body>
 

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // get object values by key
+    var grades = {
+      "Estelle": 10,
+      "Dom": 9,
+      "Carina": 8
+    };
+
+    for (key in grades) {
+      document.write(key + " : " + grades[key] + "<br />");
+    }
+
+    for (var name in grades) {
+      document.write(name + " : " + grades[name] + "<br>");
+    }
+
+    // 배열은 순서를 가진 index로 호출 가능
+    var arr = ["a", "b", "c"];
+    for (var i = 0; i < arr.length; i++) {
+      document.write(arr[i] + "<br>");
+    }
+
+    // for(var x in array){}; 배열에서도 for in statement 사용 가능
+    for (var name in arr) {
+      document.write(arr[name] + "<br>");
+    }
+  </script>
+
+  <!-- 응용 -->
+  <ul>
+    <script>
+      for (var name in grades) {
+        document.write("<li>" + name + " : " + grades[name] + "</li>");
+      }
+    </script>
+  </ul>
+
+</body>
+
+</html>
