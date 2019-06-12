@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // ⓐ 리턴값으로 함수 사용
+    function cal(mode) {
+      // 객체 funcs
+      var funcs = {
+        "plus": function(left, right) {
+          return left + right;
+        },
+        "minus": function(left, right) {
+          return left - right;
+        }
+      }
+      // 리턴값으로 함수 사용 가능
+      return funcs[mode];
+    }
+    // () → 함수 호출/실행
+    document.write(cal("plus")(2, 1) + "<br>");
+    document.write(cal("minus")(2, 1) + "<br>");
+  </script>
+
+</body>
+
+</html>
