@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<!-- array.sort(sortfunc); ??????????????????????????-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //ⓑ 배열의 요소로 함수 사용
+    // ※ javascript 배열은 [] !!!
+    var arr = [
+      function(input) {
+        return input + 10;
+      },
+      function(input) {
+        return input * input;
+      },
+      function(input) {
+        return input / 2;
+      }
+    ];
+    var input = 1;
+    for (var i = 0; i < arr.length; i++) {
+      input = arr[i](input);
+    }
+    document.write(input + "<br>");
+
+    // ⓒ 내장객체(built-in object), 내장메소드(built-in method)
+    // ↔ 사용자정의 객체/메소드
+    var numbers = [20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+    // * 콜백 함수 (call back) : 다른 함수의 인자로 사용될 함수
+    // → 다른 함수/메소드의 기능을 조작할 수 있다
+    var sortfunc = function(a, b) {
+      return a - b;
+      // if (a > b) {
+      //   return 1; // 양수
+      // } else if (a < b) {
+      //   return -1; // 음수
+      // } else {
+      //   return 0; // 0
+      // }
+    }
+    // * array.sort(sortfunc); (내장메소드/리턴값 : array)
+    document.write(numbers.sort(sortfunc));
+  </script>
+
+</body>
+
+</html>
