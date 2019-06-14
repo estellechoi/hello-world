@@ -1,0 +1,54 @@
+<html>
+<!-- 비밀변수 ? (private)
+협업 시 권한없는 사람이 정보를 바꿀 수 없도록
+일부 객체를 리턴 → 외부함수의 매개변수를 통해 내부함수에 접근
+함수 내에서 리턴되지 않은 부분은 접근 불가
+??? 이해한 내용 맞는지 추후 재확인 필요
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // title → 비밀변수
+    function movie(title) {
+      // 객체 리턴
+      // 리턴하는 순간, movie(){}의 매개변수는 리턴된 객체의 동명변수를 통해서만 조작
+      return {
+        getTitle: function() {
+          return title;
+        },
+        setTitle: function(titleRevised) {
+          if (typeof titleRevised == "String") {
+            title = titleRevised;
+          } else {
+            document.write("Title should be in string");
+          }
+        }
+      }
+    }
+    // 리턴함수 movie(title){}의 매개변수를 통해 내부함수에 접근해보자
+    // 리턴함수 → 변수 대입 가능
+    var matrix = movie("Matrix");
+    var argo = movie("Argo");
+
+    document.write(matrix.getTitle() + "<br>");
+    document.write(argo.getTitle() + "<br>");
+
+    // setTitle(); 값 출력 X 실행만 가능
+    // ∵ not a returning function)
+    matrix.setTitle("Matrix2");
+    argo.sestTitle(1);
+
+    document.write(matrix.getTitle() + "<br>");
+    document.write(argo.getTitle() + "<br>");
+  </script>
+
+</body>
+
+</html>

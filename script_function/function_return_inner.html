@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 외부함수
+    function outter() {
+      var english = "everyday";
+      // 내부함수
+      return function() {
+        document.write(english);
+      }
+    }
+    // 리턴함수 outter()
+    var inner = outter();
+    // (); 함수 호출
+    inner();
+    // → this is "closure". 내부함수 종료 후에도 내부함수에 접근 가능(return)
+  </script>
+
+</body>
+
+</html>
