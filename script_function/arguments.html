@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function sum() { // 매개변수 없어보임 → 상관없음. 자바스크립트에서는 추후 인자 넣을 수 있음
+      var i, total = 0;
+      // * arguments[] (자바스크립트 내장 배열변수)
+      // * 기능 : 사용자가 매개변수에 대입하는 인자(값)들을 arguments[] 배열로 자동생성
+      for (i = 0; i < arguments.length; i++) {
+        document.write(i + " : " + arguments[i] + "<br>");
+        total += arguments[i]; // += : 누적합산
+      }
+      return total; // 이 시점에서 리턴 (이전의 실행문은 실행됨)
+    }
+    document.write(sum(1, 2, 3, 4));
+  </script>
+
+</body>
+
+</html>

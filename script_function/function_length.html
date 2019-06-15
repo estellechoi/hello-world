@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 아직 매개변수 없음, 인자도 없음
+    // function.length : 함수가 정의한 매개변수의 갯수
+    // arguments.length : 자동생성된 인자(매개변수에 대입된 값) 배열의 크기
+    function zero() {
+      document.write(
+        "zero.length ", zero.length, // 0
+        " arguments ", arguments.length // 0
+      );
+    }
+    zero();
+
+    // 매개변수 1개 선언 후 인자 2개 대입하기
+    function one(arg1) {
+      document.write(
+        " one.length ", one.length, // 1
+        " arguments ", arguments.length // 2
+      );
+    }
+    one(1, 2);
+  </script>
+
+</body>
+
+</html>
