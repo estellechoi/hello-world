@@ -1,0 +1,33 @@
+<html>
+<!-- 다시 공부 필요 (난이도: 중급 개발자)-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 배열 변수 arr
+    var arr = [];
+    for (var i = 0; i < 5; i++) {
+      // 배열의 요소는 리턴함수 function(id)
+      // function(id) 실행 (i); → 외부함수의 매개변수 id를 통해 내부함수의 변수에 접근
+      arr[i] = function(id) {
+        // 내부 리턴함수를 리턴
+        return function() {
+          return id;
+        }
+      }(i);
+    }
+    // 출력
+    for (var index in arr) {
+      document.write(arr[index]());
+    }
+  </script>
+
+</body>
+
+</html>
