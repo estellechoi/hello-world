@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 
 <head>
@@ -9,7 +10,50 @@
 
 <body>
   <script>
+    // function func() {}
+    // func();
 
+    function sum(arg1, arg2) {
+      return arg1 + arg2;
+    }
+
+    // ⓐ 일반적인 함수 호출
+    document.write(sum(1, 2) + "<br>"); // return 3
+
+    // ⓑ 함수호출 메소드 사용
+    // function.call(); function.apply(); 자바스크립트 내장 메소드
+    document.write(sum.apply(null, [1, 2]) + "<br>"); // 배열 [1, 2] → (arg1, arg2)에 대입
+
+    // ★ function.apply(); 메소드는 왜 필요한 건가 ?
+    // ?? total(x){} 매개변수 정의 후 total(o1); 이렇게 하면 안되는 건가 ...?
+    o1 = {
+      v1: 1,
+      v2: 2,
+      v3: 3
+    }
+    o2 = {
+      val1: 10,
+      val2: 50,
+      val3: 100,
+      val4: 250
+    }
+
+    function total() {
+      var result = 0;
+      for (name in this) {
+        result += this[name];
+      }
+      return result;
+    }
+
+    // this에 접근하기
+    // total.apply(o1); → var this = o1;
+    document.write(total.apply(o1) + "<br>");
+    document.write(total.apply(o2) + "<br>");
+
+    // 객체 o1에 total()을 요소로 넣고 o1.total(); 하는 것은 비효율
+    // ∵ 반복문 실행 시 total()도 요소의 하나로서 연산에 포함되기 때문
+    //    → 숫자만 연산하려면 또 다른 장치 필요 (if문으로 제거한다던가 ..)
   </script>
 
 </body>

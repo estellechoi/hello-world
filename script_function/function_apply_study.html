@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // ★ function.apply(); 메소드는 왜 필요한 건가 ?
+    // total(x){} 매개변수 정의 후 total(o1); 이렇게 하면 안되는 건가 ...?
+    // 확인 결과 → 되는 거임...;
+    // 그럼 어떤 복잡한 상황에서 apply() 메소드가 반드시 필요한 것일까?
+    o1 = {
+      v1: 1,
+      v2: 2,
+      v3: 3
+    }
+    o2 = {
+      val1: 10,
+      val2: 50,
+      val3: 100,
+      val4: 250
+    }
+
+    function total(x) {
+      var result = 0;
+      for (name in x) {
+        result += x[name];
+      }
+      return result;
+    }
+
+    document.write(total(o1) + "<br>");
+    document.write(total(o2) + "<br>");
+  </script>
+
+</body>
+
+</html>
