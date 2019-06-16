@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<!--
+전역객체(Global object)는 특수한 객체다.
+자바스크립트에서 모든 객체는 이 전역객체의 프로퍼티다.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function func() {
+      document.write("hello<br>");
+    }
+    func();
+    window.func();
+    // window → 전역객체 (global object), 생략 가능
+    // .func → 속성
+    // () → func에 함수가 담겨있다 (func는 메소드)
+  </script>
+
+</body>
+
+</html>
