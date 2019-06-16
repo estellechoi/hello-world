@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<!--
+this는 함수 내에서 함수 호출 맥락(context)를 의미한다.
+맥락이라는 것은 상황에 따라서 달라진다는 의미.
+즉 함수를 어떻게 호출하느냐에 따라서 this가 가리키는 대상이 달라진다는 뜻이다.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 함수 내의 this → 전역객체 window
+    function func() {
+      if (window === this) {
+        document.write("window === this <br>");
+      }
+    }
+    func();
+
+    // 객체의 메소드 내의 this → 그 객체
+    var o = {
+      func: function() {
+        if (o === this) {
+          document.write("o === this <br>");
+        }
+      }
+    }
+    o.func();
+
+    // 생성자와 this
+    var funcThis = null;
+
+    function func() {
+      funcThis = this;
+    }
+    // ⓐ 함수 내 this → 전역객체(window)
+    var o1 = func();
+    if (funcThis === window) {
+      document.write("window<br>");
+    }
+    // ⓑ 객체생성 후 함수(메소드) 내 this → 생성자가 만든 객체(o2)
+    var o2 = new func();
+    if (funcThis === o2) {
+      document.write("o2<br>");
+    }
+  </script>
+
+</body>
+
+</html>
