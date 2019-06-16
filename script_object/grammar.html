@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<!--
+prototype based programming - javascript
+정보의 은닉화(information-hiding) / 정보의 캡슐화(encapsulation)
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 객체 내의 변수(key) : property(속성)
+    // 객체 내의 함수 : method(메소드)
+    var person = {}
+    person.name = "youjin";
+    person.introduce = function() {
+      return "my name is " + this.name;
+    }
+    // 리턴메소드 출력
+    document.write(person.introduce() + "<br>");
+
+    // another way
+    var member = {
+      "name": "estelle",
+      "introduce": function() {
+        return "my name is " + this.name;
+      }
+    }
+    document.write(member.introduce() + "<br>");
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<!--
+생성자(constructor) : 객체를 만드는 함수
+"생성자가 실행되기 전까지는 객체는 변수에도 할당될 수 없기 때문에
+this가 아니면 객체에 대한 어떠한 작업을 할 수 없기 때문이다."
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 생성자 new
+    // person(){}은 리턴함수가 아니기 때문에 변수 대입 불가
+    // 생성자 new를 사용해서 객체를 생성 → person {}
+    function person() {}
+    var p = new person();
+
+    p.name = "youjin";
+    p.introduce = function() {
+      return "my name is " + this.name;
+    }
+    document.write(p.introduce() + "<br>");
+
+    // 초기화 initialize (중복의 제거)
+    function Person(name) {
+      // this → don't know what object it is yet
+      this.name = name;
+      this.introduce = function() {
+        return "my name is " + this.name;
+      }
+    }
+    // 함수를 객체로
+    var p1 = new Person("estelle");
+    document.write(p1.introduce() + "<br>");
+    var p2 = new Person("isabel");
+    document.write(p2.introduce() + "<br>");
+  </script>
+
+</body>
+
+</html>
