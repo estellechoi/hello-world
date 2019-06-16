@@ -19,7 +19,7 @@
     }
     document.write(sum(1, 2) + "<br>");
 
-    // 원래 함수객체는 이렇게 만든다
+    // 원래 함수객체(functor)는 이렇게 만든다
     var sum2 = new Function('x', 'y', 'return x+y;'); // 마지막 인자 → 함수 본문
     document.write(sum2(1, 2));
   </script>
