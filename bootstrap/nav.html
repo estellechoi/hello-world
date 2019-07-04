@@ -8,17 +8,44 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    .navbarCustom {
+      margin-left: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    #searchBox input,
+    button {
+      margin-left: 10px;
+    }
+
+    @media (max-width: 1280px) {
+
+      form,
+      .navbar-text {
+        visibility: hidden;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">부트스트랩</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #343434">
+    <!--
+    .bg-light
+    .sticky-top
+     -->
+    <a class="navbar-brand text-white h4" href="#">부트스트랩</a>
+    <span class="navbar-text text-muted">
+      부트스트랩 테스트 페이지 입니다.
+    </span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
+    <!-- collapse 될 요소들은 should be coded below-->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbarCustom navbar-nav mr-auto">
         <!--
         * nav 디자인
         .nav-tabs
@@ -30,20 +57,19 @@
         .nav-justified  전체 넓이 차지 (비율 균등)
         .justify-content-center
         .justify-content-end
-
          navbar-default
       -->
         <li class="nav-item">
-          <a href="#" class="nav-link">Active</a>
+          <a href="#" class="nav-link text-success">Active</a>
         </li>
         <!--
       * .dropdown
       -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-success" href="#menu" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown link
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="menu">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
@@ -51,14 +77,25 @@
         </li>
 
         <li class="nav-item">
-          <a href="#" class="nav-link disabled" tabindex="-1" aria-disabled="true">Link</a>
+          <a href="#" class="nav-link text-success disabled" tabindex="-1" aria-disabled="true">Link</a>
         </li>
       </ul>
+      <form class="navbarCustom form-inline" id="searchBox">
+        <input type="search" placeholder="Search" aria-label="search" class="form-control">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <!-- btn-sm btn-outline-secondary 작은 회색 버튼 -->
+      </form>
 
-      <form class="form-inline my-2 my-lg-0">
-
+      <form class="navbarCustom form-inline">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+          </div>
+          <input type="text" placeholder="User ID" class="form-control" aria-label="userid" aria-describedby="basic-addon1">
+        </div>
       </form>
     </div>
+
   </nav>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
