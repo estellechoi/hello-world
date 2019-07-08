@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+#psgControl {
+	padding: 20px;
+}
+
+.numberController {
+	width: 30px;
+	border: 0px;
+	border-radius: 50%;
+	background: #EA5330;
+	font-size: 20px;
+	color: white;
+}
+.numberCanceller {
+	width: 30px;
+	border: 0px;
+	border-radius: 50%;
+	background: none;
+	font-size: 20px;
+	color: black;
+}
+
+.numberController, .numberCanceller:hover {
+	cursor: pointer;
+}
+
+#numberPassengers {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#psgList {
+	padding: 10px;
+}
+
+#psgList:hover {
+	background: #eeeeee;
+}
+
+#psgList input, select:focus {
+	outline: none;
+}
+
+#psgList input {
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: black;
+}
+
+#psgList select {
+	border: 1px solid #C2BCB4;
+	border-radius: 15px;
+	height: 30px;
+}

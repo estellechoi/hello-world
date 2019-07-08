@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="for_div.css">
+  <script>
+    var psgList = '<div id="psgList"> <
+    form action = "#"
+    method = "post" >
+      <
+      span id = "psg" > < /span> <
+    select name = "age"
+    id = "age" >
+      <
+      option value = "26-59 years" > 26 - 59 years < /option> <
+    option value = "Over 60 years old" > Over 60 years old < /option> <
+    option value = "12-25 years<" > 12 - 25 years < /option> <
+    option value = "4-11 years" > 4 - 11 years < /option> <
+    option value = "0-3 years" > 0 - 3 years < /option> < /
+    select > <
+      select name = "discountCard"
+    id = "discountCard" >
+      <
+      option value = "no discount card" > no discount card < /option> <
+    option value = "Carte Jeune" > Carte Jeune < /option> <
+    option value = "Carte Week-end" > Carte Week - end < /option> <
+    option value = "Global Pass" > Global Pass < /option> < /
+    select > <
+      select name = "loyaltyCard"
+    id = "loyaltyCard" >
+      <
+      option value = "no discount card" > no discount card < /option> <
+    option value = "Voyageur" > Voyageur < /option> <
+    option value = "Grand Voyageur" > Grand Voyageur < /option> <
+    option value = "Grand Voyageur Plus" > Grand Voyageur Plus < /option> < /
+    select > <
+      input type = "text"
+    name = "PromoCode"
+    value = "Promo code or Voucher"
+    onfocus = "PromoCodeInputOn()"
+    onblur = "PromoCodeInputOut()" >
+      <
+      button class = "numberCanceller" > X < /button> < /
+    form > <
+      /div>';
+
+    function minus() {
+      var psg = parseInt(document.getElementById("psg").innerText);
+      if (psg > 1) {
+        psg = psg - 1;
+        document.querySelector("#psg").innerText = psg;
+      }
+      for (var i = 1; i <= psg; i++) {
+        document.querySelector("#forPsgList").innerHTML = psgList;
+      }
+    }
+
+    function plus() {
+      var psg = parseInt(document.getElementById("psg").innerText);
+      psg = psg + 1;
+      document.querySelector("#psg").innerText = psg;
+      for (var i = 1; i <= psg; i++) {
+        document.querySelector("#forPsgList").innerHTML = psgList;
+      }
+    }
+
+    function PromoCodeInputOn() {
+      var moveText = document.getElementsByName("PromoCode")[0].value;
+      document.getElementsByName("PromoCode")[0].value = "";
+    }
+
+    function PromoCodeInputOut() {
+      var moveText = "Promo code or Voucher";
+      document.getElementsByName("PromoCode")[0].value = moveText;
+    }
+  </script>
+</head>
+
+<body>
+  <div>
+    <div id="psgControl">
+      <b>Number of passengers</b>
+      <button class="numberController" onclick="minus()">-</button>
+      <span id="psg">1</span>
+      <button class="numberController" onclick="plus()">+</button>
+    </div>
+    <!-- 반복될 곳 -->
+    <div id="forPsgList">
+
+    </div>
+  </div>
+</body>
+</body>
+
+</html>
