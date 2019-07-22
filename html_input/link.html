@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    a:link {
+      color: red;
+    }
+
+    a:visited {
+      color: darkblue;
+    }
+
+    /* a:active {} 마우스 클릭하는 순간 */
+    a:active {
+      color: green;
+    }
+
+    a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
+
+    a[target=_blank] {
+      background: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="http://google.com">구글</a>
+  <a href="http://google.com">구글</a>
+  <a href="http://google.com">구글</a>
+  <a href="http://google.com">구글</a>
+  <a href="http://google.com">구글</a>
+  <a href="http://google.com">구글</a>
+  <a href="http://google.com">구글</a>
+  <a href="http://google.com">구글</a>
+
+  <!--
+  <a href="#name"></a>
+  스크롤이 많을 때 사용 (해당 태그로 바로 이동)
+  -->
+  <p>
+    <h3># : 현재문서</h3>
+    <a href="#aa"></a>
+    <a href="" name="aa"></a>
+  </p>
+  <p>
+    <h3>a 태그 target 속성</h3>
+    <a href="http://www.naver.com" target="_self">현재 창에서</a>
+    <a href="http://www.naver.com" target="_blank">새 창에서</a>
+    <a href="http://www.naver.com" target="_parent">부모 창에서</a>
+    <a href="http://www.naver.com" target="_top">선조 창에서</a>
+  </p>
+
+</body>
+
+</html>
