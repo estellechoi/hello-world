@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- eval : 수식을 만들어주는 javascript 메소드 -->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function imsi(n) {
+
+      // pkc1 ~ pkc2 모두 검은색으로
+      for (var i = 0; i <= n; i++) {
+        eval("document.getElementById('pkc" + i + "').style.color = 'black'");
+      }
+
+      // 매개변수 n 값에 해당하는 pkcn 만 붉은색으로
+      eval("document.getElementById('pkc" + n + "').style.color='red'");
+    }
+  </script>
+</head>
+
+<body>
+
+  <span onclick="imsi(1)">1</span>
+  <span onclick="imsi(1)">2</span>
+  <span onclick="imsi(1)">3</span>
+  <span onclick="imsi(1)">4</span>
+  <span onclick="imsi(1)">5</span>
+  <span onclick="imsi(1)">6</span>
+
+  <div id="pkc1">hello1</div>
+  <div id="pkc2">hello2</div>
+  <div id="pkc3">hello3</div>
+  <div id="pkc4">hello4</div>
+  <div id="pkc5">hello5</div>
+  <div id="pkc6">hello6</div>
+
+</body>
+
+</html>
