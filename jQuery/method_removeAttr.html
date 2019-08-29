@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<!--
+  .removeAttr("속성") : html 태그 속성 삭제 메소드
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // 1) jQuery
+    // 문서가 로드될 때 실행
+    $(function() {
+      $("input").attr("value", "hello"); // hello 왜안댐 ????
+      alert();
+      $("input").removeAttr("value");
+    });
+
+
+    // 2) script
+    // window.onload = function() {
+    //   document.getElementsByTagName("input")[0].value = "hello";
+    //   alert();
+    //   document.getElementsByTagName("input")[0].value = "";
+    // }
+  </script>
+</head>
+
+<body>
+  <form method="post" action="write_ok.jsp">
+    <input type="text">
+    <input type="submit" value="저장">
+  </form>
+</body>
+
+</html>
