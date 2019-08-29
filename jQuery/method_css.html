@@ -1,0 +1,62 @@
+<!--
+  * jquery 연결방법
+  1.파일을 다운받아 저장경로에 넣어줌
+  2.url 주소로 연결하는 방법
+
+  * jquery 사용법
+  - <script></script> 태그 내에서 사용
+
+  * jquery 각 요소(tag, id, class) 접근법
+  - css의 선택자를 그대로 선택
+  - $("선택자").메소드();
+  - $("#pkc").css("color","red"); 스타일 속성을 바꾸는 메소드 .css("속성","값");
+-->
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 특정 버전 제이쿼리 가져오기 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- 최신 버전 제이쿼리 가져오기 -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+  <script>
+    // * 문서가 로드될 때 함수 실행
+
+    // 1) jQuery
+    $(document).ready(function() {
+      // document.ready 생략 가능
+      // $(function() {});
+      alert();
+      // alert() 실행 후 아래 제이쿼리문 실행
+      $("#pkc").css("color", "red").css("font-style", "italic");
+      $("#pkc").css("font-size", "40px");
+      $("#pkc").css("background-color", "blue");
+      $("span").css("color", "gray");
+      $("span").css("border", "1px solid black");
+      $("span").css("border-radius", "5px");
+      $(".test").css("color", "pink");
+    });
+
+
+    // 2) script
+    window.onload = function() {
+      alert();
+      var t = document.getElementById("pkc");
+      t.style.color = "red";
+      t.style.fontStyle = "italic";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="pkc"> hello world. </div>
+  <span> hello world. </span>
+  <div class="test"> hello world. </div>
+</body>
+
+</html>
