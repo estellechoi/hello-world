@@ -1,0 +1,58 @@
+<!--
+* jQuery로 이벤트 발생 시 함수 호출하기
+- $("선택자").이벤트(function(){});
+ -->
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // script
+    function callAlert() {
+      alert("Script로 함수 실행");
+    }
+
+    // jquery
+    // $(document).ready(function(){});
+    $(function() {
+      $("#testJQuery").click(function() {
+        alert("jQuery로 함수 실행");
+        $("#testJQuery").css("color", "red");
+      });
+    });
+
+    $(function() {
+      $("#test1").mouseover(function() {
+        $("#test1").css("color", "red");
+        $("#test1").css("border", "1px solid blue");
+      });
+      $("#test2").mouseover(function() {
+        $("#test2").css({
+          "color": "red",
+          "border": "1px solid blue"
+        });
+      });
+      $("#test3").mouseover(function() {
+        document.getElementById("test3").style.color = "red"; // script와 섞어쓰기 가능
+        $("#test3").css("border", "1px solid blue");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="testScript" onclick="callAlert()"> hello world. </div>
+  <div id="testJQuery"> hello world. </div>
+
+  <!-- 제이쿼리 코드 중복 발생하는데 ..-->
+  <div id="test1"> 안토니 </div>
+  <div id="test2"> 자용이 </div>
+  <div id="test3"> 보오짱 </div>
+</body>
+
+</html>
