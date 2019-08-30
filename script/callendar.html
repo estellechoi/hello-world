@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // 달력에 필요한 값 : 월별 총일수, 1일의 요일
+    var today = new Date();
+    document.write("년도 : " + today.getFullYear() + "<br>");
+    document.write("월 : " + today.getMonth() + "<br>"); // 1월 0 ~ 12월 11
+    document.write("일 : " + today.getDate() + "<br>");
+    document.write("요일 : " + today.getDay() + "<br><br>"); // 일 0 ~ 토 6
+
+    // 10월 1일
+    var cal = new Date(2019, 9, 1); // 월 값은 index (10월 → 9)
+    document.write("년도 : " + cal.getFullYear() + "<br>");
+    document.write("월 : " + cal.getMonth() + "<br>"); // 1월 0 ~ 12월 11
+    document.write("일 : " + cal.getDate() + "<br>");
+    document.write("요일 : " + cal.getDay() + "<br><br>"); // 일 0 ~ 토 6
+
+    // * 사용자가 사용할 달력 만들어보자 !
+    var monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    var yy;
+    var mm;
+
+    function makeCal() {
+      yy = parseInt(document.getElementById("year").value);
+      mm = parseInt(document.getElementById("month").value);
+      // * 객체 생성
+      var xday = new Date(yy, mm - 1, 1);
+      // * 1일의 요일
+      var xdayFirst = xday.getDay();
+      // * 총일수 (윤년 일수 처리)
+      if ((yy % 4 == 0 && yy % 100 != 0) || (yy % 400 == 0)) {
+        monthLength[1] = monthLength[1] + 1; // 윤년
+      }
+      // * 총일수
+      var xmonthLength = monthLength[mm - 1];
+      result.innerHTML = "총일수 : " + xmonthLength + " / 1일 요일 : " + xdayFirst + " !" + "<br><br>";
+    }
+  </script>
+</head>
+
+<body>
+  년
+  <input type="text" name="year" id="year" value="2019" size="3">
+  월
+  <select name="month" id="month" onchange="makeCal()">
+    <option value="0">선택</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+  <p></p>
+  ★ <span id="result"></span>
+</body>
+
+</html>
