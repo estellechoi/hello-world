@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    //jquery
+    $(function() {
+      // 클릭시마다 계속 실행
+      $("#test1").click(function() {
+        alert("실행");
+      });
+      // 클릭시마다 계속 실행
+      $("#test2").on("click", function() {
+        alert("2번 클릭");
+      });
+      // 실행 X
+      $("#test3").off("click", function() {
+        alert("3번 클릭");
+      });
+      // 1번만 실행
+      $("#test4").one("click", function() {
+        alert("4번 클릭");
+      });
+    });
+
+    //script
+    var check = 0;
+
+    function test() {
+      if (check == 0) {
+        alert("5번 클릭");
+        check++;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="test1"> Test1 </div>
+  <div id="test2"> Test2 </div>
+  <div id="test3"> Test3 </div>
+  <div id="test4"> Test4 </div>
+  <div id="test5" onclick="test()"> Test5</div>
+</body>
+
+</html>
