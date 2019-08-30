@@ -39,7 +39,58 @@
       }
       // * 총일수
       var xmonthLength = monthLength[mm - 1];
-      result.innerHTML = "총일수 : " + xmonthLength + " / 1일 요일 : " + xdayFirst + " !" + "<br><br>";
+
+      // * 달력 폼
+      callendarForm = "<table width='300' border='1' cellspacing='0'>";
+      // 필드행
+      callendarForm = callendarForm + "<tr>";
+      callendarForm = callendarForm + "<td>일</td>";
+      callendarForm = callendarForm + "<td>월</td>";
+      callendarForm = callendarForm + "<td>화</td>";
+      callendarForm = callendarForm + "<td>수</td>";
+      callendarForm = callendarForm + "<td>목</td>";
+      callendarForm = callendarForm + "<td>금</td>";
+      callendarForm = callendarForm + "<td>토</td>";
+      callendarForm = callendarForm + "</tr>";
+      // 달력 시작
+      var date = 1;
+      // 1행
+      callendarForm = callendarForm + "<tr>";
+      for (var i = 0; i < 7; i++) {
+        // 1일의 요일이 되기 전 : 빈 칸
+        if (xdayFirst > i) {
+          callendarForm = callendarForm + "<td> &nbsp; </td>";
+          // 1일의 요일 이후 : 1, 2, 3, ..
+        } else {
+          callendarForm = callendarForm + "<td>" + date + "</td>";
+          date++;
+        }
+      }
+      callendarForm = callendarForm + "</tr>";
+      // 중간행 (총 몇 주 인지 ?)
+      for (var j = 0; j < 4; j++) {
+        callendarForm = callendarForm + "<tr>";
+        for (var i = 0; i < 7; i++) {
+          callendarForm = callendarForm + "<td>" + date + "</td>";
+          date++;
+        }
+        callendarForm = callendarForm + "</tr>";
+      }
+
+      // 마지막행
+      callendarForm = callendarForm + "<tr>";
+      for (var i = 0; i < 7; i++) {
+        // 총일수 초과시 빈 칸
+        if (date > xmonthLength) {
+          callendarForm = callendarForm + "<td> &nbsp; </td>";
+        } else {
+          callendarForm = callendarForm + "<td>" + date + "</td>";
+          date++;
+        }
+      }
+      callendarForm = callendarForm + "</tr>";
+      // 달력 출력
+      result.innerHTML = callendarForm;
     }
   </script>
 </head>
@@ -64,7 +115,7 @@
     <option value="12">12</option>
   </select>
   <p></p>
-  ★ <span id="result"></span>
+  <div id="result"></div>
 </body>
 
 </html>
