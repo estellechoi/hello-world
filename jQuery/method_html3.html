@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn").click(function() {
+        var txt = $("#testQuery").text(); // 문서 내 요소를 변수에 담기
+        $("#testQuery").text(txt + "Jquery"); // 단순히 txt("Jquery") 랑 뭐가 다르지 ? 누적 ?
+      });
+    });
+
+    function txtTest() {
+      var txt = document.getElementById("testScript").innerText;
+      document.getElementById("testScript").innerText = txt + "Javascript";
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" id="btn" value="클릭" onclick="txtTest()">
+  <div id="testQuery"></div>
+  <div id="testScript"></div>
+
+</body>
+
+</html>
