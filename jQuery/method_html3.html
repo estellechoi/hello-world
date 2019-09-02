@@ -11,7 +11,7 @@
     $(function() {
       $("#btn").click(function() {
         var txt = $("#testQuery").text(); // 문서 내 텍스트를 변수에 담기
-        $("#testQuery").text(txt + "Jquery"); // 단순히 txt("Jquery") 랑 뭐가 다르지 ? 누적 ?
+        $("#testQuery").text(txt + "Jquery"); // 텍스트 덧붙이기
       });
     });
 
@@ -24,8 +24,8 @@
 
 <body>
   <input type="button" id="btn" value="클릭" onclick="txtTest()">
-  <div id="testQuery"></div>
-  <div id="testScript"></div>
+  <div id="testQuery"> Let's study </div>
+  <div id="testScript"> Let's study </div>
 
 </body>
 
