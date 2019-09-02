@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      list-style-type: none;
+      display: inline-block;
+      border: 1px solid grey;
+      padding: 10px;
+      width: 70px;
+      text-align: center;
+      margin-left: 20px;
+      /* inline 과 차이점은 ?*/
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      // hover → list 클래스 요소 중 hover 된 요소만 개별 동작
+      $(".list").hover(function() {
+          $(this).css({
+            "color": "pink",
+            "border": "1px solid orange"
+          });
+        },
+        // mouseout
+        function() {
+          $(this).css({
+            "color": "black",
+            "border": "1px solid grey"
+          });
+        });
+    });
+  </script>
+</head>
+
+<body>
+  <ul>
+    <li class="list">스포츠</li>
+    <li class="list">식품</li>
+    <li class="list">생활용품</li>
+    <li class="list">주방용품</li>
+    <li class="list">여행용품</li>
+  </ul>
+
+</body>
+
+</html>
