@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn1").click(function() {
+        $("#test").addClass("toAdd");
+      });
+      $("#btn2").click(function() {
+        $("#test").removeClass("toAdd");
+      });
+    });
+  </script>
+  <style>
+    .toAdd {
+      color: pink;
+      font-size: 20px;
+      border: 1px solid black;
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="button" id="btn1" value="add class">
+  <input type="button" id="btn2" value="remove class">
+  <p></p>
+  <div id="test"> Hi </div>
+
+</body>
+
+</html>
