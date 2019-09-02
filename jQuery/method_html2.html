@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    var name = "최유진";
+    var cell = "010-5670-0000";
+    var email = "estele.choi@gmail.com";
+
+    // * jQuery
+    $(function() {
+      $("#name").text(name).css("color", "red");
+      $("#cell").text(cell)
+      $("#email").text(email).css("color", "blue");;
+    });
+
+    // * JavaScript
+    window.onload = function() {
+      var personalInfo = document.getElementsByClassName("personalInfo");
+      personalInfo[0].innerText = name;
+      personalInfo[0].style.color = "red";
+      personalInfo[1].innerText = cell;
+      personalInfo[2].innerText = email;
+      personalInfo[2].style.color = "blue";
+    }
+  </script>
+</head>
+
+<body>
+  <table width="400px" border="1px">
+    <tr>
+      <td>이름</td>
+      <td>휴대폰</td>
+      <td>이메일</td>
+    </tr>
+    <tr>
+      <td id="name"></td>
+      <td id="cell"></td>
+      <td id="email"></td>
+    </tr>
+    <tr>
+      <td class="personalInfo"></td>
+      <td class="personalInfo"></td>
+      <td class="personalInfo"></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
