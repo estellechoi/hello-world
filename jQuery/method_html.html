@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<!--
+* 문서 내의 특정 요소에 텍스트, 태그 전달하기
+- javascript의 innerText, innerHTML 처럼
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // * jQuery
+    $(function() {
+      $("#testId").html("<b> hello </b>");
+      $(".testClass").text("<b> hello </b>");
+    });
+
+    // * Javascript
+    window.onload = function() {
+      document.getElementById("testId2").innerHTML = "<b> hello </b>";
+      document.getElementsByClassName("testClass2")[0].innerText = "<b> hello </b>";
+      document.getElementsByClassName("testClass2")[1].innerText = "<b> hello </b>";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="testId"></div>
+  <div class="testClass"></div>
+  <div class="testClass"></div>
+  <p></p>
+  <div id="testId2"></div>
+  <div class="testClass2"></div>
+  <div class="testClass2"></div>
+
+</body>
+
+</html>
