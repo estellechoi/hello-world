@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      // setInterval(함수, 시간)
+      // 변수에 왜 담지 ?
+      var ss = setInterval(function() {
+        $(".aa").eq(0).insertAfter($(".aa").eq(4)); // 맨 앞의 요소를 맨 뒤로 이동
+      }, 1000);
+    });
+
+    // clearInterval(ss); 로 중지
+  </script>
+</head>
+
+<body>
+  <div class="aa">케밥</div>
+  <div class="aa">피자</div>
+  <div class="aa">볶음밥</div>
+  <div class="aa">삼겹살</div>
+  <div class="aa">쌀국수</div>
+</body>
+
+</html>
