@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+    div {
+      display: inline-block;
+      margin-left: 30px;
+    }
+  </style>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
     $(function() {
@@ -18,7 +24,7 @@
         // $(선택자).eq(n) : 선택자가 여러개일 경우 선택자의 인덱스 n (0 ~)
       });
       $("#btn2").click(function() {
-        $(".aa").eq(1).insertBefore($(".aa").eq(0));
+        $(".aa").eq(4).insertBefore($(".aa").eq(0));
       });
     });
   </script>
