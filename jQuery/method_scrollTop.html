@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+    #txt {
+      position: fixed;
+    }
+
+    #red {
+      position: fixed;
+      left: 100px;
+      top: 50px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+    }
+
+    #blue {
+      position: absolute;
+      left: 100px;
+      top: 200px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid blue;
+    }
+  </style>
+  <script>
+    $(function() {
+      // * 이벤트 scroll() : 스크롤을 할 때 함수 실행
+      $(window).scroll(function() {
+        var b = document.getElementById("blue");
+        // * 메소드 scrollTop() : 스크롤 값을 리턴
+        b.style.top = (200 + $(window).scrollTop()) + "px"; // 원래 위치 200 + 스크롤값
+        $("#txt").text($(window).scrollTop());
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <span id="txt"></span>
+  <div id="red"></div>
+  <div id="blue"></div>
+</body>
+
+</html>
