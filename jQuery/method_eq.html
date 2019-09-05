@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $(".cocktail li").hover(function() {
+          var n = $(this).index();
+          $(".name li").eq(n).css("background", "yellow");
+        },
+        function() {
+          var n = $(this).index();
+          $(".name li").eq(n).css("background", "none");
+        });
+    });
+  </script>
+</head>
+
+<body>
+  <ul class="cocktail">
+    <li>위스키 베이스</li>
+    <li>와인 베이스</li>
+    <li>꼬냑 베이스</li>
+    <li>진 베이스</li>
+    <li>럼 베이스</li>
+    <li>보드카 베이스</li>
+    <li>데킬라 베이스</li>
+  </ul>
+
+  <ul class="name">
+    <li>올드패션드</li>
+    <li>플라워소다</li>
+    <li>프렌치커넥션</li>
+    <li>김릿</li>
+    <li>피나콜라다</li>
+    <li>레몬드랍</li>
+    <li>마가리타</li>
+  </ul>
+
+</body>
+
+</html>
