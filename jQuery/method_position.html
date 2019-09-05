@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn").click(function() {
+        // 해당 요소의 지역위치 값을 리턴하는 메소드
+        // 부모 요소를 기준으로한 지역좌표 위치를 다루는 메소드
+        // Q) style margin 값을 주어도 영향이 없네 ?
+        var testPosition = $("#test").position();
+        document.getElementById("localPosition").innerText = testPosition.left + ", " + testPosition.top; // x 좌표 , y 좌표
+
+        // *  절대좌표 확인 및 이동함수 : offset()
+        var testOffset = $("#test").offset();
+        document.getElementById("absolutePosition").innerText = testOffset.left + ", " + testOffset.top; // x 좌표 , y 좌표
+      });
+    });
+  </script>
+  <style>
+    body {
+      border: 1px solid blue;
+    }
+
+    #test {
+      border: 1px solid red;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn">click</button>
+  <div id="test">Box</div>
+  지역좌표 : <span id="localPosition"></span> / 절대좌표 : <span id="absolutePosition"></span>
+</body>
+
+</html>
