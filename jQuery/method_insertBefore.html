@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#source").click(function() {
+        alert($("body").html()); // 이벤트 발생 후 변경된 소스보기 가능
+      });
+      $("#btn1").click(function() {
+        $(".aa").eq(2).insertAfter($(".aa").eq(4));
+        // * eq(2) 를 eq(4) 뒤로 이동
+        // $(선택자).eq(n) : 선택자가 여러개일 경우 선택자의 인덱스 n (0 ~)
+      });
+      $("#btn2").click(function() {
+        $(".aa").eq(1).insertBefore($(".aa").eq(0));
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <button id="btn1">insertAfter</button>
+  <button id="btn2">insertBefore</button>
+  <button id="source">Show Source</button>
+  <div class="aa">1</div>
+  <div class="aa">2</div>
+  <div class="aa">3</div>
+  <div class="aa">4</div>
+  <div class="aa">5</div>
+
+</body>
+
+</html>
