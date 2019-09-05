@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn").click(function() {
+        var name = $(".name").val();
+        var age = $(".age").val();
+        alert("이름 : " + name + " , 나이 : " + age);
+      });
+      $("#btnPlus").click(function() {
+        var num1 = parseInt($(".num1").val());
+        var num2 = parseInt($(".num2").val());
+        $(".result").val(num1 + num2);
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <form name="test">
+    <table>
+      <tr>
+        <td><input type="text" name="name" placeholder="이름" class="name"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="age" placeholder="나이" class="age"></td>
+      </tr>
+      <tr>
+        <td><input type="button" id="btn" value="클릭"></td>
+      </tr>
+    </table>
+  </form>
+  <hr>
+  <form>
+    ① <input type="text" class="num1" size="4">
+    ② <input type="text" class="num2" size="4">
+    <input type="button" id="btnPlus" value="+">
+    = ③ <input type="text" class="result" size="4">
+  </form>
+</body>
+
+</html>
