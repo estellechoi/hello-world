@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #test {
+      width: 240px;
+      height: 200px;
+      padding: 20px;
+      border: 10px solid red;
+      background: yellow;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn").click(function() {
+        alert($("#test").width()); // border, padding 미포함 (순수 여백만 계산)
+        alert($("#test").height());
+        alert($("#test").innerWidth()); // padding 까지 포함 (border 미포함)
+        alert($("#test").innerHeight());
+        alert($("#test").outerWidth()); // border 까지 포함
+        alert($("#test").outerHeight());
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <button id="btn">click</button>
+  <div id="test"></div>
+</body>
+
+</html>
