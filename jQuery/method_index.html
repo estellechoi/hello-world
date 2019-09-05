@@ -9,30 +9,30 @@
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script>
     $(function() {
-      $("#btn1").click(function() {
-        alert($("body").html());
+      $(".menu li").click(function() {
+        var n = $(this).index(); // 선택한 요소의 인덱스 호출 메소드
+        $(".menu li").eq(n).css("color", "red");
       });
-      $("#btn2").click(function() {
-        $(".menu li").eq(2).remove(); // 해당 요소 (태그 전체) 제거
-      });
-      $("#btn3").click(function() {
-        $(".menu li").eq(2).empty(); // 해당 요소의 innerText 제거
-      });
+
+      $(".menu li").hover(function() {
+          $(this).css("color", "blue");
+        },
+        function() {
+          $(this).css("color", "black");
+        });
     });
   </script>
 </head>
 
 <body>
-  <button id="btn1">Show source</button>
-  <button id="btn2">remove</button>
-  <button id="btn3">empty</button>
   <ul class="menu">
     <li>피자</li>
-    <li>케밥</li>
     <li>쌀국수</li>
+    <li>케밥</li>
     <li>삼겹살</li>
+    <li>라면</li>
     <li>김치찌개</li>
-    <li>수육</li>
+    <li>국밥</li>
   </ul>
 
 </body>
