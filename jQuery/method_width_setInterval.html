@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #test {
+      /* padding 미포함*/
+      width: 180px;
+      height: 180px;
+      padding: 20px;
+      /* outerWidth  = 180 + 20 + 10 */
+      border: 10px solid red;
+      background: yellow;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      var width = 200;
+      var height = 200;
+      var padding = 10;
+      var outerBorder = 10;
+      // 넓이/높이 변경
+      $("#btn1").click(function() {
+        var ss = setInterval(function() {
+          width++;
+          height++;
+          if (width < 300) {
+            $("#test").width(width);
+            $("#test").height(height);
+          } else {
+            clearInterval(ss);
+          }
+        }, 10);
+      });
+
+      // padding 변경
+      $("#btn2").click(function() {
+        var ss = setInterval(function() {
+          padding--;
+          if (padding >= 0) {
+            $("#test").css("padding", padding);
+          } else {
+            clearInterval(ss);
+          }
+        }, 50);
+      });
+
+      // 외곽선 제거
+      $("#btn3").click(function() {
+        var ss = setInterval(function() {
+          outerBorder--;
+          if (outerBorder >= 0) {
+            $("#test").css("border-width", outerBorder);
+          } else {
+            clearInterval(ss);
+          }
+        }, 50);
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <button id="btn1">넓이/높이 변경</button>
+  <button id="btn2">패딩 제거</button>
+  <button id="btn3">외곽선 제거</button>
+  <div id="test"></div>
+</body>
+
+</html>
