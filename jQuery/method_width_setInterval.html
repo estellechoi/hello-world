@@ -52,16 +52,17 @@
 
       // 외곽선 제거
       $("#btn3").click(function() {
-        var ss = setInterval(function() {
-          outerBorder--;
-          if (outerBorder >= 0) {
-            $("#test").css("border-width", outerBorder);
-          } else {
-            clearInterval(ss);
-          }
-        }, 50);
+        var ss = setInterval(controllOuterBorder, 50); // 함수명 뒤에 () 생략해야 함 !
       });
-
+      // $(); 밖으로 보내니까 호출이 안되는 이유는 ? outerBorder 변수가 사라지므로 !
+      function controllOuterBorder() {
+        outerBorder--;
+        if (outerBorder >= 0) {
+          $("#test").css("border-width", outerBorder);
+        } else {
+          clearInterval(ss);
+        }
+      }
     });
   </script>
 </head>
