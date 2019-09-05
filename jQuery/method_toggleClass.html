@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .aa {
+      list-style-type: none;
+      display: inline-block;
+      border: 1px solid darkblue;
+      margin-left: 30px;
+      padding: 2px;
+      color: darkblue;
+    }
+
+    .toggled {
+      color: white;
+      background: darkblue;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // * 설정된 클래스명을 가지고 있는지 판단하여 있으면 클래스를 제거, 없다면 클래스를 부여하는 메소드
+    $(function() {
+      $(".aa").click(function() {
+        $(this).toggleClass("toggled");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <ul>
+    <li class="aa"> 아이언맨 </li>
+    <li class="aa"> 스파이더맨 </li>
+    <li class="aa"> 헐크 </li>
+    <li class="aa"> 토르 </li>
+    <li class="aa"> 캡틴 아메리카 </li>
+  </ul>
+</body>
+
+</html>
