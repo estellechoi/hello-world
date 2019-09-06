@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn1").click(function() {
+        $(".txt").slideUp("slow");
+      });
+      $("#btn2").click(function() {
+        $(".txt").slideDown("fast");
+      });
+      $("#btn3").click(function() {
+        $(".img").slideUp(2000);
+      });
+      $("#btn4").click(function() {
+        $(".img").slideDown(2000);
+      });
+    });
+
+    // script
+    // document.getElementsByClassName("txt")[0].style.display = "none";
+    // document.getElementsByClassName("txt")[0].style.display = "block";
+  </script>
+</head>
+
+<body>
+  <button id="btn1">Text slideUp</button>
+  <button id="btn2">Text slideDown</button>
+  <button id="btn3">Image slideUp</button>
+  <button id="btn4">Image slideDown</button>
+  <hr>
+  <div class="txt"> text </div>
+  <img class="img" src="../css/img/green.jpg" alt="no image" width="100px">
+
+</body>
+
+</html>
