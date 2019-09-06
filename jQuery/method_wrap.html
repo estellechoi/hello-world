@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn1").click(function() {
+        $("b").wrap("<s style='border: 1px solid red'>"); // 해당 요소를 <s></s> 태그로 감싸기
+      });
+      $("#btn2").click(function() {
+        alert($("body").html()); // html 소스 보기
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <button id="btn1"> Wrap </button>
+  <button id="btn2"> Show source </button>
+  <b> hello </b>
+
+</body>
+
+</html>
