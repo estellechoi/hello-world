@@ -10,16 +10,16 @@
   <script>
     $(function() {
       $("#btn1").click(function() {
-        $(".txt").hide();
+        $(".txt").hide("slow");
       });
       $("#btn2").click(function() {
-        $(".txt").show();
+        $(".txt").show("fast");
       });
       $("#btn3").click(function() {
-        $(".img").hide();
+        $(".img").hide(3000);
       });
       $("#btn4").click(function() {
-        $(".img").show();
+        $(".img").show(1000);
       });
     });
 
