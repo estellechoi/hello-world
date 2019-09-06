@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<!-- * 같은 class를 가진 요소가 연속적으로 존재할 때만 this 사용 가능 -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      // 전체 숨기기
+      $(".price").hide();
+      // hover
+      // * 같은 class를 가진 요소가 연속적으로 존재할 때만 this 사용 가능
+      // * 비연속적으로 배치된 요소들의 인덱스를 사용하기 위해 변수 사용 ($m)
+      var $m = $(".menu");
+      var n;
+      $(".menu").hover(function() {
+          // $m.index(this)
+          n = $m.index(this);
+          $(".price").eq(n).show();
+        },
+        function() {
+          $(".price").eq(n).hide();
+        });
+    });
+  </script>
+</head>
+
+<body>
+  <span class="menu">밀키 선라이즈</span> <span class="price">6,000 원</span>
+  <p></p>
+  <span class="menu">플라워 소다</span> <span class="price">7,000 원</span>
+  <p></p>
+  <span class="menu">해남도 아이스티</span> <span class="price">7,000 원</span>
+  <p></p>
+  <span class="menu">아그와 모히토</span> <span class="price">8,000 원</span>
+  <p></p>
+
+</body>
+
+</html>
