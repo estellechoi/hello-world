@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn1").click(function() {
+        $(".txt").hide();
+      });
+      $("#btn2").click(function() {
+        $(".txt").show();
+      });
+      $("#btn3").click(function() {
+        $(".img").hide();
+      });
+      $("#btn4").click(function() {
+        $(".img").show();
+      });
+    });
+
+    // script
+    // document.getElementsByClassName("txt")[0].style.display = "none";
+    // document.getElementsByClassName("txt")[0].style.display = "block";
+  </script>
+</head>
+
+<body>
+  <button id="btn1">Hide Text</button>
+  <button id="btn2">Show Text</button>
+  <button id="btn3">Hide Image</button>
+  <button id="btn4">Show Image</button>
+  <hr>
+  <div class="txt"> text </div>
+  <img class="img" src="../css/img/green.jpg" alt="no image" width="100px">
+
+</body>
+
+</html>
