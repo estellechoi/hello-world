@@ -15,13 +15,21 @@
       $("#btn2").click(function() {
         alert($("body").html()); // html 소스 보기
       });
+      $("#btn3").click(function() {
+        $("b").unwrap(); // 해당 요소를 감싸고 있는 태그 제거
+      });
+      $("#btn4").click(function() {
+        $("b").wrapInner("<s style='border: 1px solid blue'>"); // 해당 요소 내부에 <s></s> 태그 넣기
+      });
     });
   </script>
 </head>
 
 <body>
   <button id="btn1"> Wrap </button>
+  <button id="btn3"> Unwrap </button>
   <button id="btn2"> Show source </button>
+  <button id="btn4"> wrapInner </button>
   <p></p>
   <b> hello </b>
   <p></p>
