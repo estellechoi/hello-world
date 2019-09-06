@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      $("#btn1").hover(function() {
+        $(".txt").slideToggle("slow");
+      });
+      $("#btn2").click(function() {
+        $(".img").slideToggle(500);
+      });
+    });
+
+    // script
+    // document.getElementsByClassName("txt")[0].style.display = "none";
+    // document.getElementsByClassName("txt")[0].style.display = "block";
+  </script>
+</head>
+
+<body>
+  <button id="btn1">Control Text</button>
+  <button id="btn2">Control Image</button>
+  <hr>
+  <div class="txt"> text </div>
+  <img class="img" src="../css/img/green.jpg" alt="no image" width="100px">
+
+</body>
+
+</html>
