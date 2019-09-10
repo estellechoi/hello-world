@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .main {
+      position: relative;
+    }
+
+    .view {
+      width: 200px;
+      height: 30px;
+      overflow: hidden;
+      border: 1px solid black;
+    }
+
+    .menu {
+      width: 198px;
+      margin: 0px;
+    }
+
+    .menu li {
+      list-style-type: none;
+      width: 196px;
+      height: 30px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    $(function() {
+      setInterval(function() {
+        $(".menu").animate({
+          marginTop: "-32px" // 숫자 px 띄어쓰기하니까 끊김 .. 이유는 ?
+        }, 1000, "linear", function() {
+          $(".menu li").eq(0).insertAfter($(".menu li").eq(6));
+          $(".menu").css("marginTop", "0px");
+        });
+      }, 1000);
+    });
+  </script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="view">
+      <ul class="menu">
+        <li>유진</li>
+        <li>용기</li>
+        <li>보민</li>
+        <li>동현</li>
+        <li>선아</li>
+        <li>형우</li>
+        <li>영빈</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
