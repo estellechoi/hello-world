@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    .main {
+      border: 1px solid pink;
+      height: 114px;
+    }
+
+    .view {
+      border: 1px solid grey;
+      width: 600px;
+      height: 112px;
+      overflow: hidden;
+    }
+
+    .img {
+      border: 1px solid blue;
+      width: 2000px;
+      height: 104px;
+    }
+
+    .img img {
+      margin-left: 0px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    // ☆ animate( properties, [duration], [easing], [complete]);
+    // 1) [easing]
+    //   "linear" : 일정한 속도로 이동
+    //   "swing" : 서서히 빨라지다가 서서히 멈추는 이동 (easing 미지정시 디폴트값)
+    // 2) [complete] : 애니메이션 종료 후 실행할 함수
+
+    $(function() {
+      // 6초 마다 반복 실행
+      setInterval(function() {
+        // .img 블럭을 3초 동안 왼쪽으로 100px 이동
+        $(".img").animate({
+          marginLeft: "-100px"
+        }, 4000, 'linear', function() {
+          // 애니메이션 종료시 첫번째 이미지 태그를 마지막 태그 뒤로 이동
+          $(".img img").eq(0).insertAfter($(".img img").eq(6));
+          $(".img").css("marginLeft", "0px");
+        });
+      }, 3000);
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="view">
+      <div class="img">
+        <img src="../css/img/green.jpg" alt=" no image" width="100px" height="100px">
+        <img src="../css/img/rainbow.jpg" alt=" no image" width="100px" height="100px">
+        <img src="../css/img/lightblue.jpg" alt=" no image" width="100px" height="100px">
+        <img src="../css/img/green.jpg" alt=" no image" width="100px" height="100px">
+        <img src="../css/img/rainbow.jpg" alt=" no image" width="100px" height="100px">
+        <img src="../css/img/lightblue.jpg" alt=" no image" width="100px" height="100px">
+        <img src="../css/img/green.jpg" alt=" no image" width="100px" height="100px">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
