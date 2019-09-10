@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    #test {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: relative;
+      left: 200px;
+      top: 0px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    // $(선택자).animate({상태}, 시간); 설정시간 동안 설정상태로 변경 실행
+    $(function() {
+      $("#btn1").click(function() {
+        $("#test").animate({
+          width: "200px",
+          height: "200px"
+        });
+      });
+      $("#btn2").click(function() {
+        $("#test").animate({
+          width: "90px",
+          height: "90px"
+        });
+      });
+      $("#btn3").click(function() {
+        $("#test").animate({
+          left: "400px"
+        });
+      });
+      $("#btn4").click(function() {
+        $("#test").animate({
+          left: "100px"
+        });
+      });
+    });
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="btn1">확장하기</button>
+  <button id="btn2">축소하기</button>
+  <button id="btn3">오른쪽으로 이동</button>
+  <button id="btn4">왼쪽으로 이동</button>
+  <div id="test"></div>
+</body>
+
+</html>
