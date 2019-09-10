@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    /*
+☆ z-index
+1) z-index는 position 속성이 설정된 엘리먼트에 대해서만 의미를 갖는다.
+2) position 속성이 지정되지 않은 블록은 항상 position이 지정된 엘리먼트 이전에 렌더링 된다.
+3) z-index 값이 클 수록 위에 렌더링된다.
+  */
+
+    /* no position */
+    #test {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      opacity: 0.7;
+    }
+
+    /* with position */
+    #animated {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100px;
+      height: 30px;
+      background: lightblue;
+      z-index: 2;
+      opacity: 0.7;
+    }
+
+    #txt {
+      position: absolute;
+      top: 0px;
+      color: white;
+      z-index: 1;
+      font-weight: 900;
+    }
+  </style>
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    $(function() {
+      setInterval(function() {
+        $("#animated").animate({
+          left: "370px"
+        }, 4000).animate({
+          left: "0px"
+        }, 4000);
+      }, 10);
+    });
+  </script>
+</head>
+
+<body>
+  <div id="animated"></div>
+  <div id="test"></div>
+  <span id="txt">텍스트</span>
+</body>
+
+</html>
