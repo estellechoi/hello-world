@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      var arr = ["Anthony", "Carina", "Estelle"];
+      $("#search").autocomplete({
+        source: arr
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <input type="text" id="search" placeholder="검색어 입력">
+</body>
+
+</html>
