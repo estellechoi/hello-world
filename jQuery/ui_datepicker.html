@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $("#cal").datepicker({
+        showAnim: "fade", // show, slid, fade, blind, drop, clip, fold, bounce, explode
+        dateFormat: "yy 년 mm 월 dd 일",
+        showOtherMonths: true, // 빈 칸에 다른 달의 날짜 표기
+        selectOtherMonths: true, // 다른 달의 날짜 선택
+        changeMonth: true, // 월 직접 선택
+        changeYear: true, // 연도 직접 선택
+        numberOfMonths: 3, // 동시에 보여줄 월의 개수
+        showOn: "button", // 달력 보기 방법
+        buttonText: "보기", // buttonImage: "img file"
+        minDate: -3, // 오늘 -3일 선택 가능
+        maxDate: "+2M +10D", // 오늘 + 2개월 10일 선택 가능
+        // showWeek: true, // 주차 표시
+        firstDay: 0 // 달력의 시작 요일 / 0: 일, 1 : 월, 2: 화, ...
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <input type="text" id="cal">
+</body>
+
+</html>
