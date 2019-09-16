@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    // * javascript
+    // function test(n) {
+    //   for (var i = 0; i < n; i++) {
+    //     document.getElementsByClassName("block")[i].style.display = "none";
+    //   }
+    // }
+
+    // * jquery
+    // * 첫 번째 태그를 제목, 두 번째 태그를 내용으로 자동 인식
+    $(function() {
+      $("#accord").accordion({
+        // 세미콜론 X !!
+        // * 실행여부
+        active: true,
+        // * 애니메이션 효과 여부
+        animate: true,
+        // * 애니메이션 동작 소요시간
+        animate: 1000,
+        // * 애니메이션 속도 변화 "linear" / "swing"
+        animate: "linear",
+        // * 블럭 높이 지정
+        //   "fill"("auto") 내용이 제일 많은 블럭의 높이로 통일 / "content" 내용에 따라 블럭별 높이 지정
+        heightStyle: "content",
+        // * 실행을 위한 이벤트 지정
+        event: "mouseover click",
+        // * 아이콘 설정
+        //   아이콘 참조 https://api.jqueryui.com/theming/icons/
+        icons: {
+          header: "ui-icon-plus", // 헤더 아이콘
+          activeHeader: "ui-icon-caret-1-e" // 활성화된 헤더의 아이콘
+        },
+        // * 동작 후 실행 내용
+        activate: function() {
+          document.getElementById("alertBox").innerText = "완료";
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="accord">
+    <h3 onclick="test(0)">짜장면</h3>
+    <div class="block">
+      춘장에다 각종 야채와 고기를 볶은 후 <p></p>
+      전분물을 섞어서 만드는 음식
+    </div>
+    <h3 onclick="test(1)">탕수육</h3>
+    <div class="block">
+      고기를 길게 썰어서 튀김옷을 입힌 후 <p></p>
+      기름에 튀겨서 전분 섞은 소스를 함께 먹는 음식
+    </div>
+    <h3 onclick="test(2)">쫄면</h3>
+    <div class="block">
+      냉면을 만드려다 굵기 조절이 다르게 된 면 종류
+    </div>
+    <h3 onclick="test(3)">맛조개</h3>
+    <div class="block">
+      모래바닥에 살며 삽으로 살짝 모래를 걷은 후 <p></p>
+      구멍에 소금을 뿌리면 바닷물이 들어온줄 알고 <p></p>
+      나온다. 그 때 손으로 잡으면 된다.
+    </div>
+  </div>
+  <div id="alertBox"></div>
+
+</body>
+
+</html>
