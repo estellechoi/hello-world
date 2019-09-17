@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- 플러그인 추가 -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script>
+    $(function() {
+      $("#test").dialog({
+        autoOpen: false // 자동열기 X
+      });
+      $("button").click(function() {
+        $("#test").dialog("open");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <button>클릭</button>
+  <div id="test"> 안녕하세요 </div>
+</body>
+
+</html>
