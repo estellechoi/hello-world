@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <!--
+    아이콘 참조 : https://api.jqueryui.com/theming/icons/
+  -->
+  <script>
+    $(function() {
+      $(".aa, .bb, span, a").button();
+      $("span").eq(1).button({
+        icon: "ui-icon-heart",
+        iconPosition: "top" // beginning, top, bottom, end
+      });
+    });
+  </script>
+</head>
+
+<body>
+  ① input 태그 : <input class="aa" type="button" value="확인">
+  <p></p>
+  ② button 태그 : <button class="bb"> 확인 </button>
+  <p></p>
+  <!-- 그림,테이블 모든 요소가 들어갈수 있다. -->
+  ③ span 태그 : <span>확인</span>
+  <p></p>
+  ④ a 태그 : <a href="http://www.naver.com"> 네이버 </a>
+</body>
+
+</html>
