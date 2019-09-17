@@ -1,5 +1,9 @@
 <!doctype html>
 <html>
+<!--
+{autoOpen} 자동실행 제어
+show: {effect: 효과, duration: 시간} 경고창 효과
+-->
 
 <head>
   <meta charset="UTF-8">
@@ -7,16 +11,58 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <!-- 플러그인 추가 -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script>
     $(function() {
       $("#test").dialog({
-        autoOpen: false // 자동열기 X
+        // 자동열기 X
+        autoOpen: false,
+        // 경고창 열기 효과
+        show: {
+          effect: "bounce", // bounce, slide, blind, explode, fade, fold, clip, ..
+          duration: 2000
+        },
+        // 경고창 닫기 효과
+        hide: {
+          effect: "blind",
+          duration: 1000
+        },
+        // 드래그 허용 여부
+        draggable: true,
+        // 크기 지정
+        width: 200,
+        height: 100,
+        // 자식창이 열린 상태에서 부모창 클릭 허용 (종속 여부)
+        modal: false,
+        // 경고창 크기를 드래그하여 조정하기 허용 여부
+        resizable: true,
+        // 경고창 상단 바에 표시되는 타이틀
+        title: "테스트",
+        // esc 키로 경고창 닫기 허용 여부
+        closeOnEscape: false,
+        // 경고창 내 버튼 생성 (text, icon, click 속성)
+        buttons: [{
+            text: "ok",
+            icon: "ui-icon-heart",
+            click: function() {
+              $("#test").dialog("close");
+            }
+          },
+          {
+            text: "escape",
+            icon: "ui-icon-heart",
+            click: function() {
+              location = "http://www.naver.com";
+            }
+          }
+        ]
       });
-      $("button").click(function() {
-        $("#test").dialog("open");
+      $("button").eq(0).click(function() {
+        $("#test").dialog("open"); // 열림이 제어된 경고창을 열기
+      });
+      $("button").eq(1).click(function() {
+        $("#test").dialog("close"); // 열린 경고창 닫기
       });
     });
   </script>
@@ -24,6 +70,7 @@
 
 <body>
   <button>클릭</button>
+  <button>취소</button>
   <div id="test"> 안녕하세요 </div>
 </body>
 
