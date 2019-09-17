@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <style>
+    li {
+      width: 80px;
+      height: 30px;
+      border: 1px solid #dddddd;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      background: #F3F3F3;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background: #eeeeee;
+    }
+
+    li .radio {
+      /* non-inline 요소에 가로세로 크기 지정을 위해서는 display: inline-block 설정 필요 */
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 1px solid #dddddd;
+      border-radius: 50px;
+      margin-left: 0px;
+      margin-right: 7px;
+      background: white;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $("li").click(function() {
+        $("li").css("background", "#2A2A7F");
+        $("li").css("border", "2px solid #5F5F9F");
+        $(".test").css("color", "white");
+        $(".radio").css("border", "2px solid #5F5F9F");
+      });
+      $("li").blur(function() {
+        $("li").css("background", "#F3F3F3");
+        $("li").css("border", "1px solid #dddddd");
+        $(".test").css("color", "black");
+        $(".radio").css("border", "1px solid #dddddd");
+      });
+      // 미리 class 만들어놓은 후 add(), remove() 메소드 사용 가능
+    });
+  </script>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <span class="radio"></span>
+      <span class="test">테스트</span>
+    </li>
+  </ul>
+
+</body>
+
+</html>
