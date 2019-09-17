@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <style>
+
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $(".male").checkboxradio();
+      $(".female").checkboxradio();
+      $(".food").checkboxradio({
+        icon: "ui-icon-heart"
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <label for="male">남자</label>
+  <input type="radio" name="sex" id="male" class="male">
+  <label for="female">여자</label>
+  <input type="radio" name="sex" id="female" class="female">
+  <hr>
+  <label for="food">음식</label>
+  <input type="checkbox" id="food" class="food">
+</body>
+
+</html>
