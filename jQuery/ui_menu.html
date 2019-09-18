@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #menu {
+      width: 300px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script>
+    $(function() {
+      $("#menu").menu();
+    });
+  </script>
+</head>
+
+<body>
+  <ul id="menu">
+    <li>
+      <!-- jQuery style(마우스 올리면 배경색 변경) 적용을 위해 div 태그 추가-->
+      <!-- 아이콘 추가를 위해 빈 span 태그에 해당 클래스 추가 -->
+      <div><span class="ui-icon ui-icon-eject"></span>한국음식</div>
+      <ul>
+        <li>
+          <div>비빔밥</div>
+        </li>
+        <li>
+          <div>불고기</div>
+        </li>
+        <li>
+          <div>김치찌개</div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <div>중국음식</div>
+      <ul>
+        <li>
+          <div>마라탕</div>
+          <ul>
+            <li>
+              <div>대 30,000원</div>
+            </li>
+            <li>
+              <div>소 20,000원</div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div>라조기</div>
+        </li>
+        <li>
+          <div>전가복</div>
+        </li>
+      </ul>
+    </li>
+    <!-- 특정 메뉴 disabled 위하여 클래스 추가 -->
+    <li class="ui-state-disabled">
+      <div>일본음식</div>
+      <ul>
+        <li>
+          <div>스시</div>
+        </li>
+        <li>
+          <div>오코노미야끼</div>
+        </li>
+        <li>
+          <div>메밀소바</div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <div>유럽음식</div>
+      <ul>
+        <li>
+          <div>피자</div>
+        </li>
+        <li>
+          <div>파스타</div>
+        </li>
+        <li>
+          <div>리조또</div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>
