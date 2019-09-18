@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    li {
+      list-style-type: none;
+      width: 100px;
+      height: 30px;
+      border: 1px solid red;
+      margin-top: 10px;
+    }
+
+    #test {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      visibility: hidden;
+    }
+  </style>
+  <script>
+    var price = ["5,000원", "10,000원", "15,000원", "20,000원"];
+
+    function view(n) {
+      var test = document.getElementById("test");
+      // var test 전역변수로 선언하니까 왜 실행안되지 ?
+      test.innerText = price[n];
+      test.style.visibility = "visible";
+      test.style.left = (event.clientX + 20) + "px";
+      test.style.top = event.clientY + "px";
+    }
+
+    function hide() {
+      var test = document.getElementById("test");
+      test.style.visibility = "hidden";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="test"></div>
+  <ul>
+    <li onmouseover="view(0)" onmouseout="hide()">짜장면</li>
+    <li onmouseover="view(1)" onmouseout="hide()">우동</li>
+    <li onmouseover="view(2)" onmouseout="hide()">짬뽕</li>
+    <li onmouseover="view(3)" onmouseout="hide()">탕수육</li>
+  </ul>
+</body>
+
+</html>
