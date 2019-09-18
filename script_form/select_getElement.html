@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script>
+    // select 내 option 태그 생성하기 ?
+
+    // * javascript 에서 <select> 접근하기
+    // 1) name 통해 접근 : document.form.select
+    function getByName() {
+      alert(document.form.menu.value);
+      // text값 호출 위해서는 index 표기 필수
+      alert(document.form.menu[document.form.menu.selectedIndex].text);
+    }
+
+    // 2) id, class 통해 접근 : document.getElementById("id")
+    function getByIdClass() {
+      alert(document.getElementById("menu").value);
+    }
+
+    // 3) 요소 자신을 호출하여 접근 : this
+    function getByThis(menu) {
+      // ☆ <option> 태그의 value 지정하지 않으면, text → value값으로 자동 전환
+      alert(menu.value);
+    }
+  </script>
+</head>
+
+<body>
+  <!-- with form tag -->
+  <form action="" name="form">
+    <select name="menu" onchange="getByName()">
+      <option value="0">선택</option>
+      <option value="1">메뉴1</option>
+      <option value="2">메뉴2</option>
+      <option value="3">메뉴3</option>
+      <option value="4">메뉴4</option>
+    </select>
+  </form>
+
+  <!-- without form tag -->
+  <select id="menu" onchange="getByIdClass()">
+    <option value="0">선택</option>
+    <option value="1">메뉴1</option>
+    <option value="2">메뉴2</option>
+    <option value="3">메뉴3</option>
+    <option value="4">메뉴4</option>
+  </select>
+  <br>
+
+  <!-- without form tag -->
+  <select onchange="getByThis(this)">
+    <option>선택</option>
+    <option>메뉴1</option>
+    <option>메뉴2</option>
+    <option>메뉴3</option>
+    <option>메뉴4</option>
+  </select>
+</body>
+
+</html>
