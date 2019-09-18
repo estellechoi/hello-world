@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      display: flex;
+    }
+  </style>
+  <script>
+    function showSource() {
+      alert(test.innerHTML);
+    }
+    // * 이벤트를 통해 <select> 내 <option> 생성하기
+    // 1) name 통해 접근 : document.form.select
+    function addOption1() {
+      document.form.menu.length = 2; // length : option 개수
+      document.form.menu.options[0].text = "선택";
+      document.form.menu.options[1].text = "볼로네제";
+      document.form.menu.options[0].value = "0";
+      document.form.menu.options[1].value = "1";
+    }
+
+    // 2) id, class 통해 접근 : document.getElementById("id")
+    function addOption2() {
+      document.getElementById("menu").length = 3;
+      document.getElementById("menu").options[0].text = "선택";
+    }
+  </script>
+</head>
+
+<body id="test">
+  <button onclick="showSource()">소스보기</button>
+  <hr>
+  <!-- with form tag -->
+  <div>
+    <button onclick="addOption1()">option 추가</button>
+    <form name="form">
+      <select name="menu">
+      </select>
+    </form>
+  </div>
+
+  <!-- without form tag -->
+  <button onclick="addOption2()">option 추가</button>
+  <select name="menu" id="menu">
+  </select>
+</body>
+
+</html>
