@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <script>
+    $(function() {
+      $("#test1").draggable({
+        cursor: "pointer"
+      });
+      $("#test2").draggable({
+        // 부모 태그의 영역 내로 드래그 제한
+        containment: "parent",
+        // 드래그 동안 해당요소를 기준으로 마우스 커서의 위치
+        cursorAt: {
+          top: 10,
+          left: 100
+        },
+        // 드래그 동안 해당요소의 투명도
+        opacity: 0.1,
+        // 드래그 시작 지연시키기 ([ex]커서로 당기고 1초 후 실제 드래그 시작)
+        delay: 1000
+      });
+    });
+  </script>
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      border: 1px solid gold;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span id="test1">안녕 !</span>
+    <span id="test2">안녕 !</span>
+  </div>
+</body>
+
+</html>
