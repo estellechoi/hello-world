@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // * 이벤트를 통해 <select> 내 <option> 생성하기
+    function addSub() {
+      // 대분류 선택값 불러오기
+      var category = document.form.world.value;
+
+      if (category == 0) {
+        document.form.sub.length = 0;
+      } else if (category == 1) {
+        // 아시아
+        document.form.sub.length = 4;
+        for (var i = 0; i < 4; i++) {
+          document.form.sub.options[i].value = i + "";
+        }
+        document.form.sub.options[0].text = "대한민국";
+        document.form.sub.options[1].text = "일본";
+        document.form.sub.options[2].text = "인도네시아";
+        document.form.sub.options[3].text = "베트남";
+      } else if (category == 2) {
+        // 유럽
+        document.form.sub.length = 4;
+        for (var i = 0; i < 4; i++) {
+          document.form.sub.options[i].value = i + "";
+        }
+        document.form.sub.options[0].text = "스페인";
+        document.form.sub.options[1].text = "프랑스";
+        document.form.sub.options[2].text = "독일";
+        document.form.sub.options[3].text = "포르투갈";
+      } else if (category == 3) {
+        // 아프리카
+        document.form.sub.length = 4;
+        for (var i = 0; i < 4; i++) {
+          document.form.sub.options[i].value = i + "";
+        }
+        document.form.sub.options[0].text = "모로코";
+        document.form.sub.options[1].text = "이집트";
+        document.form.sub.options[2].text = "남아프리카공화국";
+        document.form.sub.options[3].text = "케냐";
+      }
+    }
+  </script>
+</head>
+
+<body id="test">
+  <form name="form">
+    <!-- 대분류 -->
+    <select name="world" onchange="addSub()">
+      <option value="0">대분류</option>
+      <option value="1">아시아</option>
+      <option value="2">유럽</option>
+      <option value="3">아프리카</option>
+    </select>
+
+    <!-- 중분류 -->
+    <select name="sub" id="sub"></select>
+  </form>
+</body>
+
+</html>
