@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    .test {
+      overflow: hidden;
+    }
+  </style>
+  <script>
+    // * selectmenu();
+    // <select> 요소를 테마 및 사용자 정의 컨트롤로 변형
+    $(function() {
+      $(".test").selectmenu({
+        style: "popup",
+        // classes: {
+        //   "ui-selectmenu-menu": "highlight"
+        // }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <select id="test" class="test">
+    <option value="">선택</option>
+    <option value="">바르셀로나</option>
+    <option value="">하와이</option>
+    <option value="">발리</option>
+    <option value="">도쿄</option>
+  </select>
+
+  <!-- 비교 -->
+  <select>
+    <option value="">선택</option>
+    <option value="">바르셀로나</option>
+    <option value="">하와이</option>
+    <option value="">발리</option>
+    <option value="">도쿄</option>
+  </select>
+</body>
+
+</html>
