@@ -22,6 +22,13 @@
       height: 60px;
       border: 1px solid red;
     }
+
+    .imgBlock {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid red;
+    }
   </style>
   <script>
     $(function() {
@@ -33,6 +40,12 @@
         minWidth: 300,
         animate: true
       });
+      $(".imgBlock").resizable({
+        maxHeight: 200,
+        maxWidth: 300,
+        minHeight: 60,
+        minWidth: 80,
+      });
     });
   </script>
 </head>
@@ -43,6 +56,10 @@
     <img src="../css/img/green.jpg" alt="no image">
   </div>
   <textarea id="textBlock" rows="3" cols="30"></textarea>
+  <!-- jQuery class 호출 -->
+  <img src="../css/img/green.jpg" alt="no image" class="imgBlock">
+  <img src="../css/img/rainbow.jpg" alt="no image" class="imgBlock">
+  <img src="../css/img/lightblue.jpg" alt="no image" class="imgBlock">
 </body>
 
 </html>
