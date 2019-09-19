@@ -25,11 +25,18 @@
     }
   </style>
   <script>
+    // * $("#sortable").sortable();
+    //  "#sortable" 요소의 내부 태그를 사용하여 드래그앤드랍 가능한 리스트를 만듬
+    // * $("#sortable").disableSelection();
+    //  아이템 내부의 글자를 드래그해서 선택하지 못하도록 하는 기능
+
     $(function() {
       $("#europe, #asia").sortable({
+        // 드래그 중인 아이템이 놓일 자리를 표시할 스타일 지정
+        placeholder: "itemBoxHighlight",
+        // 서로 다른 <ul>간 아이템 이동을 허용
         connectWith: ".world"
-        //드래그해서 순서를 임의로 정할 수 있음
-      });
+      }).disableSelection();
     });
   </script>
 </head>
