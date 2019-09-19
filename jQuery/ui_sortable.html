@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    ul {
+      float: left;
+      width: 120px;
+    }
+
+    li {
+      list-style-type: none;
+      width: 100px;
+      height: 30px;
+      border: 1px solid gold;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $("#europe, #asia").sortable({
+        connectWith: ".world"
+        //드래그해서 순서를 임의로 정할 수 있음
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <ul id="europe" class="world">
+    <li>바르셀로나</li>
+    <li>파리</li>
+    <li>베를린</li>
+    <li>포르투</li>
+    <li>로마</li>
+    <li>프라하</li>
+  </ul>
+  <ul id="asia" class="world">
+    <li>하노이</li>
+    <li>서울</li>
+    <li>도쿄</li>
+    <li>상해</li>
+    <li>자카르타</li>
+    <li>발리</li>
+  </ul>
+
+</body>
+
+</html>
