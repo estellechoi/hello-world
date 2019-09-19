@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #tabs {
+      width: 500px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script>
+    $(function() {
+      $("#tabs").tabs();
+    });
+  </script>
+</head>
+
+<body>
+  <div id="tabs">
+    <!-- 메뉴 -->
+    <!-- <a href="#"></a> : # 현재 문서에서 찾기 -->
+    <ul>
+      <li><a href="#barcelona">바르셀로나</a></li>
+      <li><a href="#newyork">뉴욕</a></li>
+      <li><a href="#paris">파리</a></li>
+      <li><a href="#seoul">서울</a></li>
+    </ul>
+    <!-- 내용 -->
+    <div id="barcelona">스페인 동부의 도시</div>
+    <div id="newyork">미국 동부의 도시</div>
+    <div id="paris">프랑스의 수도</div>
+    <div id="seoul">대한민국의 수도</div>
+  </div>
+
+</body>
+
+</html>
