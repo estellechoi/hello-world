@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    #divBlock {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid red;
+    }
+
+    #textBlock {
+      width: 300px;
+      height: 60px;
+      border: 1px solid red;
+    }
+  </style>
+  <script>
+    $(function() {
+      $("#divBlock").resizable();
+      $("#textBlock").resizable({
+        maxHeight: 300,
+        minHeight: 60,
+        maxWidth: 500,
+        minWidth: 300,
+        animate: true
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="divBlock">
+    <h3>테스트</h3>
+    <img src="../css/img/green.jpg" alt="no image">
+  </div>
+  <textarea id="textBlock" rows="3" cols="30"></textarea>
+</body>
+
+</html>
